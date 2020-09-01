@@ -1,6 +1,8 @@
 #+OPTIONS: ^:nil
 #+EXPORT_EXCLUDE_TAGS: noexport
-* Table of Contents :TOC_4:
+* CMS ETL Readout Board PCB
+** Table of Contents :TOC_4:
+- [[#cms-etl-readout-board-pcb][CMS ETL Readout Board PCB]]
   - [[#useful-links][Useful Links]]
     - [[#relevant-presentations][Relevant Presentations]]
   - [[#block-diagrams][Block Diagrams]]
@@ -16,7 +18,7 @@
     - [[#sca-pin-assignments][SCA Pin Assignments]]
 
 ** Useful Links
-- TDR - [[https://cds.cern.ch/record/2296612/files/LHCC-P-009.pdf][LHCC-P-009]]
+- TDR - [[https://cds.cern.ch/record/2667167/files/CMS-TDR-020.pdf][CMS-TDR-020]]
 *** Relevant Presentations
 - 2019/05/13 - [[https://indico.cern.ch/event/820512/contributions/3429658/attachments/1842929/3023621/ETL-Cabling-S_Los-May13-2019.pdf][Update on Power board and Patch Panel-0]] (Sergey V.)
 - 2020/03/09 - [[https://indico.cern.ch/event/902328/contributions/3798257/attachments/2008611/3355343/2020-03-09_LV_scheme.pdf][ETL LV powering scheme]] (Natalia K.)
