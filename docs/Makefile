@@ -2,9 +2,13 @@
 .PHONY: diagrams
 
 diagrams:
-		draw.io --width 800 -p 0 -x -f png -o data-flow.png etl-readout-board.drawio
-		draw.io --width 800 -p 1 -x -f png -o power-distribution.png etl-readout-board.drawio
-		draw.io --width 800 -p 2 -x -f png -o ctrl-and-mon.png etl-readout-board.drawio
+		draw.io --width 700 -p 0 -x -f png -o data-flow.png etl-readout-board.drawio
+		draw.io --width 700 -p 1 -x -f png -o power-distribution.png etl-readout-board.drawio
+		draw.io --width 700 -p 2 -x -f png -o ctrl-and-mon.png etl-readout-board.drawio
+
+		draw.io --width 2400 -p 0 -x -f png -o data-flow_large.png etl-readout-board.drawio
+		draw.io --width 2400 -p 1 -x -f png -o power-distribution_large.png etl-readout-board.drawio
+		draw.io --width 2400 -p 2 -x -f png -o ctrl-and-mon_large.png etl-readout-board.drawio
 
 		draw.io -p 0 -x -f pdf -o data-flow.pdf etl-readout-board.drawio
 		draw.io -p 1 -x -f pdf -o power-distribution.pdf etl-readout-board.drawio
