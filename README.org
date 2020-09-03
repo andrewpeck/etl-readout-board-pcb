@@ -12,7 +12,6 @@
     - [[#control-and-monitoring][Control and Monitoring]]
   - [[#connectorsinterfaces][Connectors/Interfaces]]
   - [[#mechanical-outline][Mechanical Outline]]
-  - [[#jumpers][Jumpers]]
   - [[#power][Power]]
     - [[#power-estimates][Power Estimates]]
     - [[#linpol12s][LINPOL12s]]
@@ -29,6 +28,9 @@
     - [[#sca-pin-assignments][SCA Pin Assignments]]
       - [[#analog-inputs-1][Analog Inputs]]
       - [[#gpio-1][GPIO]]
+  - [[#jumpers][Jumpers]]
+  - [[#test-points][Test points]]
+  - [[#errata][Errata]]
 
 ** Useful Links
 - TDR - [[https://cds.cern.ch/record/2667167/files/CMS-TDR-020.pdf][CMS-TDR-020]]
@@ -66,16 +68,6 @@ Full size: [[file:docs/module-connectivity.pdf]]
 ** Mechanical Outline
 #+attr_org: :width 700px
 [[file:docs/mechanical-outline.png]]
-** Jumpers
-
-|---------+--------------------------------------------------------|
-| Jumpers | Description                                            |
-|---------+--------------------------------------------------------|
-| JMP1    | Install to set LPGBT MODE[2] to 0 (FEC12 → FEC5)       |
-| JMP2    | Install to set LPGBT MODE[3] to 0 (data rate → 5 Gbps) |
-|---------+--------------------------------------------------------|
-
-Locations:
 ** Power
 *** Power Estimates
 *** LINPOL12s
@@ -121,6 +113,7 @@ A handy copy of the LPGBT mode table:
 
 All uplinks run at 320 or 640MHz
 
+***** Sorted by ETROC
 |------------+------------+-------|
 | Assignment | Group/Link | Elink |
 |------------+------------+-------|
@@ -138,6 +131,7 @@ All uplinks run at 320 or 640MHz
 | ETROC-11   | G2L2       |    10 |
 |------------+------------+-------|
 
+***** Sorted by E-link
 |------------+------------+-------|
 | Assignment | Group/Link | Elink |
 |------------+------------+-------|
@@ -174,6 +168,7 @@ All uplinks run at 320 or 640MHz
 
 All uplinks run at 320 or 640MHz
 
+***** Sorted by ETROC
 |------------+------------+-------|
 | Assignment | Group/Link | Elink |
 |------------+------------+-------|
@@ -191,6 +186,7 @@ All uplinks run at 320 or 640MHz
 | ETROC-11   | G2L0       |     8 |
 |------------+------------+-------|
 
+***** Sorted by E-link
 |------------+-------+------------|
 | Group/Link | Elink | Assignment |
 |------------+-------+------------|
@@ -252,12 +248,12 @@ All downlinks run at 320MHz
 |-------+-------------+------|
 | Clock | Assignment  | Freq |
 |-------+-------------+------|
-|     0 | ETROC3      | 40M  |
-|     1 | ETROC2      | 40M  |
-|     2 | ETROC6      | 40M  |
-|     3 | ETROC7      | 40M  |
-|     4 | ETROC10     | 40M  |
-|     5 | ETROC11     | 40M  |
+|     0 | ETROC-3     | 40M  |
+|     1 | ETROC-2     | 40M  |
+|     2 | ETROC-6     | 40M  |
+|     3 | ETROC-7     | 40M  |
+|     4 | ETROC-10    | 40M  |
+|     5 | ETROC-11    | 40M  |
 |     6 | --          | OFF  |
 |     7 | --          | OFF  |
 |     8 | --          | OFF  |
@@ -274,12 +270,12 @@ All downlinks run at 320MHz
 |    19 | --          | OFF  |
 |    20 | --          | OFF  |
 |    21 | --          | OFF  |
-|    22 | ETROC9      | 40M  |
-|    23 | ETROC4      | 40M  |
-|    24 | ETROC8      | 40M  |
-|    25 | ETROC5      | 40M  |
-|    26 | ETROC0      | 40M  |
-|    27 | ETROC1      | 40M  |
+|    22 | ETROC-9     | 40M  |
+|    23 | ETROC-4     | 40M  |
+|    24 | ETROC-8     | 40M  |
+|    25 | ETROC-5     | 40M  |
+|    26 | ETROC-0     | 40M  |
+|    27 | ETROC-1     | 40M  |
 |-------+-------------+------|
 *** LPGBT Pin Assignments
 **** Analog Inputs
@@ -287,3 +283,15 @@ All downlinks run at 320MHz
 *** SCA Pin Assignments
 **** Analog Inputs
 **** GPIO
+** Jumpers
+|---------+--------------------------------------------------------|
+| Jumpers | Description                                            |
+|---------+--------------------------------------------------------|
+| JMP1    | Install to set LPGBT MODE[2] to 0 (FEC12 → FEC5)       |
+| JMP2    | Install to set LPGBT MODE[3] to 0 (data rate → 5 Gbps) |
+|---------+--------------------------------------------------------|
+
+Locations:
+
+** Test points
+** Errata
