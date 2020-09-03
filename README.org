@@ -1,37 +1,6 @@
 #+OPTIONS: ^:nil
 #+EXPORT_EXCLUDE_TAGS: noexport
 * CMS ETL Readout Board PCB
-** Table of Contents :TOC_4:
-- [[#cms-etl-readout-board-pcb][CMS ETL Readout Board PCB]]
-  - [[#useful-links][Useful Links]]
-    - [[#relevant-presentations][Relevant Presentations]]
-  - [[#block-diagrams][Block Diagrams]]
-    - [[#data-flow][Data Flow]]
-    - [[#module-connectivity][Module Connectivity]]
-    - [[#power-distribution][Power Distribution]]
-    - [[#control-and-monitoring][Control and Monitoring]]
-  - [[#connectorsinterfaces][Connectors/Interfaces]]
-  - [[#mechanical-outline][Mechanical Outline]]
-  - [[#power][Power]]
-    - [[#power-estimates][Power Estimates]]
-    - [[#linpol12s][LINPOL12s]]
-  - [[#lpgbt-configuration][LPGBT Configuration]]
-  - [[#pin-assignments][Pin Assignments]]
-    - [[#e-link-assignments][E-Link Assignments]]
-      - [[#daq-uplinks][DAQ Uplinks]]
-      - [[#trigger-uplinks][Trigger Uplinks]]
-      - [[#downlink][Downlink]]
-    - [[#clock-assignments][Clock Assignments]]
-    - [[#lpgbt-pin-assignments][LPGBT Pin Assignments]]
-      - [[#analog-inputs][Analog Inputs]]
-      - [[#gpio][GPIO]]
-    - [[#sca-pin-assignments][SCA Pin Assignments]]
-      - [[#analog-inputs-1][Analog Inputs]]
-      - [[#gpio-1][GPIO]]
-  - [[#jumpers][Jumpers]]
-  - [[#test-points][Test points]]
-  - [[#errata][Errata]]
-
 ** Useful Links
 - TDR - [[https://cds.cern.ch/record/2667167/files/CMS-TDR-020.pdf][CMS-TDR-020]]
 - LGPBT Manual - [[https://lpgbt.web.cern.ch/lpgbt/manual/][LpGBT Manual]]
