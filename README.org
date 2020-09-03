@@ -7,18 +7,35 @@
     - [[#relevant-presentations][Relevant Presentations]]
   - [[#block-diagrams][Block Diagrams]]
     - [[#data-flow][Data Flow]]
+    - [[#module-connectivity][Module Connectivity]]
     - [[#power-distribution][Power Distribution]]
     - [[#control-and-monitoring][Control and Monitoring]]
   - [[#connectorsinterfaces][Connectors/Interfaces]]
   - [[#mechanical-outline][Mechanical Outline]]
   - [[#jumpers][Jumpers]]
+  - [[#power][Power]]
+    - [[#power-estimates][Power Estimates]]
+    - [[#linpol12s][LINPOL12s]]
+  - [[#lpgbt-configuration][LPGBT Configuration]]
   - [[#pin-assignments][Pin Assignments]]
     - [[#e-link-assignments][E-Link Assignments]]
+      - [[#daq-uplinks][DAQ Uplinks]]
+      - [[#trigger-uplinks][Trigger Uplinks]]
+      - [[#downlink][Downlink]]
+    - [[#clock-assignments][Clock Assignments]]
     - [[#lpgbt-pin-assignments][LPGBT Pin Assignments]]
+      - [[#analog-inputs][Analog Inputs]]
+      - [[#gpio][GPIO]]
     - [[#sca-pin-assignments][SCA Pin Assignments]]
+      - [[#analog-inputs-1][Analog Inputs]]
+      - [[#gpio-1][GPIO]]
 
 ** Useful Links
 - TDR - [[https://cds.cern.ch/record/2667167/files/CMS-TDR-020.pdf][CMS-TDR-020]]
+- LGPBT Manual - [[https://lpgbt.web.cern.ch/lpgbt/manual/][LpGBT Manual]]
+- GBT-SCA Manual - [[https://espace.cern.ch/GBT-Project/GBT-SCA/Manuals/GBT-SCA_Manual_2019.002.pdf][GBT-SCA Manual]]
+- LINPOL12 Datasheet - [[https://project-dcdc.web.cern.ch/public/Documents/linPOL12V%20datasheetV3.3.pdf][LinPOL12V]]
+- ETL RB Schematics PDF: http://ohm.bu.edu/~apeck/ETL_RB_PCBv3.0.PDF
 *** Relevant Presentations
 - 2019/05/13 - [[https://indico.cern.ch/event/820512/contributions/3429658/attachments/1842929/3023621/ETL-Cabling-S_Los-May13-2019.pdf][Update on Power board and Patch Panel-0]] (Sergey V.)
 - 2020/03/09 - [[https://indico.cern.ch/event/902328/contributions/3798257/attachments/2008611/3355343/2020-03-09_LV_scheme.pdf][ETL LV powering scheme]] (Natalia K.)
@@ -33,22 +50,240 @@
 - 2020/XX/YY - Submit files to fab house
 ** Block Diagrams
 *** Data Flow
-#+ATTR_HTML: :width 600px
+#+ATTR_HTML: :width 700px
 [[file:docs/data-flow.png]]
+*** Module Connectivity
+Full size: [[file:docs/module-connectivity.pdf]]
+#+ATTR_HTML: :width 700px
+[[file:docs/module-connectivity.png]]
 *** Power Distribution
-#+ATTR_HTML: :width 600px
-#+ATTR_HTML: :width 600px
+#+ATTR_HTML: :width 700px
 [[file:docs/power-distribution.png]]
 *** Control and Monitoring
-#+ATTR_HTML: :width 600px
+#+ATTR_HTML: :width 700px
 [[file:docs/ctrl-and-mon.png]]
-
 ** Connectors/Interfaces
 ** Mechanical Outline
 #+attr_org: :width 700px
 [[file:docs/mechanical-outline.png]]
 ** Jumpers
+
+|---------+--------------------------------------------------------|
+| Jumpers | Description                                            |
+|---------+--------------------------------------------------------|
+| JMP1    | Install to set LPGBT MODE[2] to 0 (FEC12 → FEC5)       |
+| JMP2    | Install to set LPGBT MODE[3] to 0 (data rate → 5 Gbps) |
+|---------+--------------------------------------------------------|
+
+Locations:
+** Power
+*** Power Estimates
+*** LINPOL12s
+
+Three LINPOL12 chips are used on board to provide 1.5V (GBT-SCA), and 2.5V (1 each for VTRX TX + RX).
+
+For the 2.5V supply a voltage divider is formed by RR0510P-1541-D (1.54k) and RR0510P-4870-D (487R).
+ - V=0.6*(1+1540/487)=2.497V
+
+For the 1.5V supply a voltage divider is formed by RR0510P-6040-D (604R) and RR0510P-4020-D (402R).
+ - V= 0.6*(1+604/402)=1.50V
+
+** LPGBT Configuration
+
+The DAQ and Trigger LPGBTs are arranged in a master-slave configuration, with the master LPGBT providing a clock and an I2C bus to the slave.
+
+Both LPGBTs are configured by default in FEC12 10.24 Gbps mode, with jumpers available to select FEC5 or 5.12 Gbps modes. CHange of the mode affects both LPGBTs together.
+
+A handy copy of the LPGBT mode table:
+|------------+--------------+-------------+-------------|
+| MODE [3:0] | Tx Data Rate | Tx Encoding | lpGBT Mode  |
+|------------+--------------+-------------+-------------|
+| 4’b0000    | 5 Gbps       | FEC5        | Off         |
+| 4’b0001    | 5 Gbps       | FEC5        | Simplex TX  |
+| 4’b0010    | 5 Gbps       | FEC5        | Simplex RX  |
+| 4’b0011    | 5 Gbps       | FEC5        | Transceiver |
+| 4’b0100    | 5 Gbps       | FEC12       | Off         |
+| 4’b0101    | 5 Gbps       | FEC12       | Simplex TX  |
+| 4’b0110    | 5 Gbps       | FEC12       | Simplex RX  |
+| 4’b0111    | 5 Gbps       | FEC12       | Transceiver |
+| 4’b1000    | 10 Gbps      | FEC5        | Off         |
+| 4’b1001    | 10 Gbps      | FEC5        | Simplex TX  |
+| 4’b1010    | 10 Gbps      | FEC5        | Simplex RX  |
+| 4’b1011    | 10 Gbps      | FEC5        | Transceiver |
+| 4’b1100    | 10 Gbps      | FEC12       | Off         |
+| 4’b1101    | 10 Gbps      | FEC12       | Simplex TX  |
+| 4’b1110    | 10 Gbps      | FEC12       | Simplex RX  |
+| 4’b1111    | 10 Gbps      | FEC12       | Transceiver |
+|------------+--------------+-------------+-------------|
 ** Pin Assignments
 *** E-Link Assignments
+**** DAQ Uplinks
+
+All uplinks run at 320 or 640MHz
+
+|------------+------------+-------|
+| Assignment | Group/Link | Elink |
+|------------+------------+-------|
+| ETROC-0    | G5L0       |    20 |
+| ETROC-1    | G5L2       |    22 |
+| ETROC-2    | G0L0       |     0 |
+| ETROC-3    | G0L2       |     2 |
+| ETROC-4    | G4L0       |    16 |
+| ETROC-5    | G4L2       |    18 |
+| ETROC-6    | G1L0       |     4 |
+| ETROC-7    | G1L2       |     6 |
+| ETROC-8    | G3L0       |    12 |
+| ETROC-9    | G3L2       |    14 |
+| ETROC-10   | G2L0       |     8 |
+| ETROC-11   | G2L2       |    10 |
+|------------+------------+-------|
+
+|------------+------------+-------|
+| Assignment | Group/Link | Elink |
+|------------+------------+-------|
+| ETROC-2    | G0L0       |     0 |
+| --         | G0L1       |     1 |
+| ETROC-3    | G0L2       |     2 |
+| --         | G0L3       |     3 |
+| ETROC-6    | G1L0       |     4 |
+| --         | G1L1       |     5 |
+| ETROC-7    | G1L2       |     6 |
+| --         | G1L3       |     7 |
+| ETROC-10   | G2L0       |     8 |
+| --         | G2L1       |     9 |
+| ETROC-11   | G2L2       |    10 |
+| --         | G2L3       |    11 |
+| ETROC-8    | G3L0       |    12 |
+| --         | G3L1       |    13 |
+| ETROC-9    | G3L2       |    14 |
+| --         | G3L3       |    15 |
+| ETROC-4    | G4L0       |    16 |
+| --         | G4L1       |    17 |
+| ETROC-5    | G4L2       |    18 |
+| --         | G4L3       |    19 |
+| ETROC-0    | G5L0       |    20 |
+| --         | G5L1       |    21 |
+| ETROC-1    | G5L2       |    22 |
+| --         | G5L3       |    23 |
+| --         | G6L0       |    24 |
+| --         | G6L1       |    25 |
+| --         | G6L2       |    26 |
+| --         | G6L3       |    27 |
+|------------+------------+-------|
+**** Trigger Uplinks
+
+All uplinks run at 320 or 640MHz
+
+|------------+------------+-------|
+| Assignment | Group/Link | Elink |
+|------------+------------+-------|
+| ETROC-0    | G5L2       |    22 |
+| ETROC-1    | G5L0       |    20 |
+| ETROC-2    | G0L2       |     2 |
+| ETROC-3    | G0L0       |     0 |
+| ETROC-4    | G4L2       |    18 |
+| ETROC-5    | G4L0       |    16 |
+| ETROC-6    | G1L2       |     6 |
+| ETROC-7    | G1L0       |     4 |
+| ETROC-8    | G3L2       |    14 |
+| ETROC-9    | G3L0       |    12 |
+| ETROC-10   | G2L2       |    10 |
+| ETROC-11   | G2L0       |     8 |
+|------------+------------+-------|
+
+|------------+-------+------------|
+| Group/Link | Elink | Assignment |
+|------------+-------+------------|
+| G0L0       |     0 | ETROC-3    |
+| G0L1       |     1 | --         |
+| G0L2       |     2 | ETROC-2    |
+| G0L3       |     3 | --         |
+| G1L0       |     4 | ETROC-7    |
+| G1L1       |     5 | --         |
+| G1L2       |     6 | ETROC-6    |
+| G1L3       |     7 | --         |
+| G2L0       |     8 | ETROC-11   |
+| G2L1       |     9 | --         |
+| G2L2       |    10 | ETROC-10   |
+| G2L3       |    11 | --         |
+| G3L0       |    12 | ETROC-9    |
+| G3L1       |    13 | --         |
+| G3L2       |    14 | ETROC-8    |
+| G3L3       |    15 | --         |
+| G4L0       |    16 | ETROC-5    |
+| G4L1       |    17 | --         |
+| G4L2       |    18 | ETROC-4    |
+| G4L3       |    19 | --         |
+| G5L0       |    20 | ETROC-1    |
+| G5L1       |    21 | --         |
+| G5L2       |    22 | ETROC-0    |
+| G5L3       |    23 | --         |
+| G6L0       |    24 | --         |
+| G6L1       |    25 | --         |
+| G6L2       |    26 | --         |
+| G6L3       |    27 | --         |
+|------------+-------+------------|
+**** Downlink
+
+All downlinks run at 320MHz
+
+|------------+-------+-------------|
+| Group/Link | Elink | Assignment  |
+|------------+-------+-------------|
+| G0L0       |     0 | ETROC-2/3   |
+| G0L1       |     1 | --          |
+| G0L2       |     2 | ETROC-6/7   |
+| G0L3       |     3 | --          |
+| G1L0       |     4 | ETROC-10/11 |
+| G1L1       |     5 | --          |
+| G1L2       |     6 | --          |
+| G1L3       |     7 | --          |
+| G2L0       |     8 | ETROC-8/9   |
+| G2L1       |     9 | --          |
+| G2L2       |    10 | ETROC-4/5   |
+| G2L3       |    11 | --          |
+| G3L0       |    12 | ETROC-0/1   |
+| G3L1       |    13 | --          |
+| G3L2       |    14 | --          |
+| G3L3       |    15 | --          |
+|------------+-------+-------------|
+
+*** Clock Assignments
+|-------+-------------+------|
+| Clock | Assignment  | Freq |
+|-------+-------------+------|
+|     0 | ETROC3      | 40M  |
+|     1 | ETROC2      | 40M  |
+|     2 | ETROC6      | 40M  |
+|     3 | ETROC7      | 40M  |
+|     4 | ETROC10     | 40M  |
+|     5 | ETROC11     | 40M  |
+|     6 | --          | OFF  |
+|     7 | --          | OFF  |
+|     8 | --          | OFF  |
+|     9 | --          | OFF  |
+|    10 | --          | OFF  |
+|    11 | Slave Clock | 40M  |
+|    12 | --          | OFF  |
+|    13 | --          | OFF  |
+|    14 | --          | OFF  |
+|    15 | --          | OFF  |
+|    16 | --          | OFF  |
+|    17 | --          | OFF  |
+|    18 | --          | OFF  |
+|    19 | --          | OFF  |
+|    20 | --          | OFF  |
+|    21 | --          | OFF  |
+|    22 | ETROC9      | 40M  |
+|    23 | ETROC4      | 40M  |
+|    24 | ETROC8      | 40M  |
+|    25 | ETROC5      | 40M  |
+|    26 | ETROC0      | 40M  |
+|    27 | ETROC1      | 40M  |
+|-------+-------------+------|
 *** LPGBT Pin Assignments
+**** Analog Inputs
+**** GPIO
 *** SCA Pin Assignments
+**** Analog Inputs
+**** GPIO
