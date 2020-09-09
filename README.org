@@ -3,10 +3,14 @@
 * CMS ETL Readout Board PCB
 ** Useful Links
 - TDR - [[https://cds.cern.ch/record/2667167/files/CMS-TDR-020.pdf][CMS-TDR-020]]
-- LGPBT Manual - [[https://lpgbt.web.cern.ch/lpgbt/manual/][LpGBT Manual]]
-- GBT-SCA Manual - [[https://espace.cern.ch/GBT-Project/GBT-SCA/Manuals/GBT-SCA_Manual_2019.002.pdf][GBT-SCA Manual]]
-- LINPOL12 Datasheet - [[https://project-dcdc.web.cern.ch/public/Documents/linPOL12V%20datasheetV3.3.pdf][LinPOL12V]]
-- ETL RB Schematics PDF: http://ohm.bu.edu/~apeck/ETL_RB_PCBv3.0.PDF
+- ETL RB Schematics - [[https://gitlab.cern.ch/cms-etl-electronics/readout-board-pcb/uploads/f07f5d8df638028b9eaa6a74b5b843f3/ETL_RB_09092020.PDF][ETL_RB_09092020.pdf]]
+- ETL RB Gerbers - [[https://gitlab.cern.ch/cms-etl-electronics/readout-board-pcb/uploads/48295c81b3c8f89c4e6bba3df2f8b1f1/quote_ETL_RB_09092020.zip][quote_ETL_RB_09092020.zip]]
+- Datasheets:
+  + LGPBT Manual - [[https://lpgbt.web.cern.ch/lpgbt/manual/][LpGBT Manual]]
+  + GBT-SCA Manual - [[https://espace.cern.ch/GBT-Project/GBT-SCA/Manuals/GBT-SCA_Manual_2019.002.pdf][GBT-SCA Manual]]
+  + LINPOL12 Datasheet - [[https://project-dcdc.web.cern.ch/public/Documents/linPOL12V%20datasheetV3.3.pdf][LinPOL12V]]
+  + VTRX+ Application Note: https://edms.cern.ch/ui/file/2149674/1/VTRxPlusApplicationNote.pdf
+  + VTRX+ Specification: https://edms.cern.ch/ui/file/1719329/1/VTRxPlus_spec_v2.4.pdf
 *** Relevant Presentations
 - 2019/05/13 - [[https://indico.cern.ch/event/820512/contributions/3429658/attachments/1842929/3023621/ETL-Cabling-S_Los-May13-2019.pdf][Update on Power board and Patch Panel-0]] (Sergey V.)
 - 2020/03/09 - [[https://indico.cern.ch/event/902328/contributions/3798257/attachments/2008611/3355343/2020-03-09_LV_scheme.pdf][ETL LV powering scheme]] (Natalia K.)
@@ -39,6 +43,73 @@ Full size: [[file:docs/module-connectivity.pdf]]
 [[file:docs/mechanical-outline.png]]
 ** Power
 *** Power Estimates
+
+The readout board is expected to dissipate up to ~1.3W, along with some additional power for LINPOL conversion efficiency. Total power should be around 2W.  Details of the calculation follow.
+
+|-----------------------------+-------------|
+| Note                        | P (mW)      |
+|-----------------------------+-------------|
+| 1.2V LPGBT analog + digital | 1000        |
+| 1.2V VTRX digital           | 30          |
+| 2.5V VTRX analog            | 150 - 175   |
+| 1.5V GBT-SCA                | 65.4 - 108  |
+| LINPOL12 Loss               | 613 - 853   |
+|-----------------------------+-------------|
+|                             | 1858 - 2166 |
+|-----------------------------+-------------|
+
+**** VTRX
+[[https://edms.cern.ch/ui/file/1719329/1/VTRxPlus_spec_v2.4.pdf][VTRX+ Specification]] specifies:
+- A supply current 2V5RX of 40mA
+- A supply current 2V5TX of  15/ch @ End of life (30mA for a 2+1 configuration)
+- A supply current 1V2D of 5+10/ch mA (25mA for a 2+1 configuration)
+
+|---------+--------+--------+----------------------------------------|
+| Voltage | I (mA) | P (mW) | Notes                                  |
+|---------+--------+--------+----------------------------------------|
+| 2V5RX   |     40 |    100 | 40mA total                             |
+| 2V5TX   |     30 |     75 | 15mA/ch at end of life (10mA to start) |
+| 1V2     |     25 |     30 | 5+10mA/ch                              |
+|---------+--------+--------+----------------------------------------|
+| Total   |        |  205mW |                                        |
+|---------+--------+--------+----------------------------------------|
+
+**** GBT-SCA
+The GBT-SCA manual specifies power consumption of:
+
+|--------------------------------+-------------------+-----------------|
+| Supply                         | Typical (Maximum) | Power mW        |
+|--------------------------------+-------------------+-----------------|
+| 1V5 VDD core                   | 36 (63) mA        | 54 (94.5) mW    |
+| 1V5 AVDD analog                | 0.5 (0.8) mA      | 0.75 (1.2) mW   |
+| 1V5 DVDD Static supply current | 7.1 (8.2) mA      | 10.65 (12.3) mW |
+|--------------------------------+-------------------+-----------------|
+| Total                          | 43.6 (72.0) mA    | 65.4 (108.0) mW |
+|--------------------------------+-------------------+-----------------|
+
+**** LPGBT
+LPGBT power measurements can be found at https://espace.cern.ch/GBT-Project/LpGBT/Presentations/lpGBT20190903.pdf
+
+Note that these numbers may change between v0 and v1 of the LPGBT.
+
+Power consumption is dependent on the exact configuration, but we expect it should be <500mW
+
+We expect up to 2 LPGBTs per board, so ~1W maximum.
+
+**** LINPOL
+
+We have some additional power loss in the LINPOL12 chips, which is dependent on the exact input voltage. Assuming 8V nominal, we would expect using the /MAXIMUM/ values:
+
+|--------+-------------------------------------------|
+| Supply | Power mW                                  |
+|--------+-------------------------------------------|
+| 1V5    | (8-1.5)*(43.6 - 72) = (283 typ - 468 max) |
+| 2V5 TX | (8-2.5)*(20 - 30) = (110 start - 165 EOL) |
+| 2V5 RX | (8-2.5)*40 = 220                          |
+|--------+-------------------------------------------|
+| Total  | 613 - 853 mW                              |
+|--------+-------------------------------------------|
+
 *** LINPOL12s
 
 Three LINPOL12 chips are used on board to provide 1.5V (GBT-SCA), and 2.5V (1 each for VTRX TX + RX).
