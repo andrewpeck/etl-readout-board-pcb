@@ -28,7 +28,7 @@ DItemRevisionGUID=
 ReportSuppressedErrorsInMessages=0
 FSMCodingStyle=eFMSDropDownList_OneProcess
 FSMEncodingStyle=eFMSDropDownList_OneHot
-OutputPath=
+OutputPath=Project Outputs for ETL_RB
 LogFolderPath=
 ManagedProjectGUID=
 IncludeDesignInRelease=0
@@ -351,6 +351,306 @@ DocumentPath=Project Outputs for ETL_RB\Design Rule Check - ETL_RB.html
 DItemRevisionGUID=
 
 [GeneratedDocument2]
+DocumentPath=Project Outputs for ETL_RB\quote_NC Drill\ETL_RB_quote.DRR
+DItemRevisionGUID=
+
+[GeneratedDocument3]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote.EXTREP
+DItemRevisionGUID=
+
+[GeneratedDocument4]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote.G1
+DItemRevisionGUID=
+
+[GeneratedDocument5]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote.G2
+DItemRevisionGUID=
+
+[GeneratedDocument6]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote.GBL
+DItemRevisionGUID=
+
+[GeneratedDocument7]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote.GBO
+DItemRevisionGUID=
+
+[GeneratedDocument8]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote.GBP
+DItemRevisionGUID=
+
+[GeneratedDocument9]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote.GBS
+DItemRevisionGUID=
+
+[GeneratedDocument10]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote.GD1
+DItemRevisionGUID=
+
+[GeneratedDocument11]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote.GM14
+DItemRevisionGUID=
+
+[GeneratedDocument12]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote.GP1
+DItemRevisionGUID=
+
+[GeneratedDocument13]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote.GP2
+DItemRevisionGUID=
+
+[GeneratedDocument14]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote.GP3
+DItemRevisionGUID=
+
+[GeneratedDocument15]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote.GP4
+DItemRevisionGUID=
+
+[GeneratedDocument16]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote.GTL
+DItemRevisionGUID=
+
+[GeneratedDocument17]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote.GTO
+DItemRevisionGUID=
+
+[GeneratedDocument18]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote.GTP
+DItemRevisionGUID=
+
+[GeneratedDocument19]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote.GTS
+DItemRevisionGUID=
+
+[GeneratedDocument20]
+DocumentPath=Project Outputs for ETL_RB\quote_NC Drill\ETL_RB_quote.LDP
+DItemRevisionGUID=
+
+[GeneratedDocument21]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote.REP
+DItemRevisionGUID=
+
+[GeneratedDocument22]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote.RUL
+DItemRevisionGUID=
+
+[GeneratedDocument23]
+DocumentPath=Project Outputs for ETL_RB\quote_NC Drill\ETL_RB_quote.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument24]
+DocumentPath=Project Outputs for ETL_RB\quote_Pick Place\ETL_RB_quote.txt
+DItemRevisionGUID=
+
+[GeneratedDocument25]
+DocumentPath=Project Outputs for ETL_RB\quote_Report Board Stack\ETL_RB_quote.xls
+DItemRevisionGUID=
+
+[GeneratedDocument26]
+DocumentPath=Project Outputs for ETL_RB\quote_BOM\ETL_RB_quote.xlsx
+DItemRevisionGUID=
+
+[GeneratedDocument27]
+DocumentPath=Project Outputs for ETL_RB\quote_NC Drill\ETL_RB_quote_0907.DRR
+DItemRevisionGUID=
+
+[GeneratedDocument28]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0907.EXTREP
+DItemRevisionGUID=
+
+[GeneratedDocument29]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0907.G1
+DItemRevisionGUID=
+
+[GeneratedDocument30]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0907.G2
+DItemRevisionGUID=
+
+[GeneratedDocument31]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0907.GBL
+DItemRevisionGUID=
+
+[GeneratedDocument32]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0907.GBO
+DItemRevisionGUID=
+
+[GeneratedDocument33]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0907.GBP
+DItemRevisionGUID=
+
+[GeneratedDocument34]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0907.GBS
+DItemRevisionGUID=
+
+[GeneratedDocument35]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0907.GD1
+DItemRevisionGUID=
+
+[GeneratedDocument36]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0907.GM14
+DItemRevisionGUID=
+
+[GeneratedDocument37]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0907.GP1
+DItemRevisionGUID=
+
+[GeneratedDocument38]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0907.GP2
+DItemRevisionGUID=
+
+[GeneratedDocument39]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0907.GP3
+DItemRevisionGUID=
+
+[GeneratedDocument40]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0907.GP4
+DItemRevisionGUID=
+
+[GeneratedDocument41]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0907.GTL
+DItemRevisionGUID=
+
+[GeneratedDocument42]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0907.GTO
+DItemRevisionGUID=
+
+[GeneratedDocument43]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0907.GTP
+DItemRevisionGUID=
+
+[GeneratedDocument44]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0907.GTS
+DItemRevisionGUID=
+
+[GeneratedDocument45]
+DocumentPath=Project Outputs for ETL_RB\quote_NC Drill\ETL_RB_quote_0907.LDP
+DItemRevisionGUID=
+
+[GeneratedDocument46]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0907.REP
+DItemRevisionGUID=
+
+[GeneratedDocument47]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0907.RUL
+DItemRevisionGUID=
+
+[GeneratedDocument48]
+DocumentPath=Project Outputs for ETL_RB\quote_NC Drill\ETL_RB_quote_0907.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument49]
+DocumentPath=Project Outputs for ETL_RB\quote_Pick Place\ETL_RB_quote_0907.txt
+DItemRevisionGUID=
+
+[GeneratedDocument50]
+DocumentPath=Project Outputs for ETL_RB\quote_Report Board Stack\ETL_RB_quote_0907.xls
+DItemRevisionGUID=
+
+[GeneratedDocument51]
+DocumentPath=Project Outputs for ETL_RB\quote_BOM\ETL_RB_quote_0907.xlsx
+DItemRevisionGUID=
+
+[GeneratedDocument52]
+DocumentPath=Project Outputs for ETL_RB\quote_NC Drill\ETL_RB_quote_0908.DRR
+DItemRevisionGUID=
+
+[GeneratedDocument53]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0908.EXTREP
+DItemRevisionGUID=
+
+[GeneratedDocument54]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0908.G1
+DItemRevisionGUID=
+
+[GeneratedDocument55]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0908.G2
+DItemRevisionGUID=
+
+[GeneratedDocument56]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0908.GBL
+DItemRevisionGUID=
+
+[GeneratedDocument57]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0908.GBO
+DItemRevisionGUID=
+
+[GeneratedDocument58]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0908.GBP
+DItemRevisionGUID=
+
+[GeneratedDocument59]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0908.GBS
+DItemRevisionGUID=
+
+[GeneratedDocument60]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0908.GD1
+DItemRevisionGUID=
+
+[GeneratedDocument61]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0908.GM14
+DItemRevisionGUID=
+
+[GeneratedDocument62]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0908.GP1
+DItemRevisionGUID=
+
+[GeneratedDocument63]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0908.GP2
+DItemRevisionGUID=
+
+[GeneratedDocument64]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0908.GP3
+DItemRevisionGUID=
+
+[GeneratedDocument65]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0908.GP4
+DItemRevisionGUID=
+
+[GeneratedDocument66]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0908.GTL
+DItemRevisionGUID=
+
+[GeneratedDocument67]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0908.GTO
+DItemRevisionGUID=
+
+[GeneratedDocument68]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0908.GTP
+DItemRevisionGUID=
+
+[GeneratedDocument69]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0908.GTS
+DItemRevisionGUID=
+
+[GeneratedDocument70]
+DocumentPath=Project Outputs for ETL_RB\quote_NC Drill\ETL_RB_quote_0908.LDP
+DItemRevisionGUID=
+
+[GeneratedDocument71]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0908.REP
+DItemRevisionGUID=
+
+[GeneratedDocument72]
+DocumentPath=Project Outputs for ETL_RB\quote_Gerber\ETL_RB_quote_0908.RUL
+DItemRevisionGUID=
+
+[GeneratedDocument73]
+DocumentPath=Project Outputs for ETL_RB\quote_NC Drill\ETL_RB_quote_0908.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument74]
+DocumentPath=Project Outputs for ETL_RB\quote_Pick Place\ETL_RB_quote_0908.txt
+DItemRevisionGUID=
+
+[GeneratedDocument75]
+DocumentPath=Project Outputs for ETL_RB\quote_Report Board Stack\ETL_RB_quote_0908.xls
+DItemRevisionGUID=
+
+[GeneratedDocument76]
+DocumentPath=Project Outputs for ETL_RB\quote_BOM\ETL_RB_quote_0908.xlsx
+DItemRevisionGUID=
+
+[GeneratedDocument77]
 DocumentPath=Project Outputs for ETL_RB\Net Status - ETL_RB.html
 DItemRevisionGUID=
 
@@ -365,7 +665,7 @@ ContentTypeGUID=CB6F2064-E317-11DF-B822-12313F0024A2
 ConfigurationType=Source
 
 [Generic_EDE]
-OutputDir=
+OutputDir=Project Outputs for ETL_RB
 
 [OutputGroup1]
 Name=Netlist Outputs
