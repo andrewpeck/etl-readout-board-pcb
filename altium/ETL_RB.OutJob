@@ -15,13 +15,13 @@ LifeCycleDefinitionGUID=
 RevisionNamingSchemeGUID=
 
 [OutputGroup1]
-Name=
+Name=ETL_RB.OutJob
 Description=
-TargetOutputMedium=PDF
+TargetOutputMedium=Folder Structure
 VariantName=[No Variations]
 VariantScope=0
 CurrentConfigurationName=
-TargetPrinter=Virtual Printer
+TargetPrinter=Adobe PDF (redirected 2)
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 OutputMedium1=Print Job
 OutputMedium1_Type=Printer
@@ -38,7 +38,7 @@ OutputName1=Schematic Prints
 OutputCategory1=Documentation
 OutputDocumentPath1=
 OutputVariantName1=
-OutputEnabled1=1
+OutputEnabled1=0
 OutputEnabled1_OutputMedium1=0
 OutputEnabled1_OutputMedium2=1
 OutputEnabled1_OutputMedium3=0
@@ -50,9 +50,9 @@ Configuration1_Item1=Record=SchPrintView|ShowNoERC=True|ShowParamSet=True|ShowPr
 OutputType2=PCB Print
 OutputName2=PCB Prints
 OutputCategory2=Documentation
-OutputDocumentPath2=ETL_RB.PcbDoc
+OutputDocumentPath2=ETL_RB_v1.3.PcbDoc
 OutputVariantName2=
-OutputEnabled2=1
+OutputEnabled2=0
 OutputEnabled2_OutputMedium1=0
 OutputEnabled2_OutputMedium2=2
 OutputEnabled2_OutputMedium3=0
@@ -87,9 +87,9 @@ PcbPrintPreferences2=SubsititueFont_Default=True|SubsititueFont_Serif=True|Subsi
 OutputType3=PCB 3D Print
 OutputName3=PCB 3D Print
 OutputCategory3=Documentation
-OutputDocumentPath3=ETL_RB.PcbDoc
+OutputDocumentPath3=ETL_RB_v1.3.PcbDoc
 OutputVariantName3=
-OutputEnabled3=1
+OutputEnabled3=0
 OutputEnabled3_OutputMedium1=0
 OutputEnabled3_OutputMedium2=3
 OutputEnabled3_OutputMedium3=0
@@ -101,9 +101,9 @@ Configuration3_Item1=Record=Pcb3DPrintView|ResX=150|ResY=150|ViewX=12824806|View
 OutputType4=PCB 3D Print
 OutputName4=Copy of PCB 3D Print
 OutputCategory4=Documentation
-OutputDocumentPath4=ETL_RB.PcbDoc
+OutputDocumentPath4=ETL_RB_v1.3.PcbDoc
 OutputVariantName4=
-OutputEnabled4=1
+OutputEnabled4=0
 OutputEnabled4_OutputMedium1=0
 OutputEnabled4_OutputMedium2=4
 OutputEnabled4_OutputMedium3=0
@@ -115,9 +115,9 @@ Configuration4_Item1=Record=Pcb3DPrintView|ResX=150|ResY=150|ViewX=51299213|View
 OutputType5=Gerber
 OutputName5=Gerber Files
 OutputCategory5=Fabrication
-OutputDocumentPath5=ETL_RB.PcbDoc
+OutputDocumentPath5=ETL_RB_v1.3.PcbDoc
 OutputVariantName5=
-OutputEnabled5=0
+OutputEnabled5=1
 OutputEnabled5_OutputMedium1=0
 OutputEnabled5_OutputMedium2=0
 OutputEnabled5_OutputMedium3=1
@@ -128,9 +128,9 @@ Configuration5_Item1=AddToAllLayerClasses.Set= |AddToAllPlots.Set=SerializeLayer
 OutputType6=PCB 3D Print
 OutputName6=Copy of Copy of PCB 3D Print
 OutputCategory6=Documentation
-OutputDocumentPath6=ETL_RB.PcbDoc
+OutputDocumentPath6=ETL_RB_v1.3.PcbDoc
 OutputVariantName6=
-OutputEnabled6=1
+OutputEnabled6=0
 OutputEnabled6_OutputMedium1=0
 OutputEnabled6_OutputMedium2=5
 OutputEnabled6_OutputMedium3=0
@@ -142,9 +142,9 @@ Configuration6_Item1=Record=Pcb3DPrintView|ResX=150|ResY=150|ViewX=32729732|View
 OutputType7=PCB 3D Print
 OutputName7=Copy of Copy of Copy of PCB 3D Print
 OutputCategory7=Documentation
-OutputDocumentPath7=ETL_RB.PcbDoc
+OutputDocumentPath7=ETL_RB_v1.3.PcbDoc
 OutputVariantName7=
-OutputEnabled7=1
+OutputEnabled7=0
 OutputEnabled7_OutputMedium1=0
 OutputEnabled7_OutputMedium2=6
 OutputEnabled7_OutputMedium3=0
@@ -156,9 +156,9 @@ Configuration7_Item1=Record=Pcb3DPrintView|ResX=150|ResY=150|ViewX=18662432|View
 OutputType8=NC Drill
 OutputName8=NC Drill Files
 OutputCategory8=Fabrication
-OutputDocumentPath8=ETL_RB.PcbDoc
+OutputDocumentPath8=ETL_RB_v1.3.PcbDoc
 OutputVariantName8=
-OutputEnabled8=0
+OutputEnabled8=1
 OutputEnabled8_OutputMedium1=0
 OutputEnabled8_OutputMedium2=0
 OutputEnabled8_OutputMedium3=3
@@ -169,7 +169,7 @@ Configuration8_Item1=BoardEdgeRoutToolDia=2000000|GenerateBoardEdgeRout=False|Ge
 OutputType9=Drill
 OutputName9=Drill Drawing/Guides
 OutputCategory9=Fabrication
-OutputDocumentPath9=ETL_RB.PcbDoc
+OutputDocumentPath9=ETL_RB_v1.3.PcbDoc
 OutputVariantName9=
 OutputEnabled9=0
 OutputEnabled9_OutputMedium1=0
@@ -210,7 +210,7 @@ OutputName10=Bill of Materials
 OutputCategory10=Report
 OutputDocumentPath10=
 OutputVariantName10=
-OutputEnabled10=0
+OutputEnabled10=1
 OutputEnabled10_OutputMedium1=0
 OutputEnabled10_OutputMedium2=0
 OutputEnabled10_OutputMedium3=5
@@ -227,36 +227,36 @@ Configuration10_Name4=SortOrder
 Configuration10_Item4=Designator=Up|Comment=Up|Footprint=Up
 Configuration10_Name5=VisibleOrder
 Configuration10_Item5=Comment=120|Description=120|Designator=120|Footprint=120|LibRef=120|Quantity=120
-OutputType11=Pick Place
-OutputName11=Generates pick and place files
-OutputCategory11=Assembly
-OutputDocumentPath11=ETL_RB.PcbDoc
+OutputType11=Board Stack Report
+OutputName11=Report Board Stack
+OutputCategory11=Fabrication
+OutputDocumentPath11=ETL_RB_v1.3.PcbDoc
 OutputVariantName11=
-OutputEnabled11=0
+OutputEnabled11=1
 OutputEnabled11_OutputMedium1=0
 OutputEnabled11_OutputMedium2=0
-OutputEnabled11_OutputMedium3=2
+OutputEnabled11_OutputMedium3=4
 OutputEnabled11_OutputMedium4=0
 OutputDefault11=0
+PageOptions11=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=0|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
 Configuration11_Name1=OutputConfigurationParameter1
-Configuration11_Item1=Record=PickPlaceView|Units=Imperial|GenerateCSVFormat=False|GenerateTextFormat=True|ShowUnits=False|Separator= |ExcludeFilterParam=False|IncludeVariations=False|Filter= |FilterActive=False|Column#1=Name:Designator,Fixed:True,Metric:False,Visible:True,Sort:None,Position:0|Column#2=Name:Comment,Fixed:True,Metric:False,Visible:True,Sort:None,Position:1|Column#3=Name:Layer,Fixed:True,Metric:False,Visible:True,Sort:None,Position:2|Column#4=Name:Footprint,Fixed:True,Metric:False,Visible:True,Sort:None,Position:3|Column#5=Name:Footprint Description,Fixed:True,Metric:False,Visible:False,Sort:None,Position:4|Column#6=Name:Center-X,Fixed:True,Metric:True,Visible:True,Sort:None,Position:5|Column#7=Name:Center-Y,Fixed:True,Metric:True,Visible:True,Sort:None,Position:6|Column#8=Name:Rotation,Fixed:True,Metric:False,Visible:True,Sort:None,Position:7|Column#9=Name:Description,Fixed:True,Metric:False,Visible:True,Sort:None,Position:8|Column#10=Name:ComponentKind,Fixed:True,Metric:False,Visible:False,Sort:None,Position:9|Column#11=Name:Height,Fixed:True,Metric:True,Visible:False,Sort:None,Position:10|Column#12=Name:Ref-X,Fixed:True,Metric:True,Visible:False,Sort:None,Position:11|Column#13=Name:Ref-Y,Fixed:True,Metric:True,Visible:False,Sort:None,Position:12|Column#14=Name:Pad-X,Fixed:True,Metric:True,Visible:False,Sort:None,Position:13|Column#15=Name:Pad-Y,Fixed:True,Metric:True,Visible:False,Sort:None,Position:14|Column#16=Name:Variation,Fixed:True,Metric:False,Visible:False,Sort:None,Position:15
-OutputType12=Board Stack Report
-OutputName12=Report Board Stack
-OutputCategory12=Fabrication
-OutputDocumentPath12=ETL_RB.PcbDoc
+Configuration11_Item1=Record=LayerStackReportView|Units=Metric
+OutputType12=Pick Place
+OutputName12=Copy of Generates pick and place files
+OutputCategory12=Assembly
+OutputDocumentPath12=ETL_RB_v1.3.PcbDoc
 OutputVariantName12=
-OutputEnabled12=0
+OutputEnabled12=1
 OutputEnabled12_OutputMedium1=0
 OutputEnabled12_OutputMedium2=0
-OutputEnabled12_OutputMedium3=4
+OutputEnabled12_OutputMedium3=2
 OutputEnabled12_OutputMedium4=0
 OutputDefault12=0
-PageOptions12=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=0|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
 Configuration12_Name1=OutputConfigurationParameter1
-Configuration12_Item1=Record=LayerStackReportView|Units=Metric
+Configuration12_Item1=Record=PickPlaceView|Units=Metric|GenerateCSVFormat=False|GenerateTextFormat=True|ShowUnits=False|Separator=.|ExcludeFilterParam=False|IncludeVariations=False|Filter= |FilterActive=False|Column#1=Name:Designator,Fixed:True,Metric:False,Visible:True,Sort:None,Position:0|Column#2=Name:Comment,Fixed:True,Metric:False,Visible:True,Sort:None,Position:1|Column#3=Name:Layer,Fixed:True,Metric:False,Visible:True,Sort:None,Position:2|Column#4=Name:Footprint,Fixed:True,Metric:False,Visible:True,Sort:None,Position:3|Column#5=Name:Footprint Description,Fixed:True,Metric:False,Visible:False,Sort:None,Position:4|Column#6=Name:Center-X,Fixed:True,Metric:True,Visible:True,Sort:None,Position:5|Column#7=Name:Center-Y,Fixed:True,Metric:True,Visible:True,Sort:None,Position:6|Column#8=Name:Rotation,Fixed:True,Metric:False,Visible:True,Sort:None,Position:7|Column#9=Name:Description,Fixed:True,Metric:False,Visible:True,Sort:None,Position:8|Column#10=Name:ComponentKind,Fixed:True,Metric:False,Visible:False,Sort:None,Position:9|Column#11=Name:Height,Fixed:True,Metric:True,Visible:False,Sort:None,Position:10|Column#12=Name:Ref-X,Fixed:True,Metric:True,Visible:False,Sort:None,Position:11|Column#13=Name:Ref-Y,Fixed:True,Metric:True,Visible:False,Sort:None,Position:12|Column#14=Name:Pad-X,Fixed:True,Metric:True,Visible:False,Sort:None,Position:13|Column#15=Name:Pad-Y,Fixed:True,Metric:True,Visible:False,Sort:None,Position:14|Column#16=Name:Variation,Fixed:True,Metric:False,Visible:False,Sort:None,Position:15|Column#17=Name:Published,Fixed:False,Metric:False,Visible:False,Sort:None,Position:35|Column#18=Name:Device,Fixed:False,Metric:False,Visible:False,Sort:None,Position:21|Column#19=Name:Pinout Version,Fixed:False,Metric:False,Visible:False,Sort:None,Position:34|Column#20=Name:SMD,Fixed:False,Metric:False,Visible:False,Sort:None,Position:37|Column#21=Name:Text Field2,Fixed:False,Metric:False,Visible:False,Sort:None,Position:39|Column#22=Name:LatestRevisionNote,Fixed:False,Metric:False,Visible:False,Sort:None,Position:23|Column#23=Name:Manufacturer,Fixed:False,Metric:False,Visible:False,Sort:None,Position:24|Column#24=Name:Bonding,Fixed:False,Metric:False,Visible:False,Sort:None,Position:16|Column#25=Name:Code_JEDEC,Fixed:False,Metric:False,Visible:False,Sort:None,Position:19|Column#26=Name:Case,Fixed:False,Metric:False,Visible:False,Sort:None,Position:17|Column#27=Name:Socket,Fixed:False,Metric:False,Visible:False,Sort:None,Position:38|Column#28=Name:Part Number,Fixed:False,Metric:False,Visible:False,Sort:None,Position:32|Column#29=Name:Component Type,Fixed:False,Metric:False,Visible:False,Sort:None,Position:20|Column#30=Name:Code_IPC,Fixed:False,Metric:False,Visible:False,Sort:None,Position:18|Column#31=Name:Mounted,Fixed:False,Metric:False,Visible:False,Sort:None,Position:26|Column#32=Name:PackageDescription,Fixed:False,Metric:False,Visible:False,Sort:None,Position:27|Column#33=Name:Part Description,Fixed:False,Metric:False,Visible:False,Sort:None,Position:31|Column#34=Name:Value,Fixed:False,Metric:False,Visible:False,Sort:None,Position:40|Column#35=Name:LatestRevisionDate,Fixed:False,Metric:False,Visible:False,Sort:None,Position:22|Column#36=Name:PackageReference,Fixed:False,Metric:False,Visible:False,Sort:None,Position:28|Column#37=Name:Publisher,Fixed:False,Metric:False,Visible:False,Sort:None,Position:36|Column#38=Name:Pin Count,Fixed:False,Metric:False,Visible:False,Sort:None,Position:33|Column#39=Name:Parameter 1,Fixed:False,Metric:False,Visible:False,Sort:None,Position:30|Column#40=Name:PackageVersion,Fixed:False,Metric:False,Visible:False,Sort:None,Position:29|Column#41=Name:Manufacturer Part Number,Fixed:False,Metric:False,Visible:False,Sort:None,Position:25
 
 [PublishSettings]
-OutputFilePath2=D:\projects\ETL_RB\ETL_RB_09092020.PDF
+OutputFilePath2=D:\projects\ETL_RB\ETL_RB_09102020.PDF
 ReleaseManaged2=0
 OutputBasePath2=D:\projects\ETL_RB\
 OutputPathMedia2=
@@ -264,7 +264,7 @@ OutputPathMediaValue2=
 OutputPathOutputer2=[Output Type]
 OutputPathOutputerPrefix2=
 OutputPathOutputerValue2=
-OutputFileName2=ETL_RB_09102020
+OutputFileName2=ETL_RB_09112020
 OutputFileNameMulti2=
 UseOutputNameForMulti2=0
 OutputFileNameSpecial2=
@@ -292,7 +292,7 @@ OutputPathOutputer3=quote
 OutputPathOutputerPrefix3=quote
 OutputPathOutputerValue3=
 OutputFileName3=
-OutputFileNameMulti3=ETL_RB_quote_0910
+OutputFileNameMulti3=ETL_RB_quote_0911
 UseOutputNameForMulti3=0
 OutputFileNameSpecial3=
 OpenOutput3=1
@@ -335,7 +335,7 @@ WmvVideoCodecName4=Windows Media Video V7
 WmvQuality4=80
 
 [GeneratedFilesSettings]
-RelativeOutputPath2=D:\projects\ETL_RB\ETL_RB_09092020.PDF
+RelativeOutputPath2=D:\projects\ETL_RB\ETL_RB_09102020.PDF
 OpenOutputs2=1
 RelativeOutputPath3=D:\projects\ETL_RB\Project Outputs for ETL_RB\
 OpenOutputs3=1
