@@ -48,17 +48,17 @@ Full size: [[file:docs/module-connectivity.pdf]]
 
 The readout board is expected to dissipate up to ~1.3W, along with some additional power for LINPOL conversion efficiency. Total power should be around 2W.  Details of the calculation follow.
 
-|-----------------------------+-------------|
-| Note                        | P (mW)      |
-|-----------------------------+-------------|
-| 1.2V LPGBT analog + digital | 1000        |
-| 1.2V VTRX digital           | 30          |
-| 2.5V VTRX analog            | 150 - 175   |
-| 1.5V GBT-SCA                | 65.4 - 108  |
-| LINPOL12 Loss               | 613 - 853   |
-|-----------------------------+-------------|
-|                             | 1858 - 2166 |
-|-----------------------------+-------------|
+|-----------------------------+---------------|
+| Note                        | P (mW)        |
+|-----------------------------+---------------|
+| 1.2V LPGBT analog + digital | 1000          |
+| 1.2V VTRX digital           | 30            |
+| 2.5V VTRX analog            | 150 - 175     |
+| 1.5V GBT-SCA                | 65.4 - 108    |
+| LINPOL12 Loss               | 613 - 853     |
+|-----------------------------+---------------|
+| *Total*                     | *1858 - 2166* |
+|-----------------------------+---------------|
 
 **** VTRX
 [[https://edms.cern.ch/ui/file/1719329/1/VTRxPlus_spec_v2.4.pdf][VTRX+ Specification]] specifies:
@@ -66,28 +66,28 @@ The readout board is expected to dissipate up to ~1.3W, along with some addition
 - A supply current 2V5TX of  15/ch @ End of life (30mA for a 2+1 configuration)
 - A supply current 1V2D of 5+10/ch mA (25mA for a 2+1 configuration)
 
-|---------+--------+--------+----------------------------------------|
-| Voltage | I (mA) | P (mW) | Notes                                  |
-|---------+--------+--------+----------------------------------------|
-| 2V5RX   |     40 |    100 | 40mA total                             |
-| 2V5TX   |     30 |     75 | 15mA/ch at end of life (10mA to start) |
-| 1V2     |     25 |     30 | 5+10mA/ch                              |
-|---------+--------+--------+----------------------------------------|
-| Total   |        |  205mW |                                        |
-|---------+--------+--------+----------------------------------------|
+|---------+--------+---------+----------------------------------------|
+| Voltage | I (mA) |  P (mW) | Notes                                  |
+|---------+--------+---------+----------------------------------------|
+| 2V5RX   |     40 |     100 | 40mA total                             |
+| 2V5TX   |     30 |      75 | 15mA/ch at end of life (10mA to start) |
+| 1V2     |     25 |      30 | 5+10mA/ch                              |
+|---------+--------+---------+----------------------------------------|
+| *Total* |        | *205mW* |                                        |
+|---------+--------+---------+----------------------------------------|
 
 **** GBT-SCA
 The GBT-SCA manual specifies power consumption of:
 
-|--------------------------------+-------------------+-----------------|
-| Supply                         | Typical (Maximum) | Power mW        |
-|--------------------------------+-------------------+-----------------|
-| 1V5 VDD core                   | 36 (63) mA        | 54 (94.5) mW    |
-| 1V5 AVDD analog                | 0.5 (0.8) mA      | 0.75 (1.2) mW   |
-| 1V5 DVDD Static supply current | 7.1 (8.2) mA      | 10.65 (12.3) mW |
-|--------------------------------+-------------------+-----------------|
-| Total                          | 43.6 (72.0) mA    | 65.4 (108.0) mW |
-|--------------------------------+-------------------+-----------------|
+|--------------------------------+-------------------+-------------------|
+| Supply                         | Typical (Maximum) | Power mW          |
+|--------------------------------+-------------------+-------------------|
+| 1V5 VDD core                   | 36 (63) mA        | 54 (94.5) mW      |
+| 1V5 AVDD analog                | 0.5 (0.8) mA      | 0.75 (1.2) mW     |
+| 1V5 DVDD Static supply current | 7.1 (8.2) mA      | 10.65 (12.3) mW   |
+|--------------------------------+-------------------+-------------------|
+| *Total*                        | *43.6 (72.0) mA*  | *65.4 (108.0) mW* |
+|--------------------------------+-------------------+-------------------|
 
 **** LPGBT
 LPGBT power measurements can be found at https://espace.cern.ch/GBT-Project/LpGBT/Presentations/lpGBT20190903.pdf
@@ -110,15 +110,15 @@ For the 1.5V supply a voltage divider is formed by RR0510P-6040-D (604R) and RR0
 
 We have some additional power loss in the LINPOL12 chips, which is dependent on the exact input voltage. Assuming 8V nominal, we would expect using the /MAXIMUM/ values:
 
-|--------+-------------------------------------------|
-| Supply | Power mW                                  |
-|--------+-------------------------------------------|
-| 1V5    | (8-1.5)*(43.6 - 72) = (283 typ - 468 max) |
-| 2V5 TX | (8-2.5)*(20 - 30) = (110 start - 165 EOL) |
-| 2V5 RX | (8-2.5)*40 = 220                          |
-|--------+-------------------------------------------|
-| Total  | 613 - 853 mW                              |
-|--------+-------------------------------------------|
+|---------+-------------------------------------------|
+| Supply  | Power mW                                  |
+|---------+-------------------------------------------|
+| 1V5     | (8-1.5)*(43.6 - 72) = (283 typ - 468 max) |
+| 2V5 TX  | (8-2.5)*(20 - 30) = (110 start - 165 EOL) |
+| 2V5 RX  | (8-2.5)*40 = 220                          |
+|---------+-------------------------------------------|
+| *Total* | *613 - 853 mW*                            |
+|---------+-------------------------------------------|
 
 ** LPGBT Configuration
 
