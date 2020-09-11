@@ -335,9 +335,9 @@ All downlinks run at 320MHz
 ** Test points
 
 ** VTRX+ I2C
-VTRX+ documentation does not specify the I2C address of the device, but the laser driver spec has some details: https://edms.cern.ch/ui/file/1719330/1/VLplus_quadLDD_spec_v1.2_prototypes.pdf
+VTRX+ documentation does not specify the I2C address of the device, but the laser driver spec has some details: [[https://edms.cern.ch/ui/file/1719330/1/VLplus_quadLDD_spec_v1.2_prototypes.pdf]]
 
-I checked the bonding diagram (https://edms.cern.ch/ui/file/2146792/1/CERN_VTRxPlus_V10_bonding.pdf) and the address pins are not connected, so they use internal pull down.
+I checked the bonding diagram ([[https://edms.cern.ch/ui/file/2146792/1/CERN_VTRxPlus_V10_bonding.pdf]]) and the address pins are not connected, so they use internal pull down.
 
 The address then is 1010000 = 0x50
 
