@@ -48,17 +48,17 @@ Full size: [[file:docs/module-connectivity.pdf]]
 
 The readout board is expected to dissipate up to ~1.3W, along with some additional power for LINPOL conversion efficiency. Total power should be around 2W.  Details of the calculation follow.
 
-|-----------------------------+---------------|
-| Note                        | P (mW)        |
-|-----------------------------+---------------|
-| 1.2V LPGBT analog + digital | 1000          |
-| 1.2V VTRX digital           | 30            |
-| 2.5V VTRX analog            | 150 - 175     |
-| 1.5V GBT-SCA                | 65.4 - 108    |
-| LINPOL12 Loss               | 613 - 853     |
-|-----------------------------+---------------|
-| *Total*                     | *1858 - 2166* |
-|-----------------------------+---------------|
+|-----------------------------+------------------|
+| Note                        | P (mW)           |
+|-----------------------------+------------------|
+| 1.2V LPGBT analog + digital | 1000             |
+| 1.2V VTRX digital           | 30               |
+| 2.5V VTRX analog            | 150 - 175        |
+| 1.5V GBT-SCA                | 65.4 - 108       |
+| LINPOL12 Loss               | 613 - 853        |
+|-----------------------------+------------------|
+| *Total*                     | *1858 - 2166 mW* |
+|-----------------------------+------------------|
 
 **** VTRX
 [[https://edms.cern.ch/ui/file/1719329/1/VTRxPlus_spec_v2.4.pdf][VTRX+ Specification]] specifies:
@@ -66,15 +66,15 @@ The readout board is expected to dissipate up to ~1.3W, along with some addition
 - A supply current 2V5TX of  15/ch @ End of life (30mA for a 2+1 configuration)
 - A supply current 1V2D of 5+10/ch mA (25mA for a 2+1 configuration)
 
-|---------+--------+---------+----------------------------------------|
-| Voltage | I (mA) |  P (mW) | Notes                                  |
-|---------+--------+---------+----------------------------------------|
-| 2V5RX   |     40 |     100 | 40mA total                             |
-| 2V5TX   |     30 |      75 | 15mA/ch at end of life (10mA to start) |
-| 1V2     |     25 |      30 | 5+10mA/ch                              |
-|---------+--------+---------+----------------------------------------|
-| *Total* |        | *205mW* |                                        |
-|---------+--------+---------+----------------------------------------|
+|---------+--------+----------+----------------------------------------|
+| Voltage | I (mA) |   P (mW) | Notes                                  |
+|---------+--------+----------+----------------------------------------|
+| 2V5RX   |     40 |      100 | 40mA total                             |
+| 2V5TX   |     30 |       75 | 15mA/ch at end of life (10mA to start) |
+| 1V2     |     25 |       30 | 5+10mA/ch                              |
+|---------+--------+----------+----------------------------------------|
+| *Total* |        | *205 mW* |                                        |
+|---------+--------+----------+----------------------------------------|
 
 **** GBT-SCA
 The GBT-SCA manual specifies power consumption of:
@@ -126,7 +126,15 @@ The DAQ and Trigger LPGBTs are arranged in a master-slave configuration, with th
 
 Both LPGBTs are configured by default in FEC12 10.24 Gbps mode, with jumpers available to select FEC5 or 5.12 Gbps modes. CHange of the mode affects both LPGBTs together.
 
+|---------+--------------------------------------------------------|
+| Jumpers | Description                                            |
+|---------+--------------------------------------------------------|
+| JMP1    | Install to set LPGBT MODE[2] to 0 (FEC12 → FEC5)       |
+| JMP2    | Install to set LPGBT MODE[3] to 0 (data rate → 5 Gbps) |
+|---------+--------------------------------------------------------|
+
 A handy copy of the LPGBT mode table:
+
 |------------+--------------+-------------+-------------|
 | MODE [3:0] | Tx Data Rate | Tx Encoding | lpGBT Mode  |
 |------------+--------------+-------------+-------------|
@@ -147,6 +155,7 @@ A handy copy of the LPGBT mode table:
 | 4’b1110    | 10 Gbps      | FEC12       | Simplex RX  |
 | 4’b1111    | 10 Gbps      | FEC12       | Transceiver |
 |------------+--------------+-------------+-------------|
+
 ** Pin Assignments
 *** E-Link Assignments
 **** DAQ Uplinks
@@ -323,16 +332,6 @@ All downlinks run at 320MHz
 *** SCA Pin Assignments
 **** Analog Inputs
 **** GPIO
-** Jumpers
-|---------+--------------------------------------------------------|
-| Jumpers | Description                                            |
-|---------+--------------------------------------------------------|
-| JMP1    | Install to set LPGBT MODE[2] to 0 (FEC12 → FEC5)       |
-| JMP2    | Install to set LPGBT MODE[3] to 0 (data rate → 5 Gbps) |
-|---------+--------------------------------------------------------|
-
-Locations:
-
 ** Test points
 
 ** VTRX+ I2C
