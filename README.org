@@ -2,14 +2,15 @@
 #+EXPORT_EXCLUDE_TAGS: noexport
 * CMS ETL Readout Board PCB
 ** Useful Links
-- Latest ETL RB Schematics - [[https://gitlab.cern.ch/cms-etl-electronics/readout-board-pcb/uploads/f07f5d8df638028b9eaa6a74b5b843f3/ETL_RB_09092020.PDF][ETL_RB_09092020.pdf]]
-- Latest ETL RB Gerbers - [[https://gitlab.cern.ch/cms-etl-electronics/readout-board-pcb/uploads/48295c81b3c8f89c4e6bba3df2f8b1f1/quote_ETL_RB_09092020.zip][quote_ETL_RB_09092020.zip]]
+- Latest ETL RB Schematics - [[https://gitlab.cern.ch/cms-etl-electronics/readout-board-pcb/uploads/e284fd28c05b4f59ce5d38f59de77440/ETL_RB_09102020.PDF][ETL_RB_09102020.PDF]]
+- Latest ETL RB Gerbers - [[https://gitlab.cern.ch/cms-etl-electronics/readout-board-pcb/uploads/cef4670773e288b4b66043db7ff21360/quote_ETL_RB_09102020.zip][quote_ETL_RB_09102020.zip]]
 - Datasheets:
   + LGPBT Manual - [[https://lpgbt.web.cern.ch/lpgbt/manual/][LpGBT Manual]]
   + GBT-SCA Manual - [[https://espace.cern.ch/GBT-Project/GBT-SCA/Manuals/GBT-SCA_Manual_2019.002.pdf][GBT-SCA Manual]]
   + LINPOL12 Datasheet - [[https://project-dcdc.web.cern.ch/public/Documents/linPOL12V%20datasheetV3.3.pdf][LinPOL12V]]
   + VTRX+ Application Note: [[https://edms.cern.ch/ui/file/2149674/1/VTRxPlusApplicationNote.pdf][VTRxPlusApplicationNote.pdf]]
   + VTRX+ Specification: [[https://edms.cern.ch/ui/file/1719329/1/VTRxPlus_spec_v2.4.pdf][VTRxPlus_spec_v2.4.pdf]]
+  + VTRX+ LDD Specs: [[https://edms.cern.ch/ui/file/1719330/1/VLplus_quadLDD_spec_v1.2_prototypes.pdf][VLplus_quadLDD_spec_v1.2_prototypes.pdf]]
 - TDR - [[https://cds.cern.ch/record/2667167/files/CMS-TDR-020.pdf][CMS-TDR-020]]
 *** Relevant Presentations
 - 2019/05/13 - [[https://indico.cern.ch/event/820512/contributions/3429658/attachments/1842929/3023621/ETL-Cabling-S_Los-May13-2019.pdf][Update on Power board and Patch Panel-0]] (Sergey V.)
@@ -332,4 +333,12 @@ All downlinks run at 320MHz
 Locations:
 
 ** Test points
+
+** VTRX+ I2C
+VTRX+ documentation does not specify the I2C address of the device, but the laser driver spec has some details: https://edms.cern.ch/ui/file/1719330/1/VLplus_quadLDD_spec_v1.2_prototypes.pdf
+
+I checked the bonding diagram (https://edms.cern.ch/ui/file/2146792/1/CERN_VTRxPlus_V10_bonding.pdf) and the address pins are not connected, so they use internal pull down.
+
+The address then is 1010000 = 0x50
+
 ** Errata
