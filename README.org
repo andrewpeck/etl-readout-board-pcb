@@ -2,8 +2,9 @@
 #+EXPORT_EXCLUDE_TAGS: noexport
 * CMS ETL Readout Board PCB
 ** Useful Links
-- Latest ETL RB Schematics - [[https://gitlab.cern.ch/cms-etl-electronics/readout-board-pcb/uploads/e284fd28c05b4f59ce5d38f59de77440/ETL_RB_09102020.PDF][ETL_RB_09102020.PDF]]
-- Latest ETL RB Gerbers - [[https://gitlab.cern.ch/cms-etl-electronics/readout-board-pcb/uploads/cef4670773e288b4b66043db7ff21360/quote_ETL_RB_09102020.zip][quote_ETL_RB_09102020.zip]]
+- Latest ETL RB Schematics - [[https://gitlab.cern.ch/cms-etl-electronics/readout-board-pcb/uploads/5f85625e9218029a71266ea812cdf662/ETL_RB_09112020.PDF][ETL_RB_09112020.PDF]]
+- Latest ETL RB Gerbers - [[https://gitlab.cern.ch/cms-etl-electronics/readout-board-pcb/uploads/cb704b1a3da9cfcdb0abcc41a2b6aaa6/quote_ETL_RB_09112020.zip][quote_ETL_RB_09112020.zip]]
+- Mr. Wu's File Stash - [[http://physics.bu.edu/~wusx/download/ETL_RB/]]
 - Datasheets:
   + LGPBT Manual - [[https://lpgbt.web.cern.ch/lpgbt/manual/][LpGBT Manual]]
   + GBT-SCA Manual - [[https://espace.cern.ch/GBT-Project/GBT-SCA/Manuals/GBT-SCA_Manual_2019.002.pdf][GBT-SCA Manual]]
