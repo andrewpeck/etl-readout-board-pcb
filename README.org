@@ -2,8 +2,8 @@
 #+EXPORT_EXCLUDE_TAGS: noexport
 * CMS ETL Readout Board PCB
 ** Useful Links
-- Latest ETL RB Schematics - [[https://gitlab.cern.ch/cms-etl-electronics/readout-board-pcb/uploads/5f85625e9218029a71266ea812cdf662/ETL_RB_09112020.PDF][ETL_RB_09112020.PDF]]
-- Latest ETL RB Gerbers - [[https://gitlab.cern.ch/cms-etl-electronics/readout-board-pcb/uploads/cb704b1a3da9cfcdb0abcc41a2b6aaa6/quote_ETL_RB_09112020.zip][quote_ETL_RB_09112020.zip]]
+- Latest ETL RB Schematics - [[https://gitlab.cern.ch/cms-etl-electronics/readout-board-pcb/uploads/c0e717ad504096f02104e44917d3d398/ETL_RB_09162020.PDF][ETL_RB_09162020.PDF]]
+- Latest ETL RB Gerbers - [[https://gitlab.cern.ch/cms-etl-electronics/readout-board-pcb/uploads/32cd8508e596d574101c55915680f5d7/quote_v1.4.zip][quote_v1.4.zip]]
 - Mr. Wu's File Stash - [[http://physics.bu.edu/~wusx/download/ETL_RB/]]
 - Datasheets:
   + LGPBT Manual - [[https://lpgbt.web.cern.ch/lpgbt/manual/][LpGBT Manual]]
@@ -48,6 +48,8 @@ Full size: [[file:docs/module-connectivity.pdf]]
 
 The readout board is expected to dissipate up to ~1.3W, along with some additional power for LINPOL conversion efficiency. Total power should be around 2W.  Details of the calculation follow.
 
+*NOTE:* This calculation is for a configuration of *2tx + 1rx* (i.e. with a trigger path). The numbers are different if this is not the case (subtract roughly 0.6W for the LPGBT/VTRX).
+
 |-----------------------------+------------------|
 | Note                        | P (mW)           |
 |-----------------------------+------------------|
@@ -66,15 +68,15 @@ The readout board is expected to dissipate up to ~1.3W, along with some addition
 - A supply current 2V5TX of  15/ch @ End of life (30mA for a 2+1 configuration)
 - A supply current 1V2D of 5+10/ch mA (25mA for a 2+1 configuration)
 
-|---------+--------+----------+----------------------------------------|
-| Voltage | I (mA) |   P (mW) | Notes                                  |
-|---------+--------+----------+----------------------------------------|
-| 2V5RX   |     40 |      100 | 40mA total                             |
-| 2V5TX   |     30 |       75 | 15mA/ch at end of life (10mA to start) |
-| 1V2     |     25 |       30 | 5+10mA/ch                              |
-|---------+--------+----------+----------------------------------------|
-| *Total* |        | *205 mW* |                                        |
-|---------+--------+----------+----------------------------------------|
+|---------+--------+----------------+----------------------------------------|
+| Voltage | I (mA) |         P (mW) | Notes                                  |
+|---------+--------+----------------+----------------------------------------|
+| 2V5RX   |     40 |            100 | 40mA total                             |
+| 2V5TX   |  20-30 |          50-75 | 15mA/ch at end of life (10mA to start) |
+| 1V2     |     25 |             30 | 5+10mA/ch                              |
+|---------+--------+----------------+----------------------------------------|
+| *Total* |        | *180 - 205 mW* |                                        |
+|---------+--------+----------------+----------------------------------------|
 
 **** GBT-SCA
 The GBT-SCA manual specifies power consumption of:
