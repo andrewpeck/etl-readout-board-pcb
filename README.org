@@ -2,8 +2,8 @@
 #+EXPORT_EXCLUDE_TAGS: noexport
 * CMS ETL Readout Board PCB
 ** Useful Links
-- Latest ETL RB Schematics - [[https://gitlab.cern.ch/cms-etl-electronics/readout-board-pcb/uploads/c0e717ad504096f02104e44917d3d398/ETL_RB_09162020.PDF][ETL_RB_09162020.PDF]]
-- Latest ETL RB Gerbers - [[https://gitlab.cern.ch/cms-etl-electronics/readout-board-pcb/uploads/32cd8508e596d574101c55915680f5d7/quote_v1.4.zip][quote_v1.4.zip]]
+- Latest ETL RB Schematics - [[https://gitlab.cern.ch/cms-etl-electronics/readout-board-pcb/uploads/b18f9fa940ed078829a10548da5140d5/ETL_RB_V1.5.PDF][ETL_RB_V1.5.PDF]]
+- Latest ETL RB Gerbers - [[https://gitlab.cern.ch/cms-etl-electronics/readout-board-pcb/uploads/b61b3b54d8b62445bbeacfe02d91890f/ETL_RB_v1.5.zip][ETL_RB_v1.5.zip]]
 - Mr. Wu's File Stash - [[http://physics.bu.edu/~wusx/download/ETL_RB/]]
 - Datasheets:
   + LGPBT Manual - [[https://lpgbt.web.cern.ch/lpgbt/manual/][LpGBT Manual]]
