@@ -50,7 +50,7 @@ Configuration1_Item1=Record=SchPrintView|ShowNoERC=True|ShowParamSet=True|ShowPr
 OutputType2=PCB Print
 OutputName2=PCB Prints
 OutputCategory2=Documentation
-OutputDocumentPath2=ETL_RB_v1.6.PcbDoc
+OutputDocumentPath2=ETL_RB_v1.7.PcbDoc
 OutputVariantName2=
 OutputEnabled2=0
 OutputEnabled2_OutputMedium1=0
@@ -87,7 +87,7 @@ PcbPrintPreferences2=SubsititueFont_Default=True|SubsititueFont_Serif=True|Subsi
 OutputType3=PCB 3D Print
 OutputName3=PCB 3D Print
 OutputCategory3=Documentation
-OutputDocumentPath3=ETL_RB_v1.6.PcbDoc
+OutputDocumentPath3=ETL_RB_v1.7.PcbDoc
 OutputVariantName3=
 OutputEnabled3=0
 OutputEnabled3_OutputMedium1=0
@@ -101,7 +101,7 @@ Configuration3_Item1=Record=Pcb3DPrintView|ResX=150|ResY=150|ViewX=12824806|View
 OutputType4=PCB 3D Print
 OutputName4=Copy of PCB 3D Print
 OutputCategory4=Documentation
-OutputDocumentPath4=ETL_RB_v1.6.PcbDoc
+OutputDocumentPath4=ETL_RB_v1.7.PcbDoc
 OutputVariantName4=
 OutputEnabled4=0
 OutputEnabled4_OutputMedium1=0
@@ -115,7 +115,7 @@ Configuration4_Item1=Record=Pcb3DPrintView|ResX=150|ResY=150|ViewX=51299213|View
 OutputType5=Gerber
 OutputName5=Gerber Files
 OutputCategory5=Fabrication
-OutputDocumentPath5=ETL_RB_v1.6.PcbDoc
+OutputDocumentPath5=ETL_RB_v1.7.PcbDoc
 OutputVariantName5=
 OutputEnabled5=1
 OutputEnabled5_OutputMedium1=0
@@ -128,7 +128,7 @@ Configuration5_Item1=AddToAllLayerClasses.Set= |AddToAllPlots.Set=SerializeLayer
 OutputType6=PCB 3D Print
 OutputName6=Copy of Copy of PCB 3D Print
 OutputCategory6=Documentation
-OutputDocumentPath6=ETL_RB_v1.6.PcbDoc
+OutputDocumentPath6=ETL_RB_v1.7.PcbDoc
 OutputVariantName6=
 OutputEnabled6=0
 OutputEnabled6_OutputMedium1=0
@@ -142,7 +142,7 @@ Configuration6_Item1=Record=Pcb3DPrintView|ResX=150|ResY=150|ViewX=32729732|View
 OutputType7=PCB 3D Print
 OutputName7=Copy of Copy of Copy of PCB 3D Print
 OutputCategory7=Documentation
-OutputDocumentPath7=ETL_RB_v1.6.PcbDoc
+OutputDocumentPath7=ETL_RB_v1.7.PcbDoc
 OutputVariantName7=
 OutputEnabled7=0
 OutputEnabled7_OutputMedium1=0
@@ -156,7 +156,7 @@ Configuration7_Item1=Record=Pcb3DPrintView|ResX=150|ResY=150|ViewX=18662432|View
 OutputType8=NC Drill
 OutputName8=NC Drill Files
 OutputCategory8=Fabrication
-OutputDocumentPath8=ETL_RB_v1.6.PcbDoc
+OutputDocumentPath8=ETL_RB_v1.7.PcbDoc
 OutputVariantName8=
 OutputEnabled8=1
 OutputEnabled8_OutputMedium1=0
@@ -169,7 +169,7 @@ Configuration8_Item1=BoardEdgeRoutToolDia=2000000|GenerateBoardEdgeRout=False|Ge
 OutputType9=Drill
 OutputName9=Drill Drawing/Guides
 OutputCategory9=Fabrication
-OutputDocumentPath9=ETL_RB_v1.6.PcbDoc
+OutputDocumentPath9=ETL_RB_v1.7.PcbDoc
 OutputVariantName9=
 OutputEnabled9=0
 OutputEnabled9_OutputMedium1=0
@@ -230,7 +230,7 @@ Configuration10_Item5=Comment=120|Description=120|Designator=120|Footprint=120|L
 OutputType11=Board Stack Report
 OutputName11=Report Board Stack
 OutputCategory11=Fabrication
-OutputDocumentPath11=ETL_RB_v1.6.PcbDoc
+OutputDocumentPath11=ETL_RB_v1.7.PcbDoc
 OutputVariantName11=
 OutputEnabled11=1
 OutputEnabled11_OutputMedium1=0
@@ -244,7 +244,7 @@ Configuration11_Item1=Record=LayerStackReportView|Units=Metric
 OutputType12=Pick Place
 OutputName12=Copy of Generates pick and place files
 OutputCategory12=Assembly
-OutputDocumentPath12=ETL_RB_v1.6.PcbDoc
+OutputDocumentPath12=ETL_RB_v1.7.PcbDoc
 OutputVariantName12=
 OutputEnabled12=1
 OutputEnabled12_OutputMedium1=0
@@ -257,7 +257,7 @@ Configuration12_Item1=Record=PickPlaceView|Units=Metric|GenerateCSVFormat=False|
 OutputType13=IPC2581
 OutputName13=IPC-2581 Files
 OutputCategory13=Fabrication
-OutputDocumentPath13=ETL_RB_v1.6.PcbDoc
+OutputDocumentPath13=ETL_RB_v1.7.PcbDoc
 OutputVariantName13=
 OutputEnabled13=1
 OutputEnabled13_OutputMedium1=0
@@ -269,15 +269,15 @@ Configuration13_Name1=OutputConfigurationParameter1
 Configuration13_Item1=Record=IPC2581View|IPC2581Version=B|MeasurementSystem=Metric|FloatingPointPrecision=6|IsWiseSupport=False|MergeNetTieNets=False
 
 [PublishSettings]
-OutputFilePath2=D:\projects\ETL_RB\ETL_RB_V1.6.PDF
-ReleaseManaged2=0
-OutputBasePath2=D:\projects\ETL_RB\
-OutputPathMedia2=ETL_RB_V1.6
-OutputPathMediaValue2=ETL_RB_V1.6
+OutputFilePath2=D:\projects\ETL_RB\Project Outputs for ETL_RB\ETL_RB_V1.6\ETL_RB_V1.6.PDF
+ReleaseManaged2=1
+OutputBasePath2=Project Outputs for ETL_RB
+OutputPathMedia2=ETL_RB_V1.7
+OutputPathMediaValue2=ETL_RB_V1.7
 OutputPathOutputer2=[Output Type]
 OutputPathOutputerPrefix2=
 OutputPathOutputerValue2=
-OutputFileName2=ETL_RB_V1.6
+OutputFileName2=ETL_RB_V1.7
 OutputFileNameMulti2=
 UseOutputNameForMulti2=0
 OutputFileNameSpecial2=
@@ -296,16 +296,16 @@ ShowComponentParameters2=1
 GlobalBookmarks2=0
 PDFACompliance2=Disabled
 PDFVersion2=Default
-OutputFilePath3=D:\projects\ETL_RB\Project Outputs for ETL_RB\
+OutputFilePath3=D:\projects\ETL_RB\Project Outputs for ETL_RB\ETL_RB_v1.6\
 ReleaseManaged3=1
 OutputBasePath3=Project Outputs for ETL_RB
-OutputPathMedia3=ETL_RB_v1.6
-OutputPathMediaValue3=ETL_RB_v1.6
+OutputPathMedia3=ETL_RB_v1.7
+OutputPathMediaValue3=ETL_RB_v1.7
 OutputPathOutputer3=[Output Type]
 OutputPathOutputerPrefix3=quote
 OutputPathOutputerValue3=
 OutputFileName3=
-OutputFileNameMulti3=ETL_RB_V1.6
+OutputFileNameMulti3=ETL_RB_V1.7
 UseOutputNameForMulti3=0
 OutputFileNameSpecial3=
 OpenOutput3=1
@@ -348,9 +348,9 @@ WmvVideoCodecName4=Windows Media Video V7
 WmvQuality4=80
 
 [GeneratedFilesSettings]
-RelativeOutputPath2=D:\projects\ETL_RB\ETL_RB_V1.6.PDF
+RelativeOutputPath2=D:\projects\ETL_RB\Project Outputs for ETL_RB\ETL_RB_V1.6\ETL_RB_V1.6.PDF
 OpenOutputs2=1
-RelativeOutputPath3=D:\projects\ETL_RB\Project Outputs for ETL_RB\
+RelativeOutputPath3=D:\projects\ETL_RB\Project Outputs for ETL_RB\ETL_RB_v1.6\
 OpenOutputs3=1
 AddToProject3=1
 TimestampFolder3=0

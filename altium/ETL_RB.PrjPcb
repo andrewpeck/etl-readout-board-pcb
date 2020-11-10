@@ -28,7 +28,7 @@ DItemRevisionGUID=
 ReportSuppressedErrorsInMessages=0
 FSMCodingStyle=eFMSDropDownList_OneProcess
 FSMEncodingStyle=eFMSDropDownList_OneHot
-OutputPath=
+OutputPath=Project Outputs for ETL_RB
 LogFolderPath=
 ManagedProjectGUID=
 IncludeDesignInRelease=0
@@ -330,7 +330,7 @@ GenerateClassCluster=0
 DocumentUniqueId=BMUEMVBK
 
 [Document18]
-DocumentPath=C_test.PcbDoc
+DocumentPath=ETL_RB_mock1.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -347,7 +347,7 @@ GenerateClassCluster=0
 DocumentUniqueId=OOGDHTTY
 
 [Document19]
-DocumentPath=ETL_RB_v1.6.PcbDoc
+DocumentPath=ETL_RB_v1.7.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -380,159 +380,265 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[GeneratedDocument1]
-DocumentPath=.\c_test\Gerber\C_test.EXTREP
+[Document21]
+DocumentPath=ETL_RB_mock2.PcbDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
 DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=SALNLURI
 
-[GeneratedDocument2]
+[Document22]
+DocumentPath=Module_mock.PcbDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=NMFCPDBI
+
+[GeneratedDocument1]
 DocumentPath=c_test\Gerber\C_test.EXTREP
 DItemRevisionGUID=
 
-[GeneratedDocument3]
-DocumentPath=.\c_test\Gerber\C_test.GBL
-DItemRevisionGUID=
-
-[GeneratedDocument4]
+[GeneratedDocument2]
 DocumentPath=c_test\Gerber\C_test.GBL
 DItemRevisionGUID=
 
-[GeneratedDocument5]
-DocumentPath=.\c_test\Gerber\C_test.GBP
-DItemRevisionGUID=
-
-[GeneratedDocument6]
+[GeneratedDocument3]
 DocumentPath=c_test\Gerber\C_test.GBP
 DItemRevisionGUID=
 
-[GeneratedDocument7]
-DocumentPath=.\c_test\Gerber\C_test.GBS
-DItemRevisionGUID=
-
-[GeneratedDocument8]
+[GeneratedDocument4]
 DocumentPath=c_test\Gerber\C_test.GBS
 DItemRevisionGUID=
 
-[GeneratedDocument9]
-DocumentPath=.\c_test\Gerber\C_test.GM14
-DItemRevisionGUID=
-
-[GeneratedDocument10]
+[GeneratedDocument5]
 DocumentPath=c_test\Gerber\C_test.GM14
 DItemRevisionGUID=
 
-[GeneratedDocument11]
-DocumentPath=.\c_test\Gerber\C_test.REP
-DItemRevisionGUID=
-
-[GeneratedDocument12]
+[GeneratedDocument6]
 DocumentPath=c_test\Gerber\C_test.REP
 DItemRevisionGUID=
 
-[GeneratedDocument13]
-DocumentPath=.\c_test\Gerber\C_test.RUL
-DItemRevisionGUID=
-
-[GeneratedDocument14]
+[GeneratedDocument7]
 DocumentPath=c_test\Gerber\C_test.RUL
 DItemRevisionGUID=
 
-[GeneratedDocument15]
+[GeneratedDocument8]
 DocumentPath=Project Outputs for ETL_RB\Design Rule Check - ETL_RB.html
 DItemRevisionGUID=
 
-[GeneratedDocument16]
+[GeneratedDocument9]
 DocumentPath=Project Outputs for ETL_RB\Design Rule Check - ETL_RB_v1.html
 DItemRevisionGUID=
 
-[GeneratedDocument17]
+[GeneratedDocument10]
 DocumentPath=Project Outputs for ETL_RB\Gerber\ETL_RB_V1.5.EXTREP
 DItemRevisionGUID=
 
-[GeneratedDocument18]
+[GeneratedDocument11]
 DocumentPath=Project Outputs for ETL_RB\Gerber\ETL_RB_V1.5.G1
 DItemRevisionGUID=
 
-[GeneratedDocument19]
+[GeneratedDocument12]
 DocumentPath=Project Outputs for ETL_RB\Gerber\ETL_RB_V1.5.G2
 DItemRevisionGUID=
 
-[GeneratedDocument20]
+[GeneratedDocument13]
 DocumentPath=Project Outputs for ETL_RB\Gerber\ETL_RB_V1.5.GBL
 DItemRevisionGUID=
 
-[GeneratedDocument21]
+[GeneratedDocument14]
 DocumentPath=Project Outputs for ETL_RB\Gerber\ETL_RB_V1.5.GBO
 DItemRevisionGUID=
 
-[GeneratedDocument22]
+[GeneratedDocument15]
 DocumentPath=Project Outputs for ETL_RB\Gerber\ETL_RB_V1.5.GBP
 DItemRevisionGUID=
 
-[GeneratedDocument23]
+[GeneratedDocument16]
 DocumentPath=Project Outputs for ETL_RB\Gerber\ETL_RB_V1.5.GBS
 DItemRevisionGUID=
 
-[GeneratedDocument24]
+[GeneratedDocument17]
 DocumentPath=Project Outputs for ETL_RB\Gerber\ETL_RB_V1.5.GD1
 DItemRevisionGUID=
 
-[GeneratedDocument25]
+[GeneratedDocument18]
 DocumentPath=Project Outputs for ETL_RB\Gerber\ETL_RB_V1.5.GM14
 DItemRevisionGUID=
 
-[GeneratedDocument26]
+[GeneratedDocument19]
 DocumentPath=Project Outputs for ETL_RB\Gerber\ETL_RB_V1.5.GP1
 DItemRevisionGUID=
 
-[GeneratedDocument27]
+[GeneratedDocument20]
 DocumentPath=Project Outputs for ETL_RB\Gerber\ETL_RB_V1.5.GP2
 DItemRevisionGUID=
 
-[GeneratedDocument28]
+[GeneratedDocument21]
 DocumentPath=Project Outputs for ETL_RB\Gerber\ETL_RB_V1.5.GP3
 DItemRevisionGUID=
 
-[GeneratedDocument29]
+[GeneratedDocument22]
 DocumentPath=Project Outputs for ETL_RB\Gerber\ETL_RB_V1.5.GP4
 DItemRevisionGUID=
 
-[GeneratedDocument30]
+[GeneratedDocument23]
 DocumentPath=Project Outputs for ETL_RB\Gerber\ETL_RB_V1.5.GTL
 DItemRevisionGUID=
 
-[GeneratedDocument31]
+[GeneratedDocument24]
 DocumentPath=Project Outputs for ETL_RB\Gerber\ETL_RB_V1.5.GTO
 DItemRevisionGUID=
 
-[GeneratedDocument32]
+[GeneratedDocument25]
 DocumentPath=Project Outputs for ETL_RB\Gerber\ETL_RB_V1.5.GTP
 DItemRevisionGUID=
 
-[GeneratedDocument33]
+[GeneratedDocument26]
 DocumentPath=Project Outputs for ETL_RB\Gerber\ETL_RB_V1.5.GTS
 DItemRevisionGUID=
 
-[GeneratedDocument34]
+[GeneratedDocument27]
 DocumentPath=Project Outputs for ETL_RB\Gerber\ETL_RB_V1.5.REP
 DItemRevisionGUID=
 
-[GeneratedDocument35]
+[GeneratedDocument28]
 DocumentPath=Project Outputs for ETL_RB\Gerber\ETL_RB_V1.5.RUL
 DItemRevisionGUID=
 
+[GeneratedDocument29]
+DocumentPath=Project Outputs for ETL_RB\ETL_RB_v1.7\IPC2581\ETL_RB_v1.7.cvg
+DItemRevisionGUID=
+
+[GeneratedDocument30]
+DocumentPath=Project Outputs for ETL_RB\ETL_RB_v1.7\NC Drill\ETL_RB_V1.7.DRR
+DItemRevisionGUID=
+
+[GeneratedDocument31]
+DocumentPath=Project Outputs for ETL_RB\ETL_RB_v1.7\Gerber\ETL_RB_V1.7.EXTREP
+DItemRevisionGUID=
+
+[GeneratedDocument32]
+DocumentPath=Project Outputs for ETL_RB\ETL_RB_v1.7\Gerber\ETL_RB_V1.7.G1
+DItemRevisionGUID=
+
+[GeneratedDocument33]
+DocumentPath=Project Outputs for ETL_RB\ETL_RB_v1.7\Gerber\ETL_RB_V1.7.G2
+DItemRevisionGUID=
+
+[GeneratedDocument34]
+DocumentPath=Project Outputs for ETL_RB\ETL_RB_v1.7\Gerber\ETL_RB_V1.7.GBL
+DItemRevisionGUID=
+
+[GeneratedDocument35]
+DocumentPath=Project Outputs for ETL_RB\ETL_RB_v1.7\Gerber\ETL_RB_V1.7.GBO
+DItemRevisionGUID=
+
 [GeneratedDocument36]
-DocumentPath=Project Outputs for ETL_RB\Net Status - ETL_RB.html
+DocumentPath=Project Outputs for ETL_RB\ETL_RB_v1.7\Gerber\ETL_RB_V1.7.GBP
 DItemRevisionGUID=
 
 [GeneratedDocument37]
-DocumentPath=Project Outputs for ETL_RB\Net Status - ETL_RB_v1.html
+DocumentPath=Project Outputs for ETL_RB\ETL_RB_v1.7\Gerber\ETL_RB_V1.7.GBS
 DItemRevisionGUID=
 
 [GeneratedDocument38]
-DocumentPath=.\c_test\Pick Place\Pick Place for C_test.txt
+DocumentPath=Project Outputs for ETL_RB\ETL_RB_v1.7\Gerber\ETL_RB_V1.7.GD1
 DItemRevisionGUID=
 
 [GeneratedDocument39]
+DocumentPath=Project Outputs for ETL_RB\ETL_RB_v1.7\Gerber\ETL_RB_V1.7.GM14
+DItemRevisionGUID=
+
+[GeneratedDocument40]
+DocumentPath=Project Outputs for ETL_RB\ETL_RB_v1.7\Gerber\ETL_RB_V1.7.GP1
+DItemRevisionGUID=
+
+[GeneratedDocument41]
+DocumentPath=Project Outputs for ETL_RB\ETL_RB_v1.7\Gerber\ETL_RB_V1.7.GP2
+DItemRevisionGUID=
+
+[GeneratedDocument42]
+DocumentPath=Project Outputs for ETL_RB\ETL_RB_v1.7\Gerber\ETL_RB_V1.7.GP3
+DItemRevisionGUID=
+
+[GeneratedDocument43]
+DocumentPath=Project Outputs for ETL_RB\ETL_RB_v1.7\Gerber\ETL_RB_V1.7.GP4
+DItemRevisionGUID=
+
+[GeneratedDocument44]
+DocumentPath=Project Outputs for ETL_RB\ETL_RB_v1.7\Gerber\ETL_RB_V1.7.GTL
+DItemRevisionGUID=
+
+[GeneratedDocument45]
+DocumentPath=Project Outputs for ETL_RB\ETL_RB_v1.7\Gerber\ETL_RB_V1.7.GTO
+DItemRevisionGUID=
+
+[GeneratedDocument46]
+DocumentPath=Project Outputs for ETL_RB\ETL_RB_v1.7\Gerber\ETL_RB_V1.7.GTP
+DItemRevisionGUID=
+
+[GeneratedDocument47]
+DocumentPath=Project Outputs for ETL_RB\ETL_RB_v1.7\Gerber\ETL_RB_V1.7.GTS
+DItemRevisionGUID=
+
+[GeneratedDocument48]
+DocumentPath=Project Outputs for ETL_RB\ETL_RB_v1.7\NC Drill\ETL_RB_V1.7.LDP
+DItemRevisionGUID=
+
+[GeneratedDocument49]
+DocumentPath=Project Outputs for ETL_RB\ETL_RB_v1.7\Gerber\ETL_RB_V1.7.REP
+DItemRevisionGUID=
+
+[GeneratedDocument50]
+DocumentPath=Project Outputs for ETL_RB\ETL_RB_v1.7\Gerber\ETL_RB_V1.7.RUL
+DItemRevisionGUID=
+
+[GeneratedDocument51]
+DocumentPath=Project Outputs for ETL_RB\ETL_RB_v1.7\NC Drill\ETL_RB_V1.7.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument52]
+DocumentPath=Project Outputs for ETL_RB\ETL_RB_v1.7\Pick Place\ETL_RB_V1.7.txt
+DItemRevisionGUID=
+
+[GeneratedDocument53]
+DocumentPath=Project Outputs for ETL_RB\ETL_RB_v1.7\Report Board Stack\ETL_RB_V1.7.xls
+DItemRevisionGUID=
+
+[GeneratedDocument54]
+DocumentPath=Project Outputs for ETL_RB\ETL_RB_v1.7\BOM\ETL_RB_V1.7.xlsx
+DItemRevisionGUID=
+
+[GeneratedDocument55]
+DocumentPath=Project Outputs for ETL_RB\Net Status - ETL_RB.html
+DItemRevisionGUID=
+
+[GeneratedDocument56]
+DocumentPath=Project Outputs for ETL_RB\Net Status - ETL_RB_v1.html
+DItemRevisionGUID=
+
+[GeneratedDocument57]
 DocumentPath=c_test\Pick Place\Pick Place for C_test.txt
 DItemRevisionGUID=
 
@@ -547,7 +653,7 @@ ContentTypeGUID=CB6F2064-E317-11DF-B822-12313F0024A2
 ConfigurationType=Source
 
 [Generic_EDE]
-OutputDir=
+OutputDir=Project Outputs for ETL_RB
 
 [OutputGroup1]
 Name=Netlist Outputs
@@ -997,78 +1103,6 @@ OutputDocumentPath17=
 OutputVariantName17=
 OutputDefault17=0
 PageOptions17=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
-OutputType18=Text Print
-OutputName18=Text Print
-OutputDocumentPath18=
-OutputVariantName18=
-OutputDefault18=0
-PageOptions18=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
-OutputType19=Text Print
-OutputName19=Text Print
-OutputDocumentPath19=
-OutputVariantName19=
-OutputDefault19=0
-PageOptions19=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
-OutputType20=Text Print
-OutputName20=Text Print
-OutputDocumentPath20=
-OutputVariantName20=
-OutputDefault20=0
-PageOptions20=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
-OutputType21=Text Print
-OutputName21=Text Print
-OutputDocumentPath21=
-OutputVariantName21=
-OutputDefault21=0
-PageOptions21=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
-OutputType22=Text Print
-OutputName22=Text Print
-OutputDocumentPath22=
-OutputVariantName22=
-OutputDefault22=0
-PageOptions22=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
-OutputType23=Text Print
-OutputName23=Text Print
-OutputDocumentPath23=
-OutputVariantName23=
-OutputDefault23=0
-PageOptions23=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
-OutputType24=Text Print
-OutputName24=Text Print
-OutputDocumentPath24=
-OutputVariantName24=
-OutputDefault24=0
-PageOptions24=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
-OutputType25=Text Print
-OutputName25=Text Print
-OutputDocumentPath25=
-OutputVariantName25=
-OutputDefault25=0
-PageOptions25=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
-OutputType26=Text Print
-OutputName26=Text Print
-OutputDocumentPath26=
-OutputVariantName26=
-OutputDefault26=0
-PageOptions26=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
-OutputType27=Text Print
-OutputName27=Text Print
-OutputDocumentPath27=
-OutputVariantName27=
-OutputDefault27=0
-PageOptions27=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
-OutputType28=Text Print
-OutputName28=Text Print
-OutputDocumentPath28=
-OutputVariantName28=
-OutputDefault28=0
-PageOptions28=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
-OutputType29=Text Print
-OutputName29=Text Print
-OutputDocumentPath29=
-OutputVariantName29=
-OutputDefault29=0
-PageOptions29=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
 
 [OutputGroup8]
 Name=Validation Outputs
@@ -1500,6 +1534,7 @@ Type119=3
 MultiChannelAlternate=2
 AlternateItemFail=3
 Type122=2
+Type123=1
 
 [ERC Connection Matrix]
 L1=NNNNNNNNNNNWNNNWW
