@@ -29,17 +29,17 @@
 ** Block Diagrams
 *** Data Flow
 #+ATTR_HTML: :width 700px
-[[file:docs/data-flow.png]]
+[[file:docs/data-flow.svg]]
 *** Module Connectivity
 Full size: [[file:docs/module-connectivity.pdf]]
 #+ATTR_HTML: :width 700px
-[[file:docs/module-connectivity.png]]
+[[file:docs/module-connectivity.svg]]
 *** Power Distribution
 #+ATTR_HTML: :width 700px
-[[file:docs/power-distribution.png]]
+[[file:docs/power-distribution.svg]]
 *** Control and Monitoring
 #+ATTR_HTML: :width 700px
-[[file:docs/ctrl-and-mon.png]]
+[[file:docs/ctrl-and-mon.svg]]
 ** Connectors/Interfaces
 ** Mechanical Outline
 #+attr_org: :width 700px

@@ -7,10 +7,10 @@ open:
 	draw.io etl-readout-board.drawio &
 
 small:
-	draw.io --width 700 -p 0 -x -f png -o data-flow.png etl-readout-board.drawio
-	draw.io --width 700 -p 1 -x -f png -o power-distribution.png etl-readout-board.drawio
-	draw.io --width 700 -p 2 -x -f png -o ctrl-and-mon.png etl-readout-board.drawio
-	draw.io --width 900 -p 3 -x -f png -o module-connectivity.png etl-readout-board.drawio
+	draw.io --width 700 -p 0 -x -f svg -o data-flow.svg etl-readout-board.drawio
+	draw.io --width 700 -p 1 -x -f svg -o power-distribution.svg etl-readout-board.drawio
+	draw.io --width 700 -p 2 -x -f svg -o ctrl-and-mon.svg etl-readout-board.drawio
+	draw.io --width 900 -p 3 -x -f svg -o module-connectivity.svg etl-readout-board.drawio
 
 large:
 	draw.io --width 2400 -p 0 -x -f png -o data-flow_large.png etl-readout-board.drawio
