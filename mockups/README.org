@@ -11,3 +11,7 @@ Mockup of a 3 module readout board with daisy-chain connectivity
 Mockup of a full-sized module (2 sensors, 4 etrocs) with daisy-chain connectivity
 #+attr_org: :width 200px
 [[file:images/module_mock.png]]
+** ETL_BK.zip
+Module-like breakout board
+#+attr_org: :width 200px
+[[file:images/module_breakout.png]]
