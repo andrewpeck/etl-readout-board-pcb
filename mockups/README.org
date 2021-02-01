@@ -1,9 +1,7 @@
 * Mechanical Mockup Files
 ** [[file:adapterv1.0.zip][adapterv1.0.zip]]
-#+attr_org: :width 600px
-[[file:images/adapter_top.png]]
-#+attr_org: :width 600px
-[[file:images/adapter_bottom.png]]
+#+attr_org: :width 500px
+[[file:images/adapter_both_sides.png]]
 ** [[file:ETL_RB_mock1v2.zip][ETL_RB_mock1v2.zip]]
 Mockup of a 3 module readout board with realistic pad connectivity
 #+attr_org: :width 600px
