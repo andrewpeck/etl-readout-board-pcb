@@ -1,17 +1,22 @@
 * Mechanical Mockup Files
-** ETL_RB_mock1v2.zip
+** [[file:adapterv1.0.zip][adapterv1.0.zip]]
+#+attr_org: :width 600px
+[[file:images/adapter_top.png]]
+#+attr_org: :width 600px
+[[file:images/adapter_bottom.png]]
+** [[file:ETL_RB_mock1v2.zip][ETL_RB_mock1v2.zip]]
 Mockup of a 3 module readout board with realistic pad connectivity
 #+attr_org: :width 600px
 [[file:images/mock1v2.png]]
-** ETL_RB_mock2v2.zip
+** [[file:ETL_RB_mock2v2.zip]]
 Mockup of a 3 module readout board with daisy-chain connectivity
 #+attr_org: :width 600px
 [[file:images/mock2v2.png]]
-** module_mockv3.zip
+** [[file:module_mockv3.zip][module_mockv3.zip]]
 Mockup of a full-sized module (2 sensors, 4 etrocs) with daisy-chain connectivity
 #+attr_org: :width 200px
 [[file:images/module_mock.png]]
-** ETL_BKv2.zip
+** [[file:ETL_BKv2.zip][ETL_BKv2.zip]]
 Module-like breakout board
 #+attr_org: :width 200px
 [[file:images/module_breakout.png]]
