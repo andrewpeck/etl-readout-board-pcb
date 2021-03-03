@@ -23,6 +23,7 @@
 - 2020/07/13 - [[https://indico.cern.ch/event/939160/contributions/3946133/attachments/2073487/3481402/20200713_readout_board_interfaces.pdf][Readout Board Interfaces]] (Andy P.)
 - 2020/08/31 - [[https://indico.cern.ch/event/950697/contributions/3993986/attachments/2093983/3519322/20200831_readout_board_v2.pptx.pdf][Readout Board v2 Update]] (Andy P.)
 - 2020/08/31 - [[https://indico.cern.ch/event/950697/contributions/3993988/attachments/2094005/3519146/ETL-PowerConversion-S_Los-Aug31-2020.pdf][Power Board Status]] (Sergey V.)
+- 2021/03/01 - [[https://indico.cern.ch/event/1012776/contributions/4250636/attachments/2199248/3719226/20210301_etl_readout_board.pptx.pdf][Readout Board v2 Update]] (Andy P.)
 ** Milestones :noexport:
 - 2020/XX/YY - Finish schematic and layout
 - 2020/XX/YY - Submit files to fab house
@@ -345,3 +346,4 @@ I checked the bonding diagram ([[https://edms.cern.ch/ui/file/2146792/1/CERN_VTR
 The address then is 1010000 = 0x50
 
 ** Errata
+1) KSC2223 footprint is incorrect
