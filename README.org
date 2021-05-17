@@ -1,13 +1,24 @@
 #+OPTIONS: ^:nil
 #+EXPORT_EXCLUDE_TAGS: noexport
-* CMS ETL Readout Board PCB
+* CMS ETL Readout Board PCB :TOC:
+  - [[#useful-links][Useful Links]]
+  - [[#milestones][Milestones]]
+  - [[#block-diagrams][Block Diagrams]]
+  - [[#mechanical-outline][Mechanical Outline]]
+  - [[#power][Power]]
+  - [[#lpgbt-configuration][LPGBT Configuration]]
+  - [[#test-points][Test points]]
+  - [[#vtrx-i2c][VTRX+ I2C]]
+  - [[#errata][Errata]]
+  - [[#fusing-instructions][Fusing Instructions]]
+
 ** Useful Links
 - Latest RB Schematics - [[https://gitlab.cern.ch/cms-etl-electronics/readout-board-pcb/uploads/183954f3a47f967752902acf8ae9c3d3/ETL_RB_V1.6.PDF][ETL_RB_V1.6.PDF]]
 - Latest RB Gerbers:  [[https://gitlab.cern.ch/cms-etl-electronics/readout-board-pcb/uploads/5678ebf45c38e1c627c98f56c8df58fa/ETL_RB_V1.6.zip][ETL_RB_V1.6.zip]]
 - Latest RB Project Archive - [[https://gitlab.cern.ch/cms-etl-electronics/readout-board-pcb/uploads/25dc68e87a1a2c3de5a3411c434b7c02/ETL_RB__11-2-2020_9-17-11_AM_.zip][ETL_RB__11-2-2020_9-17-11_AM_.zip]]
 - Mr. Wu's File Stash - [[http://physics.bu.edu/~wusx/download/ETL_RB/]]
 - Datasheets:
-  + LGPBT Manual - [[https://lpgbt.web.cern.ch/lpgbt/manual/][LpGBT Manual]]
+  + LpGBT Manual - [[https://lpgbt.web.cern.ch/lpgbt/manual/][LpGBT Manual]]
   + GBT-SCA Manual - [[https://espace.cern.ch/GBT-Project/GBT-SCA/Manuals/GBT-SCA_Manual_2019.002.pdf][GBT-SCA Manual]]
   + LINPOL12 Datasheet - [[https://project-dcdc.web.cern.ch/public/Documents/linPOL12V%20datasheetV3.3.pdf][LinPOL12V]]
   + VTRX+ Application Note: [[https://edms.cern.ch/ui/file/2149674/1/VTRxPlusApplicationNote.pdf][VTRxPlusApplicationNote.pdf]]
@@ -24,24 +35,24 @@
 - 2020/08/31 - [[https://indico.cern.ch/event/950697/contributions/3993986/attachments/2093983/3519322/20200831_readout_board_v2.pptx.pdf][Readout Board v2 Update]] (Andy P.)
 - 2020/08/31 - [[https://indico.cern.ch/event/950697/contributions/3993988/attachments/2094005/3519146/ETL-PowerConversion-S_Los-Aug31-2020.pdf][Power Board Status]] (Sergey V.)
 - 2021/03/01 - [[https://indico.cern.ch/event/1012776/contributions/4250636/attachments/2199248/3719226/20210301_etl_readout_board.pptx.pdf][Readout Board v2 Update]] (Andy P.)
-** Milestones :noexport:
-- 2020/XX/YY - Finish schematic and layout
-- 2020/XX/YY - Submit files to fab house
+- 2021/05/17 - [[https://indico.cern.ch/event/1039531/contributions/4366460/attachments/2245627/3808234/ETL-MultyChannel-bPOL-Proto-S_Los-May17-2021.pdf][Power Board Status]] (Sergey L.)
+** Milestones
+- 2020/11/02 - Finish schematic and layout; Submit files to fab house
+- 2020/12/08 - Receive readout boards from Pactron
+- 2021/03/01 - Preliminary testing complete
 ** Block Diagrams
 *** Data Flow
-#+ATTR_HTML: :width 700px
-[[file:docs/data-flow.svg]]
+#+html: <p><alt="RB Data Flow" src="docs/data-flow.svg"/></p>
 *** Module Connectivity
 Full size: [[file:docs/module-connectivity.pdf]]
-#+ATTR_HTML: :width 700px
-[[file:docs/module-connectivity.svg]]
+#+html: <p><alt="RB Data Flow" src="docs/module-connectivity.svg"/></p>
 *** Power Distribution
 #+ATTR_HTML: :width 700px
-[[file:docs/power-distribution.svg]]
+#+html: <p><alt="RB Power Distribution" src="docs/power-distribution.svg"/></p>
 *** Control and Monitoring
 #+ATTR_HTML: :width 700px
-[[file:docs/ctrl-and-mon.svg]]
-** Connectors/Interfaces
+#+html: <p><alt="RB Control & Monitoring" src="docs/ctrl-and-mon.svg"/></p>
+** Connectors/Interfaces :noexport:
 ** Mechanical Outline
 #+attr_org: :width 700px
 [[file:docs/mechanical-outline.png]]
@@ -160,190 +171,37 @@ A handy copy of the LPGBT mode table:
 | 4’b1111    | 10 Gbps      | FEC12       | Transceiver |
 |------------+--------------+-------------+-------------|
 
-** Pin Assignments
-*** E-Link Assignments
-**** DAQ Uplinks
-
-All uplinks run at 320 or 640MHz
-
-***** Sorted by ETROC
-|------------+------------+-------|
-| Assignment | Group/Link | Elink |
-|------------+------------+-------|
-| ETROC-0    | G5L0       |    20 |
-| ETROC-1    | G5L2       |    22 |
-| ETROC-2    | G0L0       |     0 |
-| ETROC-3    | G0L2       |     2 |
-| ETROC-4    | G4L0       |    16 |
-| ETROC-5    | G4L2       |    18 |
-| ETROC-6    | G1L0       |     4 |
-| ETROC-7    | G1L2       |     6 |
-| ETROC-8    | G3L0       |    12 |
-| ETROC-9    | G3L2       |    14 |
-| ETROC-10   | G2L0       |     8 |
-| ETROC-11   | G2L2       |    10 |
-|------------+------------+-------|
-
-***** Sorted by E-link
-|-------+------------+------------|
-| Elink | Group/Link | Assignment |
-|-------+------------+------------|
-|     0 | G0L0       | ETROC-2    |
-|     1 | G0L1       | --         |
-|     2 | G0L2       | ETROC-3    |
-|     3 | G0L3       | --         |
-|     4 | G1L0       | ETROC-6    |
-|     5 | G1L1       | --         |
-|     6 | G1L2       | ETROC-7    |
-|     7 | G1L3       | --         |
-|     8 | G2L0       | ETROC-10   |
-|     9 | G2L1       | --         |
-|    10 | G2L2       | ETROC-11   |
-|    11 | G2L3       | --         |
-|    12 | G3L0       | ETROC-8    |
-|    13 | G3L1       | --         |
-|    14 | G3L2       | ETROC-9    |
-|    15 | G3L3       | --         |
-|    16 | G4L0       | ETROC-4    |
-|    17 | G4L1       | --         |
-|    18 | G4L2       | ETROC-5    |
-|    19 | G4L3       | --         |
-|    20 | G5L0       | ETROC-0    |
-|    21 | G5L1       | --         |
-|    22 | G5L2       | ETROC-1    |
-|    23 | G5L3       | --         |
-|    24 | G6L0       | --         |
-|    25 | G6L1       | --         |
-|    26 | G6L2       | --         |
-|    27 | G6L3       | --         |
-|-------+------------+------------|
-**** Trigger Uplinks
-
-All uplinks run at 320 or 640MHz
-
-***** Sorted by ETROC
-|------------+------------+-------|
-| Assignment | Group/Link | Elink |
-|------------+------------+-------|
-| ETROC-0    | G5L2       |    22 |
-| ETROC-1    | G5L0       |    20 |
-| ETROC-2    | G0L2       |     2 |
-| ETROC-3    | G0L0       |     0 |
-| ETROC-4    | G4L2       |    18 |
-| ETROC-5    | G4L0       |    16 |
-| ETROC-6    | G1L2       |     6 |
-| ETROC-7    | G1L0       |     4 |
-| ETROC-8    | G3L2       |    14 |
-| ETROC-9    | G3L0       |    12 |
-| ETROC-10   | G2L2       |    10 |
-| ETROC-11   | G2L0       |     8 |
-|------------+------------+-------|
-
-***** Sorted by E-link
-|-------+------------+------------|
-| Elink | Group/Link | Assignment |
-|-------+------------+------------|
-|     0 | G0L0       | ETROC-3    |
-|     1 | G0L1       | --         |
-|     2 | G0L2       | ETROC-2    |
-|     3 | G0L3       | --         |
-|     4 | G1L0       | ETROC-7    |
-|     5 | G1L1       | --         |
-|     6 | G1L2       | ETROC-6    |
-|     7 | G1L3       | --         |
-|     8 | G2L0       | ETROC-11   |
-|     9 | G2L1       | --         |
-|    10 | G2L2       | ETROC-10   |
-|    11 | G2L3       | --         |
-|    12 | G3L0       | ETROC-9    |
-|    13 | G3L1       | --         |
-|    14 | G3L2       | ETROC-8    |
-|    15 | G3L3       | --         |
-|    16 | G4L0       | ETROC-5    |
-|    17 | G4L1       | --         |
-|    18 | G4L2       | ETROC-4    |
-|    19 | G4L3       | --         |
-|    20 | G5L0       | ETROC-1    |
-|    21 | G5L1       | --         |
-|    22 | G5L2       | ETROC-0    |
-|    23 | G5L3       | --         |
-|    24 | G6L0       | --         |
-|    25 | G6L1       | --         |
-|    26 | G6L2       | --         |
-|    27 | G6L3       | --         |
-|-------+------------+------------|
-**** Downlink
-
-All downlinks run at 320MHz
-
-|------------+-------+-------------|
-| Group/Link | Elink | Assignment  |
-|------------+-------+-------------|
-| G0L0       |     0 | ETROC-2/3   |
-| G0L1       |     1 | --          |
-| G0L2       |     2 | ETROC-6/7   |
-| G0L3       |     3 | --          |
-| G1L0       |     4 | ETROC-10/11 |
-| G1L1       |     5 | --          |
-| G1L2       |     6 | --          |
-| G1L3       |     7 | --          |
-| G2L0       |     8 | ETROC-8/9   |
-| G2L1       |     9 | --          |
-| G2L2       |    10 | ETROC-4/5   |
-| G2L3       |    11 | --          |
-| G3L0       |    12 | ETROC-0/1   |
-| G3L1       |    13 | --          |
-| G3L2       |    14 | --          |
-| G3L3       |    15 | --          |
-|------------+-------+-------------|
-
-*** Clock Assignments
-|-------+-------------+------|
-| Clock | Assignment  | Freq |
-|-------+-------------+------|
-|     0 | ETROC-3     | 40M  |
-|     1 | ETROC-2     | 40M  |
-|     2 | ETROC-6     | 40M  |
-|     3 | ETROC-7     | 40M  |
-|     4 | ETROC-10    | 40M  |
-|     5 | ETROC-11    | 40M  |
-|     6 | --          | OFF  |
-|     7 | --          | OFF  |
-|     8 | --          | OFF  |
-|     9 | --          | OFF  |
-|    10 | --          | OFF  |
-|    11 | Slave Clock | 40M  |
-|    12 | --          | OFF  |
-|    13 | --          | OFF  |
-|    14 | --          | OFF  |
-|    15 | --          | OFF  |
-|    16 | --          | OFF  |
-|    17 | --          | OFF  |
-|    18 | --          | OFF  |
-|    19 | --          | OFF  |
-|    20 | --          | OFF  |
-|    21 | --          | OFF  |
-|    22 | ETROC-9     | 40M  |
-|    23 | ETROC-4     | 40M  |
-|    24 | ETROC-8     | 40M  |
-|    25 | ETROC-5     | 40M  |
-|    26 | ETROC-0     | 40M  |
-|    27 | ETROC-1     | 40M  |
-|-------+-------------+------|
-*** LPGBT Pin Assignments
-**** Analog Inputs
-**** GPIO
-*** SCA Pin Assignments
-**** Analog Inputs
-**** GPIO
 ** Test points
 
 ** VTRX+ I2C
-VTRX+ documentation does not specify the I2C address of the device, but the laser driver spec has some details: [[https://edms.cern.ch/ui/file/1719330/1/VLplus_quadLDD_spec_v1.2_prototypes.pdf]]
+VTRX+ documentation does not specify the I2C address of the device, but the
+laser driver spec has some details:
+[[https://edms.cern.ch/ui/file/1719330/1/VLplus_quadLDD_spec_v1.2_prototypes.pdf]]
 
-I checked the bonding diagram ([[https://edms.cern.ch/ui/file/2146792/1/CERN_VTRxPlus_V10_bonding.pdf]]) and the address pins are not connected, so they use internal pull down.
+I checked the bonding diagram
+([[https://edms.cern.ch/ui/file/2146792/1/CERN_VTRxPlus_V10_bonding.pdf]]) and the
+address pins are not connected, so they use internal pull down.
 
 The address then is 1010000 = 0x50
 
 ** Errata
 1) KSC2223 footprint is incorrect
+   - The footprint of the KSC2223 transistor is incorrect.
+2) Incorrect assignment of e-fuse power
+   - EFUSEPOWER (2.5V power to be applied only during fusing) is incorrectly
+     connected to I2C configuration connector ~P1~, pin 9. Pin 9 is in fact the
+     ~MODE3_1V25~ pin of the Rpi control toolkit, and should /not/ be connected to
+     EFUSE power.
+   - *The trace must be cut*.
+3) Erroneous note about I2C addresses
+   - The schematic features a note:
+       #+begin_quote
+     I2C ADDR6, ADDR5 and ADDR4 of ETROC2 must not be all 0 or all 1.
+     pin 11 of P6, P8 and P10 sets ADDR2 of ETROC2
+     pin 12 of P6, P8 and P10 sets ADDR3 of ETROC2
+     ADDR1 and ADDR0 of ETROC2 are set on cover PCB of the module
+       #+end_quote
+     + This note, is, however, a remnant of a previous iteration of the design
+       where all modules were on the same i2c bus. In the current configuration,
+       each module has its own I2C bus, and shares the same address.
+** Fusing Instructions
