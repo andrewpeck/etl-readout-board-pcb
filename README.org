@@ -42,16 +42,18 @@
 - 2021/03/01 - Preliminary testing complete
 ** Block Diagrams
 *** Data Flow
-#+html: <p><alt="RB Data Flow" src="docs/data-flow.svg"/></p>
+#+ATTR_HTML: :width 700px
+[[file:docs/data-flow.svg]]
 *** Module Connectivity
 Full size: [[file:docs/module-connectivity.pdf]]
-#+html: <p><alt="RB Data Flow" src="docs/module-connectivity.svg"/></p>
+#+ATTR_HTML: :width 700px
+[[file:docs/module-connectivity.svg]]
 *** Power Distribution
 #+ATTR_HTML: :width 700px
-#+html: <p><alt="RB Power Distribution" src="docs/power-distribution.svg"/></p>
+[[file:docs/power-distribution.svg]]
 *** Control and Monitoring
 #+ATTR_HTML: :width 700px
-#+html: <p><alt="RB Control & Monitoring" src="docs/ctrl-and-mon.svg"/></p>
+[[file:docs/ctrl-and-mon.svg]]
 ** Connectors/Interfaces :noexport:
 ** Mechanical Outline
 #+attr_org: :width 700px
