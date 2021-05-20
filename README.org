@@ -7,7 +7,6 @@
   - [[#mechanical-outline][Mechanical Outline]]
   - [[#power][Power]]
   - [[#lpgbt-configuration][LPGBT Configuration]]
-  - [[#test-points][Test points]]
   - [[#vtrx-i2c][VTRX+ I2C]]
   - [[#errata][Errata]]
   - [[#fusing-instructions][Fusing Instructions]]
@@ -192,11 +191,25 @@ The address then is ~0b1010000~ = ~0x50~
    - The schematic features a note:
        #+begin_quote
      I2C ADDR6, ADDR5 and ADDR4 of ETROC2 must not be all 0 or all 1.
+
      pin 11 of P6, P8 and P10 sets ADDR2 of ETROC2
+
      pin 12 of P6, P8 and P10 sets ADDR3 of ETROC2
+
      ADDR1 and ADDR0 of ETROC2 are set on cover PCB of the module
+
        #+end_quote
      + This note, is, however, a remnant of a previous iteration of the design
        where all modules were on the same i2c bus. In the current configuration,
        each module has its own I2C bus, and shares the same address.
 ** Fusing Instructions
+** Inventory
+*** v1
+|---------+--------+-------+----------|
+| Board # | Fusing | Notes | Location |
+|---------+--------+-------+----------|
+|       1 |        |       |          |
+|       2 |        |       |          |
+|       3 |        |       |          |
+|       4 |        |       |          |
+|---------+--------+-------+----------|
