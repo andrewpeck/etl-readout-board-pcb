@@ -35,6 +35,7 @@
 - 2020/08/31 - [[https://indico.cern.ch/event/950697/contributions/3993986/attachments/2093983/3519322/20200831_readout_board_v2.pptx.pdf][Readout Board v2 Update]] (Andy P.)
 - 2020/08/31 - [[https://indico.cern.ch/event/950697/contributions/3993988/attachments/2094005/3519146/ETL-PowerConversion-S_Los-Aug31-2020.pdf][Power Board Status]] (Sergey V.)
 - 2021/03/01 - [[https://indico.cern.ch/event/1012776/contributions/4250636/attachments/2199248/3719226/20210301_etl_readout_board.pptx.pdf][Readout Board v2 Update]] (Andy P.)
+- 2021/05/10 - [[https://indico.cern.ch/event/1037766/contributions/4357988/attachments/2242193/3801880/Emulator%20updates%2020210510%20V3.pdf][Emulator v1 Update]] (Andy L.)
 - 2021/05/17 - [[https://indico.cern.ch/event/1039531/contributions/4366460/attachments/2245627/3808234/ETL-MultyChannel-bPOL-Proto-S_Los-May17-2021.pdf][Power Board Status]] (Sergey L.)
 ** Milestones
 - 2020/11/02 - Finish schematic and layout; Submit files to fab house
