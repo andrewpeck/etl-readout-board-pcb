@@ -65,9 +65,13 @@ Full size: [[file:docs/module-connectivity.pdf]]
 ** Power
 *** Power Estimates
 
-The readout board is expected to dissipate up to ~1.3W, along with some additional power for LINPOL conversion efficiency. Total power should be around 2W.  Details of the calculation follow.
+The readout board is expected to dissipate up to ~1.3W, along with some
+additional power for LINPOL conversion efficiency. Total power should be around
+2W. Details of the calculation follow.
 
-*NOTE:* This calculation is for a configuration of *2tx + 1rx* (i.e. with a trigger path). The numbers are different if this is not the case (subtract roughly 0.6W for the LPGBT/VTRX).
+*NOTE:* This calculation is for a configuration of *2tx + 1rx* (i.e. with a trigger
+path). The numbers are different if this is not the case (subtract roughly 0.6W
+for the LPGBT/VTRX).
 
 |-----------------------------+------------------|
 | Note                        | P (mW)           |
@@ -100,52 +104,62 @@ The readout board is expected to dissipate up to ~1.3W, along with some addition
 **** GBT-SCA
 The GBT-SCA manual specifies power consumption of:
 
-|--------------------------------+-------------------+-------------------|
-| Supply                         | Typical (Maximum) | Power mW          |
-|--------------------------------+-------------------+-------------------|
-| 1V5 VDD core                   | 36 (63) mA        | 54 (94.5) mW      |
-| 1V5 AVDD analog                | 0.5 (0.8) mA      | 0.75 (1.2) mW     |
-| 1V5 DVDD Static supply current | 7.1 (8.2) mA      | 10.65 (12.3) mW   |
-|--------------------------------+-------------------+-------------------|
-| *Total*                        | *43.6 (72.0) mA*  | *65.4 (108.0) mW* |
-|--------------------------------+-------------------+-------------------|
+|--------------------------------+-------------------+-----------------|
+| Supply                         | Typical (Maximum) | Power mW        |
+|--------------------------------+-------------------+-----------------|
+| 1V5 VDD core                   | 36 (63) mA        | 54 (94.5) mW    |
+| 1V5 AVDD analog                | 0.5 (0.8) mA      | 0.75 (1.2) mW   |
+| 1V5 DVDD Static supply current | 7.1 (8.2) mA      | 10.65 (12.3) mW |
+|--------------------------------+-------------------+-----------------|
+| *Total*                          | *43.6 (72.0) mA*    | *65.4 (108.0) mW* |
+|--------------------------------+-------------------+-----------------|
 
 **** LPGBT
-LPGBT power measurements can be found at https://espace.cern.ch/GBT-Project/LpGBT/Presentations/lpGBT20190903.pdf
+LPGBT power measurements can be found at
+https://espace.cern.ch/GBT-Project/LpGBT/Presentations/lpGBT20190903.pdf
 
 Note that these numbers may change between v0 and v1 of the LPGBT.
 
-Power consumption is dependent on the exact configuration, but we expect it should be <500mW
+Power consumption is dependent on the exact configuration, but we expect it
+should be <500mW
 
 We expect up to 2 LPGBTs per board, so ~1W maximum.
 
 **** LINPOL
 
-Three LINPOL12 chips are used on board to provide 1.5V (GBT-SCA), and 2.5V (1 each for VTRX TX + RX).
+Three LINPOL12 chips are used on board to provide 1.5V (GBT-SCA), and 2.5V (1
+each for VTRX TX + RX).
 
-For the 2.5V supply a voltage divider is formed by RR0510P-1541-D (1.54k) and RR0510P-4870-D (487R).
+For the 2.5V supply a voltage divider is formed by RR0510P-1541-D (1.54k) and
+RR0510P-4870-D (487R).
  - V=0.6*(1+1540/487)=2.497V
 
-For the 1.5V supply a voltage divider is formed by RR0510P-6040-D (604R) and RR0510P-4020-D (402R).
+For the 1.5V supply a voltage divider is formed by RR0510P-6040-D (604R) and
+RR0510P-4020-D (402R).
  - V= 0.6*(1+604/402)=1.50V
 
-We have some additional power loss in the LINPOL12 chips, which is dependent on the exact input voltage. Assuming 8V nominal, we would expect using the /MAXIMUM/ values:
+We have some additional power loss in the LINPOL12 chips, which is dependent on
+the exact input voltage. Assuming 8V nominal, we would expect using the /MAXIMUM/
+values:
 
-|---------+-------------------------------------------|
-| Supply  | Power mW                                  |
-|---------+-------------------------------------------|
-| 1V5     | (8-1.5)*(43.6 - 72) = (283 typ - 468 max) |
-| 2V5 TX  | (8-2.5)*(20 - 30) = (110 start - 165 EOL) |
-| 2V5 RX  | (8-2.5)*40 = 220                          |
-|---------+-------------------------------------------|
-| *Total* | *613 - 853 mW*                            |
-|---------+-------------------------------------------|
+|--------+-------------------------------------------|
+| Supply | Power mW                                  |
+|--------+-------------------------------------------|
+| 1V5    | (8-1.5)*(43.6 - 72) = (283 typ - 468 max) |
+| 2V5 TX | (8-2.5)*(20 - 30) = (110 start - 165 EOL) |
+| 2V5 RX | (8-2.5)*40 = 220                          |
+|--------+-------------------------------------------|
+| *Total*  | *613 - 853 mW*                              |
+|--------+-------------------------------------------|
 
 ** LPGBT Configuration
 
-The DAQ and Trigger LPGBTs are arranged in a master-slave configuration, with the master LPGBT providing a clock and an I2C bus to the slave.
+The DAQ and Trigger LPGBTs are arranged in a master-slave configuration, with
+the master LPGBT providing a clock and an I2C bus to the slave.
 
-Both LPGBTs are configured by default in FEC12 10.24 Gbps mode, with jumpers available to select FEC5 or 5.12 Gbps modes. CHange of the mode affects both LPGBTs together.
+Both LPGBTs are configured by default in FEC12 10.24 Gbps mode, with jumpers
+available to select FEC5 or 5.12 Gbps modes. CHange of the mode affects both
+LPGBTs together.
 
 |---------+--------------------------------------------------------|
 | Jumpers | Description                                            |
@@ -153,31 +167,6 @@ Both LPGBTs are configured by default in FEC12 10.24 Gbps mode, with jumpers ava
 | JMP1    | Install to set LPGBT MODE[2] to 0 (FEC12 → FEC5)       |
 | JMP2    | Install to set LPGBT MODE[3] to 0 (data rate → 5 Gbps) |
 |---------+--------------------------------------------------------|
-
-A handy copy of the LPGBT mode table:
-
-|------------+--------------+-------------+-------------|
-| MODE [3:0] | Tx Data Rate | Tx Encoding | lpGBT Mode  |
-|------------+--------------+-------------+-------------|
-| 4’b0000    | 5 Gbps       | FEC5        | Off         |
-| 4’b0001    | 5 Gbps       | FEC5        | Simplex TX  |
-| 4’b0010    | 5 Gbps       | FEC5        | Simplex RX  |
-| 4’b0011    | 5 Gbps       | FEC5        | Transceiver |
-| 4’b0100    | 5 Gbps       | FEC12       | Off         |
-| 4’b0101    | 5 Gbps       | FEC12       | Simplex TX  |
-| 4’b0110    | 5 Gbps       | FEC12       | Simplex RX  |
-| 4’b0111    | 5 Gbps       | FEC12       | Transceiver |
-| 4’b1000    | 10 Gbps      | FEC5        | Off         |
-| 4’b1001    | 10 Gbps      | FEC5        | Simplex TX  |
-| 4’b1010    | 10 Gbps      | FEC5        | Simplex RX  |
-| 4’b1011    | 10 Gbps      | FEC5        | Transceiver |
-| 4’b1100    | 10 Gbps      | FEC12       | Off         |
-| 4’b1101    | 10 Gbps      | FEC12       | Simplex TX  |
-| 4’b1110    | 10 Gbps      | FEC12       | Simplex RX  |
-| 4’b1111    | 10 Gbps      | FEC12       | Transceiver |
-|------------+--------------+-------------+-------------|
-
-** Test points
 
 ** VTRX+ I2C
 VTRX+ documentation does not specify the I2C address of the device, but the
@@ -188,7 +177,7 @@ I checked the bonding diagram
 ([[https://edms.cern.ch/ui/file/2146792/1/CERN_VTRxPlus_V10_bonding.pdf]]) and the
 address pins are not connected, so they use internal pull down.
 
-The address then is 1010000 = 0x50
+The address then is ~0b1010000~ = ~0x50~
 
 ** Errata
 1) KSC2223 footprint is incorrect
