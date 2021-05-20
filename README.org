@@ -40,7 +40,10 @@
 ** Milestones
 - 2020/11/02 - Finish schematic and layout; Submit files to fab house
 - 2020/12/08 - Receive readout boards from Pactron
-- 2021/03/01 - Preliminary testing complete
+- 2021/03/01 - Preliminary testing (LPGBT, elinks)
+- 2021/03/18 - Working SCA GPIO Control
+- 2021/03/23 - Working ADC voltage readings
+- 2021/05/19 - Working SCA I2C master
 ** Block Diagrams
 *** Data Flow
 #+ATTR_HTML: :width 700px
