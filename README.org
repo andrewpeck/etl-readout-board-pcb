@@ -43,6 +43,7 @@
 - 2021/03/01 - Preliminary testing (LPGBT, elinks)
 - 2021/03/18 - Working SCA GPIO Control
 - 2021/03/23 - Working ADC voltage readings
+- 2021/05/11 - 2nd batch of readout boards delivered to BU
 - 2021/05/19 - Working SCA I2C master
 ** Block Diagrams
 *** Data Flow
