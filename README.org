@@ -10,6 +10,7 @@
   - [[#vtrx-i2c][VTRX+ I2C]]
   - [[#errata][Errata]]
   - [[#fusing-instructions][Fusing Instructions]]
+  - [[#inventory][Inventory]]
 
 ** Useful Links
 - Latest RB Schematics - [[https://gitlab.cern.ch/cms-etl-electronics/readout-board-pcb/uploads/183954f3a47f967752902acf8ae9c3d3/ETL_RB_V1.6.PDF][ETL_RB_V1.6.PDF]]
@@ -189,16 +190,12 @@ The address then is ~0b1010000~ = ~0x50~
    - *The trace must be cut*.
 3) Erroneous note about I2C addresses
    - The schematic features a note:
-       #+begin_quote
+       #+begin_src
      I2C ADDR6, ADDR5 and ADDR4 of ETROC2 must not be all 0 or all 1.
-
      pin 11 of P6, P8 and P10 sets ADDR2 of ETROC2
-
      pin 12 of P6, P8 and P10 sets ADDR3 of ETROC2
-
      ADDR1 and ADDR0 of ETROC2 are set on cover PCB of the module
-
-       #+end_quote
+       #+end_src
      + This note, is, however, a remnant of a previous iteration of the design
        where all modules were on the same i2c bus. In the current configuration,
        each module has its own I2C bus, and shares the same address.
