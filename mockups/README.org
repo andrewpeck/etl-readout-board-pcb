@@ -1,12 +1,19 @@
-* Mechanical Mockup Files
-** [[file:adapterv1.0.zip][adapterv1.0.zip]]
+* Adapters & Mockup Files
+** Power adapter
+- [[file:power_adapter/v1_power_adapter.pdf][Schematic]]
+- [[file:power_adapter/gerber/v1_power_adapter_gerber_20200714.zip][v1_power_adapter_gerber_20200714.zip]]
+#+attr_org: :width 300px
+[[file:images/power_adapter.png]]
+** Emulator Adapter
+Adapter board to connect to the ETROC emulator.
+- [[file:adapterv1.0.zip][adapterv1.0.zip]]
 #+attr_org: :width 500px
 [[file:images/adapter_both_sides.png]]
 ** [[file:ETL_RB_mock1v2.zip][ETL_RB_mock1v2.zip]]
 Mockup of a 3 module readout board with realistic pad connectivity
 #+attr_org: :width 600px
 [[file:images/mock1v2.png]]
-** [[file:ETL_RB_mock2v2.zip]]
+** [[file:ETL_RB_mock2v2.zip][ETL_RB_mock2v2.zip]]
 Mockup of a 3 module readout board with daisy-chain connectivity
 #+attr_org: :width 600px
 [[file:images/mock2v2.png]]
