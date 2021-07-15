@@ -26,16 +26,13 @@ F 4 "SFH11-PBPC-D07-ST-BK" H 6000 4200 50  0001 C CNN "PN"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5350 4000 5350 3550
+	5600 4000 5600 3550
 Wire Wire Line
-	5350 3550 6550 3550
+	5600 3550 6550 3550
 Wire Wire Line
 	6550 3550 6550 4000
 Wire Wire Line
 	6550 4000 6300 4000
-Connection ~ 5350 4000
-Wire Wire Line
-	5350 4000 5800 4000
 Wire Wire Line
 	5800 4100 5700 4100
 Wire Wire Line
@@ -78,9 +75,7 @@ Wire Wire Line
 Connection ~ 5700 4500
 Wire Wire Line
 	5700 4500 5700 4400
-Wire Wire Line
-	5000 4000 5350 4000
-Text Label 5800 4750 0    50   ~ 0
+Text Label 4900 4750 0    50   ~ 0
 1V2
 Wire Wire Line
 	5000 3050 5000 4000
@@ -95,7 +90,7 @@ F 2 "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2500 3500 50  0001
 F 3 "~" H 2500 3500 50  0001 C CNN
 F 4 "LTST-C193KRKT-5A" H 2500 3500 50  0001 C CNN "PN"
 	1    2500 3500
-	0    1    1    0   
+	0    -1   -1   0   
 $EndComp
 Wire Wire Line
 	2500 3350 2500 3050
@@ -382,7 +377,7 @@ Wire Wire Line
 	4000 3450 4000 4300
 Connection ~ 4000 4300
 Text Label 4750 3050 0    50   ~ 0
-7.5V
+7V5
 Text Label 1750 3050 0    50   ~ 0
 9V
 $Comp
@@ -486,7 +481,6 @@ Wire Wire Line
 	6550 4200 7200 4200
 Wire Wire Line
 	5800 3050 7200 3050
-Connection ~ 5000 4000
 Connection ~ 5000 4300
 Wire Wire Line
 	5000 4300 5700 4300
@@ -534,4 +528,37 @@ Wire Wire Line
 	8450 3050 8850 3050
 Wire Wire Line
 	8450 4200 8850 4200
+$Comp
+L Device:Jumper JP2
+U 1 1 6102B890
+P 5400 4750
+F 0 "JP2" H 5400 5014 50  0000 C CNN
+F 1 "Jumper" H 5400 4923 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5400 4750 50  0001 C CNN
+F 3 "~" H 5400 4750 50  0001 C CNN
+	1    5400 4750
+	1    0    0    -1  
+$EndComp
+Connection ~ 5700 4750
+Wire Wire Line
+	5100 4750 4900 4750
+$Comp
+L Device:Jumper JP1
+U 1 1 6103922F
+P 5300 4000
+F 0 "JP1" H 5300 4264 50  0000 C CNN
+F 1 "Jumper" H 5300 4173 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5300 4000 50  0001 C CNN
+F 3 "~" H 5300 4000 50  0001 C CNN
+	1    5300 4000
+	1    0    0    -1  
+$EndComp
+Connection ~ 5000 4000
+Connection ~ 5600 4000
+Wire Wire Line
+	5600 4000 5800 4000
+Text Label 5850 4750 0    50   ~ 0
+1V2_JUMP
+Text Label 5850 3550 0    50   ~ 0
+7V5_JUMP
 $EndSCHEMATC
