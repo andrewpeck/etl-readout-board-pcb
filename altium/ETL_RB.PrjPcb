@@ -190,6 +190,23 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=VJAXYWOQ
 
+[Document10]
+DocumentPath=ETL_RB.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=HILKNGJV
+
 [GeneratedDocument1]
 DocumentPath=Project Outputs for ETL_RB\ETL_RB_v1.7\BOM\ETL_RB_V1.7.xls
 DItemRevisionGUID=
