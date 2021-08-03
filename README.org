@@ -6,11 +6,9 @@
   - [[#block-diagrams][Block Diagrams]]
   - [[#mechanical-outline][Mechanical Outline]]
   - [[#power][Power]]
-  - [[#lpgbt-configuration][LPGBT Configuration]]
   - [[#vtrx-i2c][VTRX+ I2C]]
   - [[#errata][Errata]]
-  - [[#fusing-instructions][Fusing Instructions]]
-  - [[#inventory][Inventory]]
+  - [[#v2-change-log][V2 Change Log]]
 
 ** Useful Links
 - Latest RB Schematics - [[https://gitlab.cern.ch/cms-etl-electronics/readout-board-pcb/uploads/183954f3a47f967752902acf8ae9c3d3/ETL_RB_V1.6.PDF][ETL_RB_V1.6.PDF]]
@@ -45,6 +43,7 @@
 - 2021/03/23 - Working ADC voltage readings
 - 2021/05/11 - 2nd batch of readout boards delivered to BU
 - 2021/05/19 - Working SCA I2C master
+- 2021/08/02 - Fully tested trigger and daq lpgbts w/ emulator board
 ** Block Diagrams
 *** Data Flow
 #+ATTR_HTML: :width 700px
@@ -153,22 +152,6 @@ values:
 | *Total*  | *613 - 853 mW*                              |
 |--------+-------------------------------------------|
 
-** LPGBT Configuration
-
-The DAQ and Trigger LPGBTs are arranged in a master-slave configuration, with
-the master LPGBT providing a clock and an I2C bus to the slave.
-
-Both LPGBTs are configured by default in FEC12 10.24 Gbps mode, with jumpers
-available to select FEC5 or 5.12 Gbps modes. CHange of the mode affects both
-LPGBTs together.
-
-|---------+--------------------------------------------------------|
-| Jumpers | Description                                            |
-|---------+--------------------------------------------------------|
-| JMP1    | Install to set LPGBT MODE[2] to 0 (FEC12 → FEC5)       |
-| JMP2    | Install to set LPGBT MODE[3] to 0 (data rate → 5 Gbps) |
-|---------+--------------------------------------------------------|
-
 ** VTRX+ I2C
 VTRX+ documentation does not specify the I2C address of the device, but the
 laser driver spec has some details:
@@ -199,14 +182,19 @@ pin 12 of P6, P8 and P10 sets ADDR3 of ETROC2
      + This note, is, however, a remnant of a previous iteration of the design
        where all modules were on the same i2c bus. In the current configuration,
        each module has its own I2C bus, and shares the same address.
-** Fusing Instructions
-** Inventory
-*** v1
-|---------+--------+-------+----------|
-| Board # | Fusing | Notes | Location |
-|---------+--------+-------+----------|
-|       1 |        |       |          |
-|       2 |        |       |          |
-|       3 |        |       |          |
-|       4 |        |       |          |
-|---------+--------+-------+----------|
+** V2 Change Log
+*** Misc
+- Clean up project & project path
+- Consolidate all components into ETL_RB.SCHLIB
+- Some changes from 0201 to 0402 pads
+- FEC Mode Jumper removed
+  + Can be changed by deinstallation of a resistor
+- 10 Gbps jumper removed
+  + No reason to operate at 5 Gbps
+- [ ] Correct BJT footprint
+- [ ] Correct P1 pinout
+- [ ] I2C addressing
+*** LPGBT v0 --> v1 migration
+- [x] BOOTCNF change
+  + BOOTCNF mode can be changed by resistor removal
+- [x] EDINECTERM resistor added to Master lpgbt
