@@ -1,4 +1,5 @@
-Record=TopLevelDocument|FileName=BiasVoltage.SchDoc|SheetNumber= 
-Record=NoMainPathDocument|SourceDocument=BiasVoltage.SchDoc|FileName=LowVoltage.SchDoc|SheetNumber= 
-Record=NoMainPathDocument|SourceDocument=BiasVoltage.SchDoc|FileName=lpGBT.SchDoc|SheetNumber= 
+Record=TopLevelDocument|FileName=BiasVoltage.SchDoc|SheetNumber=5
+Record=NoMainPathDocument|SourceDocument=BiasVoltage.SchDoc|FileName=ETL_RB.SchDoc|SheetNumber=1
+Record=NoMainPathDocument|SourceDocument=BiasVoltage.SchDoc|FileName=LowVoltage.SchDoc|SheetNumber=4
+Record=NoMainPathDocument|SourceDocument=BiasVoltage.SchDoc|FileName=lpGBT.SchDoc|SheetNumber=3
 Record=NoMainPathDocument|SourceDocument=BiasVoltage.SchDoc|FileName=WP7B.SchDoc|SheetNumber=2
