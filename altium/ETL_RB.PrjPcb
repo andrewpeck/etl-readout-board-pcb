@@ -1,6 +1,6 @@
 ﻿[Design]
 Version=1.0
-HierarchyMode=3
+HierarchyMode=2
 ChannelRoomNamingStyle=0
 ReleasesFolder=
 ChannelDesignatorFormatString=$Component_$RoomName
@@ -33,7 +33,10 @@ FSMEncodingStyle=eFMSDropDownList_OneHot
 IsProjectConflictPreventionWarningsEnabled=1
 OutputPath=
 LogFolderPath=
-ManagedProjectGUID=
+ManagedProjectGUID=4C4D11AD-C569-4627-99DB-5E36B34803EB
+VaultGUID=FCF81B54-F246-4EF2-A04F-822E241F0F9D
+ReleaseVaultName=Boston University
+ItemGUID=4C4D11AD-C569-4627-99DB-5E36B34803EB
 IncludeDesignInRelease=0
 
 [Preferences]
@@ -244,7 +247,45 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=XGJGSYKD
 
+[Document13]
+DocumentPath=ExtPower.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=6
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=BQHBSOUX
+
+[Document14]
+DocumentPath=ModuleRegulator.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=7
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=YOLQLVKN
+
 [GeneratedDocument1]
+DocumentPath=Project Outputs for ETL_RB\Design Rule Check - ETL_RB.html
+DItemRevisionGUID=
+
+[GeneratedDocument2]
 DocumentPath=Project Outputs for ETL_RB\ETL_RB_v1.7\BOM\ETL_RB_V1.7.xls
 DItemRevisionGUID=
 
