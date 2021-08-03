@@ -227,29 +227,46 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
+[Document12]
+DocumentPath=LinPOL12.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=XGJGSYKD
+
 [GeneratedDocument1]
 DocumentPath=Project Outputs for ETL_RB\ETL_RB_v1.7\BOM\ETL_RB_V1.7.xls
 DItemRevisionGUID=
 
 [Parameter1]
-Name=DrawnBy
-Value=sxw anp
-
-[Parameter2]
 Name=TestParam
 Value=cheese
 
-[Parameter3]
+[Parameter2]
 Name=Revision
 Value=2.0
 
-[Parameter4]
+[Parameter3]
 Name=Project
 Value=ETL Readout Board
 
-[Parameter5]
+[Parameter4]
 Name=Organization
 Value=Boston University
+
+[Parameter5]
+Name=DrawnBy
+Value=sxw anp
 
 [Parameter6]
 Name=Date
