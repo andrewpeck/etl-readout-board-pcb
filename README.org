@@ -17,6 +17,8 @@
 - Latest RB Gerbers:  [[https://gitlab.cern.ch/cms-etl-electronics/readout-board-pcb/uploads/5678ebf45c38e1c627c98f56c8df58fa/ETL_RB_V1.6.zip][ETL_RB_V1.6.zip]]
 - Latest RB Project Archive - [[https://gitlab.cern.ch/cms-etl-electronics/readout-board-pcb/uploads/25dc68e87a1a2c3de5a3411c434b7c02/ETL_RB__11-2-2020_9-17-11_AM_.zip][ETL_RB__11-2-2020_9-17-11_AM_.zip]]
 - Mr. Wu's File Stash - [[http://physics.bu.edu/~wusx/download/ETL_RB/]]
+- [[https://gitlab.cern.ch/vldbplus/rpi_translator_board_v2/-/raw/master/HW/Project%20Outputs%20for%20RPi_VLDB_Interface/v2-b/SCH/RPi_VLDB_Interface_v2b.PDF?inline=false][PiGBT Schematic]]
+
 - Datasheets:
   + LpGBT Manual - [[https://lpgbt.web.cern.ch/lpgbt/manual/][LpGBT Manual]]
   + GBT-SCA Manual - [[https://espace.cern.ch/GBT-Project/GBT-SCA/Manuals/GBT-SCA_Manual_2019.002.pdf][GBT-SCA Manual]]
