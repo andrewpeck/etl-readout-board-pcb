@@ -11,7 +11,7 @@
   - [[#v2-change-log][V2 Change Log]]
 
 ** Useful Links
-- Documentation page: http://etl-rb.docs.cern.ch/
+- Documentation page: [[http://etl-rb.docs.cern.ch/][etl-rb.docs.cern.ch]]
 - Latest RB Schematics - [[https://gitlab.cern.ch/cms-etl-electronics/readout-board-pcb/uploads/183954f3a47f967752902acf8ae9c3d3/ETL_RB_V1.6.PDF][ETL_RB_V1.6.PDF]]
 - Latest RB Gerbers:  [[https://gitlab.cern.ch/cms-etl-electronics/readout-board-pcb/uploads/5678ebf45c38e1c627c98f56c8df58fa/ETL_RB_V1.6.zip][ETL_RB_V1.6.zip]]
 - Latest RB Project Archive - [[https://gitlab.cern.ch/cms-etl-electronics/readout-board-pcb/uploads/25dc68e87a1a2c3de5a3411c434b7c02/ETL_RB__11-2-2020_9-17-11_AM_.zip][ETL_RB__11-2-2020_9-17-11_AM_.zip]]
