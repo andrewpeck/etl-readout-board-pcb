@@ -475,23 +475,6 @@ GenerateClassCluster=0
 DocumentUniqueId=XJYDUUUS
 
 [Document26]
-DocumentPath=LpGBT-Elinks-Master.Harness
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=
-
-[Document27]
 DocumentPath=Slow-Control-Mezz.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -508,8 +491,25 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=MVZZCURC
 
+[Document27]
+DocumentPath=I2C_Mux.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=NLKIMDPJ
+
 [Document28]
-DocumentPath=Modules.Harness
+DocumentPath=LpGBT-Elinks-Master.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -526,6 +526,23 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [Document29]
+DocumentPath=Modules.Harness
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
+[Document30]
 DocumentPath=LpGBT-Elinks.Harness
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1580,6 +1597,206 @@ SelectedOnly=0
 UpdateVariants=1
 UpdateToLatestRevision=1
 PartTypes=0
+
+[NetInfos]
+Net1=NetName=EDIN00N|NetColor=$0082EC85
+Net2=NetName=EDIN00N_LpGBT Master|NetColor=$0082EC85
+Net3=NetName=EDIN00N_LpGBT Slave|NetColor=$0082EC85
+Net4=NetName=EDIN00P|NetColor=$0082EC85
+Net5=NetName=EDIN00P_LpGBT Master|NetColor=$0082EC85
+Net6=NetName=EDIN00P_LpGBT Slave|NetColor=$0082EC85
+Net7=NetName=EDIN01N|NetColor=$00B3D2F1
+Net8=NetName=EDIN01N_LpGBT Master|NetColor=$00B3D2F1
+Net9=NetName=EDIN01N_LpGBT Slave|NetColor=$00B3D2F1
+Net10=NetName=EDIN01P|NetColor=$00B3D2F1
+Net11=NetName=EDIN01P_LpGBT Master|NetColor=$00B3D2F1
+Net12=NetName=EDIN01P_LpGBT Slave|NetColor=$00B3D2F1
+Net13=NetName=EDIN02N|NetColor=$0082EC85
+Net14=NetName=EDIN02N_LpGBT Master|NetColor=$0082EC85
+Net15=NetName=EDIN02N_LpGBT Slave|NetColor=$0082EC85
+Net16=NetName=EDIN02P|NetColor=$0082EC85
+Net17=NetName=EDIN02P_LpGBT Master|NetColor=$0082EC85
+Net18=NetName=EDIN02P_LpGBT Slave|NetColor=$0082EC85
+Net19=NetName=EDIN03N|NetColor=$00B3D2F1
+Net20=NetName=EDIN03N_LpGBT Master|NetColor=$00B3D2F1
+Net21=NetName=EDIN03N_LpGBT Slave|NetColor=$00B3D2F1
+Net22=NetName=EDIN03P|NetColor=$00B3D2F1
+Net23=NetName=EDIN03P_LpGBT Master|NetColor=$00B3D2F1
+Net24=NetName=EDIN03P_LpGBT Slave|NetColor=$00B3D2F1
+Net25=NetName=EDIN10N|NetColor=$0082EC85
+Net26=NetName=EDIN10N_LpGBT Master|NetColor=$0082EC85
+Net27=NetName=EDIN10N_LpGBT Slave|NetColor=$0082EC85
+Net28=NetName=EDIN10P|NetColor=$0082EC85
+Net29=NetName=EDIN10P_LpGBT Master|NetColor=$0082EC85
+Net30=NetName=EDIN10P_LpGBT Slave|NetColor=$0082EC85
+Net31=NetName=EDIN11N|NetColor=$00B3D2F1
+Net32=NetName=EDIN11N_LpGBT Master|NetColor=$00B3D2F1
+Net33=NetName=EDIN11N_LpGBT Slave|NetColor=$00B3D2F1
+Net34=NetName=EDIN11P|NetColor=$00B3D2F1
+Net35=NetName=EDIN11P_LpGBT Master|NetColor=$00B3D2F1
+Net36=NetName=EDIN11P_LpGBT Slave|NetColor=$00B3D2F1
+Net37=NetName=EDIN12N|NetColor=$0082EC85
+Net38=NetName=EDIN12N_LpGBT Master|NetColor=$0082EC85
+Net39=NetName=EDIN12N_LpGBT Slave|NetColor=$0082EC85
+Net40=NetName=EDIN12P|NetColor=$0082EC85
+Net41=NetName=EDIN12P_LpGBT Master|NetColor=$0082EC85
+Net42=NetName=EDIN12P_LpGBT Slave|NetColor=$0082EC85
+Net43=NetName=EDIN13N|NetColor=$00B3D2F1
+Net44=NetName=EDIN13N_LpGBT Master|NetColor=$00B3D2F1
+Net45=NetName=EDIN13N_LpGBT Slave|NetColor=$00B3D2F1
+Net46=NetName=EDIN13P|NetColor=$00B3D2F1
+Net47=NetName=EDIN13P_LpGBT Master|NetColor=$00B3D2F1
+Net48=NetName=EDIN13P_LpGBT Slave|NetColor=$00B3D2F1
+Net49=NetName=EDIN20N|NetColor=$0082EC85
+Net50=NetName=EDIN20N_LpGBT Master|NetColor=$0082EC85
+Net51=NetName=EDIN20N_LpGBT Slave|NetColor=$0082EC85
+Net52=NetName=EDIN20P|NetColor=$0082EC85
+Net53=NetName=EDIN20P_LpGBT Master|NetColor=$0082EC85
+Net54=NetName=EDIN20P_LpGBT Slave|NetColor=$0082EC85
+Net55=NetName=EDIN21N|NetColor=$00B3D2F1
+Net56=NetName=EDIN21N_LpGBT Master|NetColor=$00B3D2F1
+Net57=NetName=EDIN21N_LpGBT Slave|NetColor=$00B3D2F1
+Net58=NetName=EDIN21P|NetColor=$00B3D2F1
+Net59=NetName=EDIN21P_LpGBT Master|NetColor=$00B3D2F1
+Net60=NetName=EDIN21P_LpGBT Slave|NetColor=$00B3D2F1
+Net61=NetName=EDIN22N|NetColor=$0082EC85
+Net62=NetName=EDIN22N_LpGBT Master|NetColor=$0082EC85
+Net63=NetName=EDIN22N_LpGBT Slave|NetColor=$0082EC85
+Net64=NetName=EDIN22P|NetColor=$0082EC85
+Net65=NetName=EDIN22P_LpGBT Master|NetColor=$0082EC85
+Net66=NetName=EDIN22P_LpGBT Slave|NetColor=$0082EC85
+Net67=NetName=EDIN23N|NetColor=$00B3D2F1
+Net68=NetName=EDIN23N_LpGBT Master|NetColor=$00B3D2F1
+Net69=NetName=EDIN23N_LpGBT Slave|NetColor=$00B3D2F1
+Net70=NetName=EDIN23P|NetColor=$00B3D2F1
+Net71=NetName=EDIN23P_LpGBT Master|NetColor=$00B3D2F1
+Net72=NetName=EDIN23P_LpGBT Slave|NetColor=$00B3D2F1
+Net73=NetName=EDIN30N|NetColor=$0082EC85
+Net74=NetName=EDIN30N_LpGBT Master|NetColor=$0082EC85
+Net75=NetName=EDIN30N_LpGBT Slave|NetColor=$0082EC85
+Net76=NetName=EDIN30P|NetColor=$0082EC85
+Net77=NetName=EDIN30P_LpGBT Master|NetColor=$0082EC85
+Net78=NetName=EDIN30P_LpGBT Slave|NetColor=$0082EC85
+Net79=NetName=EDIN31N|NetColor=$00B3D2F1
+Net80=NetName=EDIN31N_LpGBT Master|NetColor=$00B3D2F1
+Net81=NetName=EDIN31N_LpGBT Slave|NetColor=$00B3D2F1
+Net82=NetName=EDIN31P|NetColor=$00B3D2F1
+Net83=NetName=EDIN31P_LpGBT Master|NetColor=$00B3D2F1
+Net84=NetName=EDIN31P_LpGBT Slave|NetColor=$00B3D2F1
+Net85=NetName=EDIN32N|NetColor=$0082EC85
+Net86=NetName=EDIN32N_LpGBT Master|NetColor=$0082EC85
+Net87=NetName=EDIN32N_LpGBT Slave|NetColor=$0082EC85
+Net88=NetName=EDIN32P|NetColor=$0082EC85
+Net89=NetName=EDIN32P_LpGBT Master|NetColor=$0082EC85
+Net90=NetName=EDIN32P_LpGBT Slave|NetColor=$0082EC85
+Net91=NetName=EDIN33N|NetColor=$00B3D2F1
+Net92=NetName=EDIN33N_LpGBT Master|NetColor=$00B3D2F1
+Net93=NetName=EDIN33N_LpGBT Slave|NetColor=$00B3D2F1
+Net94=NetName=EDIN33P|NetColor=$00B3D2F1
+Net95=NetName=EDIN33P_LpGBT Master|NetColor=$00B3D2F1
+Net96=NetName=EDIN33P_LpGBT Slave|NetColor=$00B3D2F1
+Net97=NetName=EDIN40N|NetColor=$0082EC85
+Net98=NetName=EDIN40N_LpGBT Master|NetColor=$0082EC85
+Net99=NetName=EDIN40N_LpGBT Slave|NetColor=$0082EC85
+Net100=NetName=EDIN40P|NetColor=$0082EC85
+Net101=NetName=EDIN40P_LpGBT Master|NetColor=$0082EC85
+Net102=NetName=EDIN40P_LpGBT Slave|NetColor=$0082EC85
+Net103=NetName=EDIN41N|NetColor=$00B3D2F1
+Net104=NetName=EDIN41N_LpGBT Master|NetColor=$00B3D2F1
+Net105=NetName=EDIN41N_LpGBT Slave|NetColor=$00B3D2F1
+Net106=NetName=EDIN41P|NetColor=$00B3D2F1
+Net107=NetName=EDIN41P_LpGBT Master|NetColor=$00B3D2F1
+Net108=NetName=EDIN41P_LpGBT Slave|NetColor=$00B3D2F1
+Net109=NetName=EDIN42N|NetColor=$0082EC85
+Net110=NetName=EDIN42N_LpGBT Master|NetColor=$0082EC85
+Net111=NetName=EDIN42N_LpGBT Slave|NetColor=$0082EC85
+Net112=NetName=EDIN42P|NetColor=$0082EC85
+Net113=NetName=EDIN42P_LpGBT Master|NetColor=$0082EC85
+Net114=NetName=EDIN42P_LpGBT Slave|NetColor=$0082EC85
+Net115=NetName=EDIN43N|NetColor=$00B3D2F1
+Net116=NetName=EDIN43N_LpGBT Master|NetColor=$00B3D2F1
+Net117=NetName=EDIN43N_LpGBT Slave|NetColor=$00B3D2F1
+Net118=NetName=EDIN43P|NetColor=$00B3D2F1
+Net119=NetName=EDIN43P_LpGBT Master|NetColor=$00B3D2F1
+Net120=NetName=EDIN43P_LpGBT Slave|NetColor=$00B3D2F1
+Net121=NetName=EDIN50N|NetColor=$0082EC85
+Net122=NetName=EDIN50N_LpGBT Master|NetColor=$0082EC85
+Net123=NetName=EDIN50N_LpGBT Slave|NetColor=$0082EC85
+Net124=NetName=EDIN50P|NetColor=$0082EC85
+Net125=NetName=EDIN50P_LpGBT Master|NetColor=$0082EC85
+Net126=NetName=EDIN50P_LpGBT Slave|NetColor=$0082EC85
+Net127=NetName=EDIN51N|NetColor=$00B3D2F1
+Net128=NetName=EDIN51N_LpGBT Master|NetColor=$00B3D2F1
+Net129=NetName=EDIN51N_LpGBT Slave|NetColor=$00B3D2F1
+Net130=NetName=EDIN51P|NetColor=$00B3D2F1
+Net131=NetName=EDIN51P_LpGBT Master|NetColor=$00B3D2F1
+Net132=NetName=EDIN51P_LpGBT Slave|NetColor=$00B3D2F1
+Net133=NetName=EDIN52N|NetColor=$0082EC85
+Net134=NetName=EDIN52N_LpGBT Master|NetColor=$0082EC85
+Net135=NetName=EDIN52N_LpGBT Slave|NetColor=$0082EC85
+Net136=NetName=EDIN52P|NetColor=$0082EC85
+Net137=NetName=EDIN52P_LpGBT Master|NetColor=$0082EC85
+Net138=NetName=EDIN52P_LpGBT Slave|NetColor=$0082EC85
+Net139=NetName=EDIN53N|NetColor=$00B3D2F1
+Net140=NetName=EDIN53N_LpGBT Master|NetColor=$00B3D2F1
+Net141=NetName=EDIN53N_LpGBT Slave|NetColor=$00B3D2F1
+Net142=NetName=EDIN53P|NetColor=$00B3D2F1
+Net143=NetName=EDIN53P_LpGBT Master|NetColor=$00B3D2F1
+Net144=NetName=EDIN53P_LpGBT Slave|NetColor=$00B3D2F1
+Net145=NetName=EDIN60N|NetColor=$0082EC85
+Net146=NetName=EDIN60N_LpGBT Master|NetColor=$0082EC85
+Net147=NetName=EDIN60N_LpGBT Slave|NetColor=$0082EC85
+Net148=NetName=EDIN60P|NetColor=$0082EC85
+Net149=NetName=EDIN60P_LpGBT Master|NetColor=$0082EC85
+Net150=NetName=EDIN60P_LpGBT Slave|NetColor=$0082EC85
+Net151=NetName=EDIN61N|NetColor=$00B3D2F1
+Net152=NetName=EDIN61N_LpGBT Master|NetColor=$00B3D2F1
+Net153=NetName=EDIN61N_LpGBT Slave|NetColor=$00B3D2F1
+Net154=NetName=EDIN61P|NetColor=$00B3D2F1
+Net155=NetName=EDIN61P_LpGBT Master|NetColor=$00B3D2F1
+Net156=NetName=EDIN61P_LpGBT Slave|NetColor=$00B3D2F1
+Net157=NetName=EDIN62N|NetColor=$0082EC85
+Net158=NetName=EDIN62N_LpGBT Master|NetColor=$0082EC85
+Net159=NetName=EDIN62N_LpGBT Slave|NetColor=$0082EC85
+Net160=NetName=EDIN62P|NetColor=$0082EC85
+Net161=NetName=EDIN62P_LpGBT Master|NetColor=$0082EC85
+Net162=NetName=EDIN62P_LpGBT Slave|NetColor=$0082EC85
+Net163=NetName=EDIN63N|NetColor=$00B3D2F1
+Net164=NetName=EDIN63N_LpGBT Master|NetColor=$00B3D2F1
+Net165=NetName=EDIN63N_LpGBT Slave|NetColor=$00B3D2F1
+Net166=NetName=EDIN63P|NetColor=$00B3D2F1
+Net167=NetName=EDIN63P_LpGBT Master|NetColor=$00B3D2F1
+Net168=NetName=EDIN63P_LpGBT Slave|NetColor=$00B3D2F1
+Net169=NetName=M_UPLINKS_IN|NetColor=$0082EC85
+Net170=NetName=S0_UPLINKS_IN|NetColor=$0082EC85
+Net171=NetName=UPLINKS_I.EDIN00N|NetColor=$0082EC85
+Net172=NetName=UPLINKS_I.EDIN00P|NetColor=$0082EC85
+Net173=NetName=UPLINKS_I.EDIN02N|NetColor=$0082EC85
+Net174=NetName=UPLINKS_I.EDIN02P|NetColor=$0082EC85
+Net175=NetName=UPLINKS_I.EDIN10N|NetColor=$0082EC85
+Net176=NetName=UPLINKS_I.EDIN10P|NetColor=$0082EC85
+Net177=NetName=UPLINKS_I.EDIN12N|NetColor=$0082EC85
+Net178=NetName=UPLINKS_I.EDIN12P|NetColor=$0082EC85
+Net179=NetName=UPLINKS_I.EDIN20N|NetColor=$0082EC85
+Net180=NetName=UPLINKS_I.EDIN20P|NetColor=$0082EC85
+Net181=NetName=UPLINKS_I.EDIN22N|NetColor=$0082EC85
+Net182=NetName=UPLINKS_I.EDIN22P|NetColor=$0082EC85
+Net183=NetName=UPLINKS_I.EDIN30N|NetColor=$0082EC85
+Net184=NetName=UPLINKS_I.EDIN30P|NetColor=$0082EC85
+Net185=NetName=UPLINKS_I.EDIN32N|NetColor=$0082EC85
+Net186=NetName=UPLINKS_I.EDIN32P|NetColor=$0082EC85
+Net187=NetName=UPLINKS_I.EDIN40N|NetColor=$0082EC85
+Net188=NetName=UPLINKS_I.EDIN40P|NetColor=$0082EC85
+Net189=NetName=UPLINKS_I.EDIN42N|NetColor=$0082EC85
+Net190=NetName=UPLINKS_I.EDIN42P|NetColor=$0082EC85
+Net191=NetName=UPLINKS_I.EDIN50N|NetColor=$0082EC85
+Net192=NetName=UPLINKS_I.EDIN50P|NetColor=$0082EC85
+Net193=NetName=UPLINKS_I.EDIN52N|NetColor=$0082EC85
+Net194=NetName=UPLINKS_I.EDIN52P|NetColor=$0082EC85
+Net195=NetName=UPLINKS_I.EDIN60N|NetColor=$0082EC85
+Net196=NetName=UPLINKS_I.EDIN60P|NetColor=$0082EC85
+Net197=NetName=UPLINKS_I.EDIN62N|NetColor=$0082EC85
+Net198=NetName=UPLINKS_I.EDIN62P|NetColor=$0082EC85
 
 [Comparison Options]
 ComparisonOptions0=Kind=Net|MinPercent=75|MinMatch=3|ShowMatch=-1|UseName=-1|InclAllRules=0
