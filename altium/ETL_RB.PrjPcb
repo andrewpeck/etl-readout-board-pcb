@@ -568,32 +568,32 @@ DocumentPath=Project Outputs for ETL_RB\ETL_RB_v1.7\BOM\ETL_RB_V1.7.xls
 DItemRevisionGUID=
 
 [Parameter1]
-Name=CompanyName
-Value=Boston University
+Name=TestParam
+Value=cheese
 
 [Parameter2]
-Name=Date
-Value=07/27/2021
+Name=Revision
+Value=2.0
 
 [Parameter3]
-Name=DrawnBy
-Value='(sxw anp)
+Name=Project
+Value=ETL Readout Board
 
 [Parameter4]
 Name=Organization
 Value=Boston University
 
 [Parameter5]
-Name=Project
-Value=ETL Readout Board
+Name=DrawnBy
+Value=anp sxw
 
 [Parameter6]
-Name=Revision
-Value=2.0
+Name=Date
+Value=2022/06/02
 
 [Parameter7]
-Name=TestParam
-Value=cheese
+Name=CompanyName
+Value=Boston University
 
 [Configuration1]
 Name=Sources
