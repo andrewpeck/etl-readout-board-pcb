@@ -1,1 +1,2 @@
-Record=TopLevelDocument|FileName=lpGBT.SchDoc
+Record=TopLevelDocument|FileName=lpGBT.SchDoc|SheetNumber= 
+Record=NoMainPathDocument|SourceDocument=lpGBT.SchDoc|FileName=WP7B.SchDoc|SheetNumber=2

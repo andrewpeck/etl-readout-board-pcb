@@ -8,9 +8,8 @@
   - [[#power][Power]]
   - [[#lpgbt-configuration][LPGBT Configuration]]
   - [[#vtrx-i2c][VTRX+ I2C]]
+  - [[#v2-change-log][v2 Change Log]]
   - [[#errata][Errata]]
-  - [[#fusing-instructions][Fusing Instructions]]
-  - [[#inventory][Inventory]]
 
 ** Useful Links
 - Documentation page: [[http://etl-rb.docs.cern.ch/][etl-rb.docs.cern.ch]]
@@ -183,6 +182,38 @@ address pins are not connected, so they use internal pull down.
 
 The address then is ~0b1010000~ = ~0x50~
 
+** v2 Change Log
+- [X] Replace KSC2223 BJT w/ ZXMN2B01FTA
+- [X] Parallelize LinPol Outputs
+- [ ] Fix I2C note
+- [ ] Remove I2C programmer port
+- [ ] Increase BV granularity to 1 per ETROC
+- [ ] Increase LV granularity to 1 per ETROC ? add FETs or something?
+- [X] Remove EFUSEPOWER pulldown R132
+- [ ] Add EFUSEPOWER test point ?
+- [X] Fix PiGBT Connector Pinout
+- [ ] Change mechanical envelope to reflect latest design
+- [ ] Determine optimal value of LINPOL ballast resistor
+- [-] Addition of LEDs
+  + [X] Master and slave READY signals connected to LEDs
+  + [X] Connect power to LED
+  + [ ] Connect LPGBT GPIO to LED
+  + [ ] Connect SCA GPIO to LED
+- [X] lpGBT v1 Changes:
+  + [X] SC_I2C changed to BOOTCNF1, Should be tied to 0 (https://lpgbt.web.cern.ch/lpgbt/v1/powerup.html#bootcnf1-bootcnf0)
+  + [X] Stateovrd changed to EDINTERM
+    - "Notice that pin EDINECTERM contains a pull-down resistor. If left
+      unconnected, the eRx termination for the EC channel will be disabled.
+      Notice as well, that this pin has no effect when the lpGBT is set to work
+      as a transceiver. In that case, it is the responsibility of the user to
+      configure the termination for the EC-channel in master lpGBTs."
+    - https://lpgbt.web.cern.ch/lpgbt/v1/configuration.html?highlight=edinecterm#ec-channel-control-link-topologies
+  + [X] VCOBypass changed to BOOTCNF0
+    - https://lpgbt.web.cern.ch/lpgbt/v1/powerup.html#bootcnf1-bootcnf0
+    - Need to be able to change from 0 <--> 1 to select boot mode
+- [ ] Latest module pinout (monitor 1x VREF and VTEMP per ETROC)
+- [X] Update module connector (QSE-020-01-F-D)
+- [ ] Connect testoutput
 ** Errata
 1) KSC2223 footprint is incorrect
    - The footprint of the KSC2223 transistor is incorrect.
@@ -202,14 +233,3 @@ pin 12 of P6, P8 and P10 sets ADDR3 of ETROC2
      + This note, is, however, a remnant of a previous iteration of the design
        where all modules were on the same i2c bus. In the current configuration,
        each module has its own I2C bus, and shares the same address.
-** Fusing Instructions
-** Inventory
-*** v1
-|---------+--------+-------+----------|
-| Board # | Fusing | Notes | Location |
-|---------+--------+-------+----------|
-|       1 |        |       |          |
-|       2 |        |       |          |
-|       3 |        |       |          |
-|       4 |        |       |          |
-|---------+--------+-------+----------|
