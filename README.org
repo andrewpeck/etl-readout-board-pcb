@@ -20,9 +20,10 @@
 - [[https://gitlab.cern.ch/vldbplus/rpi_translator_board_v2/-/raw/master/HW/Project%20Outputs%20for%20RPi_VLDB_Interface/v2-b/SCH/RPi_VLDB_Interface_v2b.PDF?inline=false][PiGBT Schematic]]
 
 - Datasheets:
-  + LpGBT Manual - [[https://lpgbt.web.cern.ch/lpgbt/manual/][LpGBT Manual]]
+  + LpGBT v0 Manual - [[https://lpgbt.web.cern.ch/lpgbt/v0/][LpGBT v0 Manual]]
+  + LpGBT v1 Manual - [[https://lpgbt.web.cern.ch/lpgbt/v1/][LpGBT v1 Manual]]
   + GBT-SCA Manual - [[https://espace.cern.ch/GBT-Project/GBT-SCA/Manuals/GBT-SCA_Manual_2019.002.pdf][GBT-SCA Manual]]
-  + LINPOL12 Datasheet - [[https://project-dcdc.web.cern.ch/public/Documents/linPOL12V%20datasheetV3.3.pdf][LinPOL12V]]
+  + LINPOL12 Datasheet - [[https://espace.cern.ch/project-DCDC-new/Shared%20Documents/linPOL12V%20datasheetV3.4.pdf][LinPOL12V]]
   + VTRX+ Application Note: [[https://edms.cern.ch/ui/file/2149674/1/VTRxPlusApplicationNote.pdf][VTRxPlusApplicationNote.pdf]]
   + VTRX+ Specification: [[https://edms.cern.ch/ui/file/1719329/1/VTRxPlus_spec_v2.4.pdf][VTRxPlus_spec_v2.4.pdf]]
   + VTRX+ LDD Specs: [[https://edms.cern.ch/ui/file/1719330/1/VLplus_quadLDD_spec_v1.2_prototypes.pdf][VLplus_quadLDD_spec_v1.2_prototypes.pdf]]
@@ -184,21 +185,18 @@ The address then is ~0b1010000~ = ~0x50~
 
 ** v2 Change Log
 - [X] Replace KSC2223 BJT w/ ZXMN2B01FTA
-- [X] Parallelize LinPol Outputs
-- [ ] Fix I2C note
-- [ ] Remove I2C programmer port
-- [ ] Increase BV granularity to 1 per ETROC
-- [ ] Increase LV granularity to 1 per ETROC ? add FETs or something?
+  - Fixed footprint also
+- [ ] Parallelize LinPol Outputs
+  - [ ] Determine optimal value of LINPOL ballast resistor
+  - [ ] Increase footprint size
+- [X] Remove I2C programmer port
+  - test points are provided
 - [X] Remove EFUSEPOWER pulldown R132
-- [ ] Add EFUSEPOWER test point ?
-- [X] Fix PiGBT Connector Pinout
-- [ ] Change mechanical envelope to reflect latest design
-- [ ] Determine optimal value of LINPOL ballast resistor
-- [-] Addition of LEDs
+- [X] Addition of LEDs
   + [X] Master and slave READY signals connected to LEDs
   + [X] Connect power to LED
-  + [ ] Connect LPGBT GPIO to LED
-  + [ ] Connect SCA GPIO to LED
+  + [X] Connect LPGBT GPIO to LED
+  + [X] Connect SCA GPIO to LED
 - [X] lpGBT v1 Changes:
   + [X] SC_I2C changed to BOOTCNF1, Should be tied to 0 (https://lpgbt.web.cern.ch/lpgbt/v1/powerup.html#bootcnf1-bootcnf0)
   + [X] Stateovrd changed to EDINTERM
@@ -211,9 +209,24 @@ The address then is ~0b1010000~ = ~0x50~
   + [X] VCOBypass changed to BOOTCNF0
     - https://lpgbt.web.cern.ch/lpgbt/v1/powerup.html#bootcnf1-bootcnf0
     - Need to be able to change from 0 <--> 1 to select boot mode
-- [ ] Latest module pinout (monitor 1x VREF and VTEMP per ETROC)
+- [X] Update module pinout (monitor 1x VREF and VTEMP per ETROC)
+  - 9 analog inputs / module (double check)
+  - (1 VREF + 1 VTEMP) * 4 + 1 auxillary per module
 - [X] Update module connector (QSE-020-01-F-D)
+  + Test report: https://suddendocs.samtec.com/testreports/168830_report_rev_6_qua.pdf
+  + 5mm stack height with QTE lead style -01
+  + Catalog page: https://suddendocs.samtec.com/catalog_english/qse.pdf
+  + QSE-020-01-{F,L,C}-D
+  + QTE-020-01-{F,L,C}-D
+- [X] E-link connections are unchanged
+- [X] ADC connections are different from the v1 board; can be adapted in yaml file
+- [X] VTRX Thermistor connected directly to ADC Pin, no VREF
 - [ ] Connect testoutput
+- [X] Do not have any bias voltage to module interface;
+  - BV must be connected on the module adapter itself
+- [ ] Look at the BGA196 footprint.. what is going on with it???
+- [ ] Replace SMA with u.fl ?
+
 ** Errata
 1) KSC2223 footprint is incorrect
    - The footprint of the KSC2223 transistor is incorrect.

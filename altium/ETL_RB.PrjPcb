@@ -202,24 +202,24 @@ GenerateClassCluster=0
 DocumentUniqueId=FBSGJLWJ
 
 [Parameter1]
-Name=Date
-Value=2022/07/28
+Name=Revision
+Value=v2.0
 
 [Parameter2]
-Name=DrawnBy
-Value=anp, sxw
+Name=Organization
+Value=Boston University
 
 [Parameter3]
 Name=Engineer
 Value=anp, sxw
 
 [Parameter4]
-Name=Organization
-Value=Boston University
+Name=DrawnBy
+Value=anp, sxw
 
 [Parameter5]
-Name=Revision
-Value=v2.0
+Name=Date
+Value=2022/07/28
 
 [Configuration1]
 Name=Sources
@@ -894,7 +894,7 @@ Type32=1
 Type33=1
 Type34=1
 Type35=1
-Type36=1
+Type36=0
 Type37=1
 Type38=1
 Type39=1

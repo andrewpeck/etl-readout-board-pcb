@@ -1,4 +1,5 @@
-Record=TopLevelDocument|FileName=LINPOL12.SchDoc|SheetNumber=1
-Record=NoMainPathDocument|SourceDocument=LINPOL12.SchDoc|FileName=lpGBT.SchDoc|SheetNumber=1
-Record=NoMainPathDocument|SourceDocument=LINPOL12.SchDoc|FileName=Power.SchDoc|SheetNumber=1
-Record=NoMainPathDocument|SourceDocument=LINPOL12.SchDoc|FileName=WP7B.SchDoc|SheetNumber=2
+Record=TopLevelDocument|FileName=ETROC_Power.SchDoc|SheetNumber=5
+Record=NoMainPathDocument|SourceDocument=ETROC_Power.SchDoc|FileName=LINPOL12.SchDoc|SheetNumber=3
+Record=NoMainPathDocument|SourceDocument=ETROC_Power.SchDoc|FileName=lpGBT.SchDoc|SheetNumber=2
+Record=NoMainPathDocument|SourceDocument=ETROC_Power.SchDoc|FileName=Power.SchDoc|SheetNumber=4
+Record=NoMainPathDocument|SourceDocument=ETROC_Power.SchDoc|FileName=WP7B.SchDoc|SheetNumber=1
