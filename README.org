@@ -186,11 +186,10 @@ The address then is ~0b1010000~ = ~0x50~
 ** v2 Change Log
 - [X] Replace KSC2223 BJT w/ ZXMN2B01FTA
   - Fixed footprint also
-- [ ] Parallelize LinPol Outputs
+- [-] Parallelize LinPol Outputs
   - [ ] Determine optimal value of LINPOL ballast resistor
-  - [ ] Increase footprint size
-- [X] Remove I2C programmer port
-  - test points are provided
+  - [X] Increase footprint size
+- [X] Remove I2C programmer port, as fusing is now Not recommended per lpGBT spec
 - [X] Remove EFUSEPOWER pulldown R132
 - [X] Addition of LEDs
   + [X] Master and slave READY signals connected to LEDs
@@ -221,10 +220,9 @@ The address then is ~0b1010000~ = ~0x50~
 - [X] E-link connections are unchanged
 - [X] ADC connections are different from the v1 board; can be adapted in yaml file
 - [X] VTRX Thermistor connected directly to ADC Pin, no VREF
-- [ ] Connect testoutput
-- [X] Do not have any bias voltage to module interface;
-  - BV must be connected on the module adapter itself
-- [ ] Look at the BGA196 footprint.. what is going on with it???
+- [X] Do not have any bias voltage to module interface; BV must be connected on the module adapter itself
+- [X] Add glowing red LEDs
+- [ ] Connect testoutput?
 - [ ] Replace SMA with u.fl ?
 
 ** Errata

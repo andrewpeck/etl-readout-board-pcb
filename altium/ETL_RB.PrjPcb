@@ -25,14 +25,12 @@ NameNetsHierarchically=0
 PowerPortNamesTakePriority=0
 AutoSheetNumbering=0
 AutoCrossReferences=0
-NewIndexingOfSheetSymbols=0
 PushECOToAnnotationFile=1
 DItemRevisionGUID=
 ReportSuppressedErrorsInMessages=0
 FSMCodingStyle=eFMSDropDownList_OneProcess
 FSMEncodingStyle=eFMSDropDownList_OneHot
 IsProjectConflictPreventionWarningsEnabled=1
-IsVirtualBomDocumentRemoved=0
 OutputPath=
 LogFolderPath=
 ManagedProjectGUID=
@@ -140,7 +138,7 @@ AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
 AnnotateScope=All
-AnnotateOrder=-1
+AnnotateOrder=4
 DoLibraryUpdate=1
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
@@ -148,7 +146,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=RYXSOGRF
+DocumentUniqueId=XHKNHJGR
 
 [Document7]
 DocumentPath=ETL_RB.OutJob
@@ -202,24 +200,24 @@ GenerateClassCluster=0
 DocumentUniqueId=FBSGJLWJ
 
 [Parameter1]
-Name=Revision
-Value=v2.0
+Name=Date
+Value=2022/07/28
 
 [Parameter2]
-Name=Organization
-Value=Boston University
+Name=DrawnBy
+Value=anp, sxw
 
 [Parameter3]
 Name=Engineer
 Value=anp, sxw
 
 [Parameter4]
-Name=DrawnBy
-Value=anp, sxw
+Name=Organization
+Value=Boston University
 
 [Parameter5]
-Name=Date
-Value=2022/07/28
+Name=Revision
+Value=v2.0
 
 [Configuration1]
 Name=Sources
@@ -447,18 +445,6 @@ OutputDocumentPath11=
 OutputVariantName11=
 OutputDefault11=0
 PageOptions11=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
-OutputType12=Harness Layout Drawing Print
-OutputName12=Harness Layout Drawing Prints
-OutputDocumentPath12=
-OutputVariantName12=
-OutputDefault12=0
-PageOptions12=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
-OutputType13=Harness Wiring Diagram Print
-OutputName13=Harness Wiring Diagram Prints
-OutputDocumentPath13=
-OutputVariantName13=
-OutputDefault13=0
-PageOptions13=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
 
 [OutputGroup4]
 Name=Assembly Outputs
@@ -841,11 +827,6 @@ OutputName11=Specctra Design PCB
 OutputDocumentPath11=
 OutputVariantName11=
 OutputDefault11=0
-OutputType12=Web ReviewOutputName
-OutputName12=Web Review Data
-OutputDocumentPath12=
-OutputVariantName12=
-OutputDefault12=0
 
 [OutputGroup10]
 Name=PostProcess Outputs
@@ -861,12 +842,12 @@ OutputDefault1=0
 [Modification Levels]
 Type1=1
 Type2=1
-Type3=1
+Type3=0
 Type4=1
-Type5=1
+Type5=0
 Type6=1
 Type7=1
-Type8=1
+Type8=0
 Type9=1
 Type10=1
 Type11=1
@@ -876,10 +857,10 @@ Type14=1
 Type15=1
 Type16=1
 Type17=1
-Type18=1
+Type18=0
 Type19=1
 Type20=1
-Type21=1
+Type21=0
 Type22=1
 Type23=1
 Type24=1
@@ -889,7 +870,7 @@ Type27=1
 Type28=1
 Type29=1
 Type30=1
-Type31=1
+Type31=0
 Type32=1
 Type33=1
 Type34=1
@@ -937,7 +918,7 @@ Type75=1
 Type76=1
 Type77=1
 Type78=1
-Type79=1
+Type79=0
 Type80=1
 Type81=1
 Type82=1
@@ -1169,13 +1150,12 @@ Type116=2
 Type117=3
 Type118=3
 Type119=3
+MultiChannelAlternate=2
 AlternateItemFail=3
 Type122=2
 Type123=1
 Type124=1
 Type125=1
-Type126=1
-Type127=1
 
 [ERC Connection Matrix]
 L1=NNNNNNNNNNNWNNNWW
