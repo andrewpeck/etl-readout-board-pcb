@@ -185,9 +185,7 @@ The address then is ~0b1010000~ = ~0x50~
 
 ** v2 Change Log
 - [X] Replace KSC2223 BJT w/ ZXMN2B01FTA
-  - Fixed footprint also
-- [-] Parallelize LinPol Outputs
-  - [ ] Determine optimal value of LINPOL ballast resistor
+- [X] Parallelize LinPol Outputs
   - [X] Increase footprint size
 - [X] Remove I2C programmer port, as fusing is now Not recommended per lpGBT spec
 - [X] Remove EFUSEPOWER pulldown R132
@@ -222,8 +220,8 @@ The address then is ~0b1010000~ = ~0x50~
 - [X] VTRX Thermistor connected directly to ADC Pin, no VREF
 - [X] Do not have any bias voltage to module interface; BV must be connected on the module adapter itself
 - [X] Add glowing red LEDs
+- [X] Replace SMA with u.fl ?
 - [ ] Connect testoutput?
-- [ ] Replace SMA with u.fl ?
 
 ** Errata
 1) KSC2223 footprint is incorrect
