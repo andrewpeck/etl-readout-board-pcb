@@ -1,0 +1,515 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 9em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD22\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">11/10/2022</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">10:38:48 AM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:02</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc" class="file"><acronym title="C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc">C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">29</td></tr>
+</table>
+</td>
+</table><a name="IDXVU0WCZQMRVIN2MIEJXEVBIWSHGJ4N3OHYPTKPLL1J44UXW51HED"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID4MORWUFA1M5CLH31APMYJVBMIH3REXQGPJGY5EI3CUBWA4PGOS4F">Clearance Constraint (Gap=3mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID3POC1PV4C2FQP1CSCYTRGHWNCNYB5DB0IUABCWKRS4XQN1AWDYFE">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDWKU4IZNUBOPEBEVOGOKDOJJRZIFLKGUQIDIDPDMWO5KDXAW0PKZC">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">29</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDM1NIECJHTOM5ICIVYI0TPUKWTFW24AH1XXNYEYLI010ABVNMFRHB">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUXGEBDB4DWJ4CO5IC1PHMYLXTKCU0T1V3KFB1NGBYZIZ045BW3QD">Width Constraint (Min=2.992mil) (Max=100mil) (Preferred=4.724mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDO1HH0K3Q1LFTJKJHRIZCCTEUWG2UWNFUQLKE53GFMURVFFOCSOQI">Width Constraint (Min=3mil) (Max=5.118mil) (Preferred=4.724mil) (InNetClass('HS'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID0G4SOKAX04HKL4IPEIUJZKXI2IMPBMSLGPFC0OEFOTEH3KOVITJH">Power Plane Connect Rule(Direct Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDBYGXUZ5R1WSLM0C25MMYCL0O3MPCUXUJ231TBTDDYG50ZQQWLBBH">Hole Size Constraint (Min=1mil) (Max=100mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDU43TZ3QNC0ZFO3C3OQTOPXHUTGEKTB1MN1IKRMLKHOD0FQWTYS4J">Hole To Hole Clearance (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDPJ2ULU5MGKFINY2HSP4NRWOF1MMP5L1CTJEVZDNZURHTNKXYSXMN">Hole To Hole Clearance (Gap=5.906mil) (InNet('GND') or InNet('LV_RB') or InNet('1V5A') or InNet('1V5D') or InNet('1V2A') or InNet('1V2B') or InNet('1V2C') or InNet('1V2D')),(InNet('GND') or InNet('LV_RB') or InNet('1V5A') or InNet('1V5D') or InNet('1V2A') or InNet('1V2B') or InNet('1V2C') or InNet('1V2D'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDPKTPZKHT402LPIAGMFYGY2IWXPFO4Z4RGAXNERE1TVHOSCTPSOZF">Minimum Solder Mask Sliver (Gap=4mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDRSHTNYKV0PIFOQDN4BZ0PPAZ3FB1UEH0MIYC1ABUDS14ZKSWSAML">Silk To Solder Mask (Clearance=0.984mil) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID00WZIRPL1TA3HG4O5RBHDXV2JCRHRFTETKOXY3LCS3G3NTKOOZKC">Silk to Silk (Clearance=0.984mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDKLXCRLJSRM1KOAAQWSUXOI3S0PUELD2NT3JTBOB3BJQI1FHJWZKH">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDJFBSKGP5IUI1GMTJLLPM0O0P3DG2P1HBXTXWASJO5NEWZ4PALRIP">Matched Lengths(Tolerance=9.842mil) (InNetClass('Din_T_4'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDW5B3C2TMMLZWPUNJUHRNZIIWHOOJC1PIKW2GMOMUCGBRXB1HM2EN">Matched Lengths(Tolerance=9.842mil) (InNetClass('Din_T_5'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDFESACTY0UMUJHIR45USM4UPUSI5P2212UCG4FJPDQHOIIJLD21FJ">Matched Lengths(Tolerance=9.842mil) (InNetClass('Din_T_6'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAAZSOUHNMDXNLBS0VF20VQWLFRHQXH1NQ01SVBR34OGOLAE3WYH">Matched Lengths(Tolerance=9.842mil) (InNetClass('Din_T_1'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDGAKT0EMYXI3XPVDGZH0IPIJD2MMWEZAGHAUL01NT1SUROFYPBDMH">Matched Lengths(Tolerance=9.842mil) (InNetClass('Din_T_2'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDLFQQ5WOODXWPB0VJQE4H3IMNKIPQZFUI1KB2WMF5TSZLWM4WQYC">Matched Lengths(Tolerance=9.842mil) (InNetClass('Din_T_3'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUDLQD0A032Q0ENBUQORZ4X2X2IKL5XMD4PO0ZNHA1Z0NHEZIKW3O">Matched Lengths(Tolerance=9.842mil) (InNetClass('Dout_4'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAH3ILLUEZMRWMNGLH1PAW5TAAEQQQGQN3OCSIEDMBLW1PJ5ZEVTL">Matched Lengths(Tolerance=10mil) (InNetClass('SC_OUT'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDKGGY5ET3WEKLMOJQHVUCZ4PJ4EMK5FGWTRR3HXNA3N2TZA03TQOH">Matched Lengths(Tolerance=9.842mil) (InNetClass('Dout_5'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDUTSDXUJYJJ0RO3Y0LELG2LHYPJXWAEAFNLFYXMG355PBWWF0YP4F">Matched Lengths(Tolerance=9.842mil) (InNetClass('Dout_1'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID4WJI21XOOUAENZDR2LBKA3OHHMSCJSEZIAQTG20HWJCGTR0PUON">Matched Lengths(Tolerance=9.842mil) (InNetClass('Dout_2'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDTC4T4P34WXEVMHKSEWEHDCSM4NAFEYZCLGCKQHEJHTHIXU2GDNKL">Matched Lengths(Tolerance=9.842mil) (InNetClass('Dout_3'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUZLOCEGGJJNMI2GW4G1FNUYTSLBU3WRHXLK3JUBQUJEWEJZZLNJH">Matched Lengths(Tolerance=9.842mil) (InNetClass('Din_6'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDZZD5XSHR0G5ZG1QXQHD2BTKJVLHDGGEHOW3IRQJNFIEE0BIKCDAN">Matched Lengths(Tolerance=9.842mil) (InNetClass('Din_2'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDEUC42Q1OERLXPOXCYJWUMB4GNIM3CSSPHUVWK4PI5ZAN0GHHMAGK">Matched Lengths(Tolerance=9.842mil) (InNetClass('Din_1'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDD5PDQYJLPGZAPEXI5WD4QN4JFJ2YW0ZML05PETFXP4CMODDWGVJF">Matched Lengths(Tolerance=9.842mil) (InNetClass('Dout_6'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDOV3MF23CZ2TWLB4VBGJ1RIS3HPNCZOGZO2W0SVISOQBWJRUHTPVF">Matched Lengths(Tolerance=9.842mil) (InNetClass('Din_3'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDU5XERDVG33CCIIRR2T1112N0WOCSZXAI0MM4XOOEHP2RSA4QP0WM">Matched Lengths(Tolerance=9.842mil) (InNetClass('Din_4'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDJPIZ3TWZV5LQGYPK4WSHPNMJFLUOZ5IV4SCW4SFUU1GPQP0YEBCO">Matched Lengths(Tolerance=9.842mil) (InNetClass('Din_5'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDOGCUIX4VUQ4GOA0XP12M0RK2OD1HUTZGFENDCQOZ4QFC34ZKEJ0">Room lpGBT (Bounding Region = (1305.102mil, 1356.307mil, 5082.677mil, 3184.307mil) (InComponentClass('lpGBT'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDLSSWSZQYLERRKJ0DWUFAD2X5KC1EIGF3CDA123B0UYM2TZNCKRSM">Room LINPOL12 (Bounding Region = (2241.102mil, 1832.677mil, 4822.835mil, 2726.378mil) (InComponentClass('LINPOL12'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDD1LVO2ESDMBOBOHTWIRCEV1B2NSV4WOYRPYI4ABUJ2XNATGRC5DH">Room Power (Bounding Region = (1555.118mil, 1663.186mil, 6279.102mil, 2844.307mil) (InComponentClass('Power'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDPRXBZS2YMGIXH1U2J4XP3YBF5NHFURYN22OECFFPTTKDKR5OD3SJ">Room WP7B (Bounding Region = (1578.74mil, 1365.307mil, 5913.386mil, 3076.772mil) (InComponentClass('WP7B'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDBNIAYTIVEFD0LJOI0FO3KDALHBDSFNLIMO5EDTY4FBP0FKJRAGI">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (Disabled)(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">29</td>
+</tr>
+</table><br><a name="IDWKU4IZNUBOPEBEVOGOKDOJJRZIFLKGUQIDIDPDMWO5KDXAW0PKZC"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1155.98mil|Location2.X=1158.98mil|Location1.Y=4449.287mil|Location2.Y=4452.287mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1155.98mil|Location2.X=1158.98mil|Location1.Y=4449.287mil|Location2.Y=4452.287mil|Absolute=True">Un-Routed Net Constraint: Track (-23.622mil,2157.48mil)(-23.622mil,2157.48mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1470.441mil|Location2.X=1474.441mil|Location1.Y=4448.787mil|Location2.Y=4452.787mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1470.441mil|Location2.X=1474.441mil|Location1.Y=4448.787mil|Location2.Y=4452.787mil|Absolute=True">Un-Routed Net Constraint: Track (291.339mil,2157.48mil)(291.339mil,2157.48mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5471.409mil|Location2.X=5477.409mil|Location1.Y=1264.716mil|Location2.Y=1369.142mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5471.409mil|Location2.X=5477.409mil|Location1.Y=1264.716mil|Location2.Y=1369.142mil|Absolute=True">Un-Routed Net Constraint: Track (4293.307mil,-1025.591mil)(4293.307mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5471.409mil|Location2.X=5546.307mil|Location1.Y=1264.716mil|Location2.Y=1270.716mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5471.409mil|Location2.X=5546.307mil|Location1.Y=1264.716mil|Location2.Y=1270.716mil|Absolute=True">Un-Routed Net Constraint: Track (4293.307mil,-1025.591mil)(4362.205mil,-1025.591mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5471.409mil|Location2.X=5546.307mil|Location1.Y=1363.142mil|Location2.Y=1369.142mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5471.409mil|Location2.X=5546.307mil|Location1.Y=1363.142mil|Location2.Y=1369.142mil|Absolute=True">Un-Routed Net Constraint: Track (4293.307mil,-927.165mil)(4362.205mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5540.307mil|Location2.X=5546.307mil|Location1.Y=1264.716mil|Location2.Y=1369.142mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5540.307mil|Location2.X=5546.307mil|Location1.Y=1264.716mil|Location2.Y=1369.142mil|Absolute=True">Un-Routed Net Constraint: Track (4362.205mil,-1025.591mil)(4362.205mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5540.307mil|Location2.X=5615.205mil|Location1.Y=1264.716mil|Location2.Y=1270.716mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5540.307mil|Location2.X=5615.205mil|Location1.Y=1264.716mil|Location2.Y=1270.716mil|Absolute=True">Un-Routed Net Constraint: Track (4362.205mil,-1025.591mil)(4431.102mil,-1025.591mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5540.307mil|Location2.X=5615.205mil|Location1.Y=1363.142mil|Location2.Y=1369.142mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5540.307mil|Location2.X=5615.205mil|Location1.Y=1363.142mil|Location2.Y=1369.142mil|Absolute=True">Un-Routed Net Constraint: Track (4362.205mil,-927.165mil)(4431.102mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5609.205mil|Location2.X=5615.205mil|Location1.Y=1264.716mil|Location2.Y=1369.142mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5609.205mil|Location2.X=5615.205mil|Location1.Y=1264.716mil|Location2.Y=1369.142mil|Absolute=True">Un-Routed Net Constraint: Track (4431.102mil,-1025.591mil)(4431.102mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5609.205mil|Location2.X=5693.945mil|Location1.Y=1264.716mil|Location2.Y=1270.716mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5609.205mil|Location2.X=5693.945mil|Location1.Y=1264.716mil|Location2.Y=1270.716mil|Absolute=True">Un-Routed Net Constraint: Track (4431.102mil,-1025.591mil)(4509.842mil,-1025.591mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5609.205mil|Location2.X=5693.945mil|Location1.Y=1363.142mil|Location2.Y=1369.142mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5609.205mil|Location2.X=5693.945mil|Location1.Y=1363.142mil|Location2.Y=1369.142mil|Absolute=True">Un-Routed Net Constraint: Track (4431.102mil,-927.165mil)(4509.842mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5687.945mil|Location2.X=5693.945mil|Location1.Y=1264.716mil|Location2.Y=1369.142mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5687.945mil|Location2.X=5693.945mil|Location1.Y=1264.716mil|Location2.Y=1369.142mil|Absolute=True">Un-Routed Net Constraint: Track (4509.842mil,-1025.591mil)(4509.842mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5687.945mil|Location2.X=5762.843mil|Location1.Y=1264.716mil|Location2.Y=1270.716mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5687.945mil|Location2.X=5762.843mil|Location1.Y=1264.716mil|Location2.Y=1270.716mil|Absolute=True">Un-Routed Net Constraint: Track (4509.842mil,-1025.591mil)(4578.74mil,-1025.591mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5687.945mil|Location2.X=5762.843mil|Location1.Y=1363.142mil|Location2.Y=1369.142mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5687.945mil|Location2.X=5762.843mil|Location1.Y=1363.142mil|Location2.Y=1369.142mil|Absolute=True">Un-Routed Net Constraint: Track (4509.842mil,-927.165mil)(4578.74mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5756.843mil|Location2.X=5762.843mil|Location1.Y=1264.716mil|Location2.Y=1369.142mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5756.843mil|Location2.X=5762.843mil|Location1.Y=1264.716mil|Location2.Y=1369.142mil|Absolute=True">Un-Routed Net Constraint: Track (4578.74mil,-1025.591mil)(4578.74mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5756.843mil|Location2.X=5831.74mil|Location1.Y=1264.716mil|Location2.Y=1270.716mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5756.843mil|Location2.X=5831.74mil|Location1.Y=1264.716mil|Location2.Y=1270.716mil|Absolute=True">Un-Routed Net Constraint: Track (4578.74mil,-1025.591mil)(4647.638mil,-1025.591mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5756.843mil|Location2.X=5831.74mil|Location1.Y=1363.142mil|Location2.Y=1369.142mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5756.843mil|Location2.X=5831.74mil|Location1.Y=1363.142mil|Location2.Y=1369.142mil|Absolute=True">Un-Routed Net Constraint: Track (4578.74mil,-927.165mil)(4647.638mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5825.74mil|Location2.X=5831.74mil|Location1.Y=1264.716mil|Location2.Y=1369.142mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5825.74mil|Location2.X=5831.74mil|Location1.Y=1264.716mil|Location2.Y=1369.142mil|Absolute=True">Un-Routed Net Constraint: Track (4647.638mil,-1025.591mil)(4647.638mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5825.74mil|Location2.X=5900.638mil|Location1.Y=1264.716mil|Location2.Y=1270.716mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5825.74mil|Location2.X=5900.638mil|Location1.Y=1264.716mil|Location2.Y=1270.716mil|Absolute=True">Un-Routed Net Constraint: Track (4647.638mil,-1025.591mil)(4716.535mil,-1025.591mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5825.74mil|Location2.X=5900.638mil|Location1.Y=1363.142mil|Location2.Y=1369.142mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5825.74mil|Location2.X=5900.638mil|Location1.Y=1363.142mil|Location2.Y=1369.142mil|Absolute=True">Un-Routed Net Constraint: Track (4647.638mil,-927.165mil)(4716.535mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5894.638mil|Location2.X=5900.638mil|Location1.Y=1264.716mil|Location2.Y=1369.142mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5894.638mil|Location2.X=5900.638mil|Location1.Y=1264.716mil|Location2.Y=1369.142mil|Absolute=True">Un-Routed Net Constraint: Track (4716.535mil,-1025.591mil)(4716.535mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5894.638mil|Location2.X=5969.535mil|Location1.Y=1264.716mil|Location2.Y=1270.716mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5894.638mil|Location2.X=5969.535mil|Location1.Y=1264.716mil|Location2.Y=1270.716mil|Absolute=True">Un-Routed Net Constraint: Track (4716.535mil,-1025.591mil)(4785.433mil,-1025.591mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5894.638mil|Location2.X=5969.535mil|Location1.Y=1363.142mil|Location2.Y=1369.142mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5894.638mil|Location2.X=5969.535mil|Location1.Y=1363.142mil|Location2.Y=1369.142mil|Absolute=True">Un-Routed Net Constraint: Track (4716.535mil,-927.165mil)(4785.433mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5963.535mil|Location2.X=5969.535mil|Location1.Y=1264.716mil|Location2.Y=1369.142mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5963.535mil|Location2.X=5969.535mil|Location1.Y=1264.716mil|Location2.Y=1369.142mil|Absolute=True">Un-Routed Net Constraint: Track (4785.433mil,-1025.591mil)(4785.433mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5963.535mil|Location2.X=6038.433mil|Location1.Y=1264.716mil|Location2.Y=1270.716mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5963.535mil|Location2.X=6038.433mil|Location1.Y=1264.716mil|Location2.Y=1270.716mil|Absolute=True">Un-Routed Net Constraint: Track (4785.433mil,-1025.591mil)(4854.331mil,-1025.591mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5963.535mil|Location2.X=6038.433mil|Location1.Y=1363.142mil|Location2.Y=1369.142mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5963.535mil|Location2.X=6038.433mil|Location1.Y=1363.142mil|Location2.Y=1369.142mil|Absolute=True">Un-Routed Net Constraint: Track (4785.433mil,-927.165mil)(4854.331mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6032.433mil|Location2.X=6038.433mil|Location1.Y=1264.716mil|Location2.Y=1369.142mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6032.433mil|Location2.X=6038.433mil|Location1.Y=1264.716mil|Location2.Y=1369.142mil|Absolute=True">Un-Routed Net Constraint: Track (4854.331mil,-1025.591mil)(4854.331mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1730.284mil|Location2.X=1738.22mil|Location1.Y=2043.276mil|Location2.Y=2047.276mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1730.284mil|Location2.X=1738.22mil|Location1.Y=2043.276mil|Location2.Y=2047.276mil|Absolute=True">Un-Routed Net Constraint: Track (551.181mil,-248.031mil)(555.118mil,-248.031mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1785.402mil|Location2.X=1789.402mil|Location1.Y=4448.787mil|Location2.Y=4452.787mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1785.402mil|Location2.X=1789.402mil|Location1.Y=4448.787mil|Location2.Y=4452.787mil|Absolute=True">Un-Routed Net Constraint: Track (606.299mil,2157.48mil)(606.299mil,2157.48mil) on Top Layer Dead Copper - Net Not Assigned.</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

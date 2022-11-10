@@ -1,0 +1,152 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\pgkounto\Downloads\readout-board-pcb-v2\readout-board-pcb-v2\altium\ETL_RB.PcbDoc
+Date     : 11/10/2022
+Time     : 10:38:48 AM
+
+Processing Rule : Clearance Constraint (Gap=3mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+   Violation between Un-Routed Net Constraint: Track (-23.622mil,2157.48mil)(-23.622mil,2157.48mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (291.339mil,2157.48mil)(291.339mil,2157.48mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4293.307mil,-1025.591mil)(4293.307mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4293.307mil,-1025.591mil)(4362.205mil,-1025.591mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4293.307mil,-927.165mil)(4362.205mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4362.205mil,-1025.591mil)(4362.205mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4362.205mil,-1025.591mil)(4431.102mil,-1025.591mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4362.205mil,-927.165mil)(4431.102mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4431.102mil,-1025.591mil)(4431.102mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4431.102mil,-1025.591mil)(4509.842mil,-1025.591mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4431.102mil,-927.165mil)(4509.842mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4509.842mil,-1025.591mil)(4509.842mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4509.842mil,-1025.591mil)(4578.74mil,-1025.591mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4509.842mil,-927.165mil)(4578.74mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4578.74mil,-1025.591mil)(4578.74mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4578.74mil,-1025.591mil)(4647.638mil,-1025.591mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4578.74mil,-927.165mil)(4647.638mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4647.638mil,-1025.591mil)(4647.638mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4647.638mil,-1025.591mil)(4716.535mil,-1025.591mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4647.638mil,-927.165mil)(4716.535mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4716.535mil,-1025.591mil)(4716.535mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4716.535mil,-1025.591mil)(4785.433mil,-1025.591mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4716.535mil,-927.165mil)(4785.433mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4785.433mil,-1025.591mil)(4785.433mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4785.433mil,-1025.591mil)(4854.331mil,-1025.591mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4785.433mil,-927.165mil)(4854.331mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (4854.331mil,-1025.591mil)(4854.331mil,-927.165mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (551.181mil,-248.031mil)(555.118mil,-248.031mil) on Top Layer Dead Copper - Net Not Assigned.
+   Violation between Un-Routed Net Constraint: Track (606.299mil,2157.48mil)(606.299mil,2157.48mil) on Top Layer Dead Copper - Net Not Assigned.
+Rule Violations :29
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=2.992mil) (Max=100mil) (Preferred=4.724mil) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=3mil) (Max=5.118mil) (Preferred=4.724mil) (InNetClass('HS'))
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Direct Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=100mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=5.906mil) (InNet('GND') or InNet('LV_RB') or InNet('1V5A') or InNet('1V5D') or InNet('1V2A') or InNet('1V2B') or InNet('1V2C') or InNet('1V2D')),(InNet('GND') or InNet('LV_RB') or InNet('1V5A') or InNet('1V5D') or InNet('1V2A') or InNet('1V2B') or InNet('1V2C') or InNet('1V2D'))
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=4mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=0.984mil) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=0.984mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=9.842mil) (InNetClass('Din_T_4'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=9.842mil) (InNetClass('Din_T_5'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=9.842mil) (InNetClass('Din_T_6'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=9.842mil) (InNetClass('Din_T_1'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=9.842mil) (InNetClass('Din_T_2'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=9.842mil) (InNetClass('Din_T_3'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=9.842mil) (InNetClass('Dout_4'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=10mil) (InNetClass('SC_OUT'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=9.842mil) (InNetClass('Dout_5'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=9.842mil) (InNetClass('Dout_1'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=9.842mil) (InNetClass('Dout_2'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=9.842mil) (InNetClass('Dout_3'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=9.842mil) (InNetClass('Din_6'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=9.842mil) (InNetClass('Din_2'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=9.842mil) (InNetClass('Din_1'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=9.842mil) (InNetClass('Dout_6'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=9.842mil) (InNetClass('Din_3'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=9.842mil) (InNetClass('Din_4'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=9.842mil) (InNetClass('Din_5'))
+Rule Violations :0
+
+Processing Rule : Room lpGBT (Bounding Region = (1305.102mil, 1356.307mil, 5082.677mil, 3184.307mil) (InComponentClass('lpGBT'))
+Rule Violations :0
+
+Processing Rule : Room LINPOL12 (Bounding Region = (2241.102mil, 1832.677mil, 4822.835mil, 2726.378mil) (InComponentClass('LINPOL12'))
+Rule Violations :0
+
+Processing Rule : Room Power (Bounding Region = (1555.118mil, 1663.186mil, 6279.102mil, 2844.307mil) (InComponentClass('Power'))
+Rule Violations :0
+
+Processing Rule : Room WP7B (Bounding Region = (1578.74mil, 1365.307mil, 5913.386mil, 3076.772mil) (InComponentClass('WP7B'))
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (Disabled)(All)
+Rule Violations :0
+
+
+Violations Detected : 29
+Waived Violations : 0
+Time Elapsed        : 00:00:02
