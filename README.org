@@ -8,9 +8,8 @@
   - [[#power][Power]]
   - [[#lpgbt-configuration][LPGBT Configuration]]
   - [[#vtrx-i2c][VTRX+ I2C]]
+  - [[#v2-change-log][v2 Change Log]]
   - [[#errata][Errata]]
-  - [[#fusing-instructions][Fusing Instructions]]
-  - [[#inventory][Inventory]]
 
 ** Useful Links
 - Documentation page: [[http://etl-rb.docs.cern.ch/][etl-rb.docs.cern.ch]]
@@ -28,18 +27,6 @@
   + VTRX+ Specification: [[https://edms.cern.ch/ui/file/1719329/1/VTRxPlus_spec_v2.4.pdf][VTRxPlus_spec_v2.4.pdf]]
   + VTRX+ LDD Specs: [[https://edms.cern.ch/ui/file/1719330/1/VLplus_quadLDD_spec_v1.2_prototypes.pdf][VLplus_quadLDD_spec_v1.2_prototypes.pdf]]
 - TDR - [[https://cds.cern.ch/record/2667167/files/CMS-TDR-020.pdf][CMS-TDR-020]]
-*** Relevant Presentations
-- 2019/05/13 - [[https://indico.cern.ch/event/820512/contributions/3429658/attachments/1842929/3023621/ETL-Cabling-S_Los-May13-2019.pdf][Update on Power board and Patch Panel-0]] (Sergey V.)
-- 2020/03/09 - [[https://indico.cern.ch/event/902328/contributions/3798257/attachments/2008611/3355343/2020-03-09_LV_scheme.pdf][ETL LV powering scheme]] (Natalia K.)
-- 2020/04/05 - [[https://indico.cern.ch/event/906805/contributions/3815774/attachments/2016073/3369701/2020-04-05-ETL-RBv2-Boston.pdf][ETL Readout Board v2]] (Andy P.)
-- 2020/04/27 - [[https://indico.cern.ch/event/912420/contributions/3837314/attachments/2026902/3391190/Andy_Liu_-_Emulator_v1.1.pdf][EIE Dataformat]] (Andy L.)
-- 2020/06/02 - [[https://indico.cern.ch/event/931796/contributions/3915833/attachments/2061731/3458677/ETROC2-power-update-v1.pdf][ETROC Power consumption]] (Andy P.)
-- 2020/07/13 - [[https://indico.cern.ch/event/939160/contributions/3946133/attachments/2073487/3481402/20200713_readout_board_interfaces.pdf][Readout Board Interfaces]] (Andy P.)
-- 2020/08/31 - [[https://indico.cern.ch/event/950697/contributions/3993986/attachments/2093983/3519322/20200831_readout_board_v2.pptx.pdf][Readout Board v2 Update]] (Andy P.)
-- 2020/08/31 - [[https://indico.cern.ch/event/950697/contributions/3993988/attachments/2094005/3519146/ETL-PowerConversion-S_Los-Aug31-2020.pdf][Power Board Status]] (Sergey V.)
-- 2021/03/01 - [[https://indico.cern.ch/event/1012776/contributions/4250636/attachments/2199248/3719226/20210301_etl_readout_board.pptx.pdf][Readout Board v2 Update]] (Andy P.)
-- 2021/05/10 - [[https://indico.cern.ch/event/1037766/contributions/4357988/attachments/2242193/3801880/Emulator%20updates%2020210510%20V3.pdf][Emulator v1 Update]] (Andy L.)
-- 2021/05/17 - [[https://indico.cern.ch/event/1039531/contributions/4366460/attachments/2245627/3808234/ETL-MultyChannel-bPOL-Proto-S_Los-May17-2021.pdf][Power Board Status]] (Sergey L.)
 ** Milestones
 - 2020/11/02 - Finish schematic and layout; Submit files to fab house
 - 2020/12/08 - Receive readout boards from Pactron
@@ -62,7 +49,6 @@ Full size: [[file:docs/module-connectivity.pdf]]
 *** Control and Monitoring
 #+ATTR_HTML: :width 700px
 [[file:docs/ctrl-and-mon.svg]]
-** Connectors/Interfaces :noexport:
 ** Mechanical Outline
 #+attr_org: :width 700px
 [[file:docs/mechanical-outline.png]]
@@ -183,6 +169,37 @@ address pins are not connected, so they use internal pull down.
 
 The address then is ~0b1010000~ = ~0x50~
 
+** v2 Change Log
+- [X] Replace KSC2223 BJT w/ ZXMN2B01FTA
+- [X] Parallelized LinPol Outputs for higher output current
+- [X] Fix I2C note
+- [X] Remove I2C programmer port / EFUSEPOWER
+- [X] PB and BV interfaces removed
+  - Connections can be made as needed directly on the breakout board
+- [X] Addition of LEDs
+  + [X] Master and slave READY signals connected to LEDs
+  + [X] Connect power to LED
+  + [X] Connect LPGBT GPIO to LED
+  + [X] Connect SCA GPIO to LED
+- [X] lpGBT v1 Changes:
+  + [X] SC_I2C changed to BOOTCNF1, Should be tied to 0 (https://lpgbt.web.cern.ch/lpgbt/v1/powerup.html#bootcnf1-bootcnf0)
+  + [X] Stateovrd changed to EDINTERM
+    - "Notice that pin EDINECTERM contains a pull-down resistor. If left
+      unconnected, the eRx termination for the EC channel will be disabled.
+      Notice as well, that this pin has no effect when the lpGBT is set to work
+      as a transceiver. In that case, it is the responsibility of the user to
+      configure the termination for the EC-channel in master lpGBTs."
+    - https://lpgbt.web.cern.ch/lpgbt/v1/configuration.html?highlight=edinecterm#ec-channel-control-link-topologies
+  + [X] VCOBypass changed to BOOTCNF0
+    - https://lpgbt.web.cern.ch/lpgbt/v1/powerup.html#bootcnf1-bootcnf0
+    - Need to be able to change from 0 <--> 1 to select boot mode
+- [X] Latest module pinout (monitor 1x VREF and VTEMP per ETROC)
+- [X] Update module connector (QSE-020-01-F-D)
+  + RB side: QSE-020-01-{F,L,C}-D
+  + Mating connector QTE-020-01-{F,L,C}-D
+  + Test report: https://suddendocs.samtec.com/testreports/168830_report_rev_6_qua.pdf
+  + 5mm stack height with QTE lead style -01
+  + Catalog page: https://suddendocs.samtec.com/catalog_english/qse.pdf
 ** Errata
 1) KSC2223 footprint is incorrect
    - The footprint of the KSC2223 transistor is incorrect.
@@ -202,14 +219,3 @@ pin 12 of P6, P8 and P10 sets ADDR3 of ETROC2
      + This note, is, however, a remnant of a previous iteration of the design
        where all modules were on the same i2c bus. In the current configuration,
        each module has its own I2C bus, and shares the same address.
-** Fusing Instructions
-** Inventory
-*** v1
-|---------+--------+-------+----------|
-| Board # | Fusing | Notes | Location |
-|---------+--------+-------+----------|
-|       1 |        |       |          |
-|       2 |        |       |          |
-|       3 |        |       |          |
-|       4 |        |       |          |
-|---------+--------+-------+----------|
