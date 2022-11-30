@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
-PCB File : C:\Users\pgkounto\cernbox\Altium\ETL\readout-board-pcb\altium\ETL_RB.PcbDoc
-Date     : 11/11/2022
-Time     : 5:48:41 PM
+PCB File : C:\Users\pgkounto\cernbox\Altium\ETL\Updated_files\readout-board-pcb\altium\ETL_RB.PcbDoc
+Date     : 11/30/2022
+Time     : 9:12:54 AM
 
 Processing Rule : Clearance Constraint (Gap=0.076mm) (All),(All)
 Rule Violations :0
@@ -120,4 +120,4 @@ Rule Violations :0
 
 Violations Detected : 0
 Waived Violations : 0
-Time Elapsed        : 00:00:02
+Time Elapsed        : 00:00:01
