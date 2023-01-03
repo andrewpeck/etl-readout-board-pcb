@@ -275,6 +275,10 @@ DItemRevisionGUID=
 DocumentPath=Project Outputs for Free Documents\NC Drill\emulator_adapter.TXT
 DItemRevisionGUID=
 
+[GeneratedDocument37]
+DocumentPath=Outputs\Pick Place\Pick Place for emulator_adapter.txt
+DItemRevisionGUID=
+
 [Configuration1]
 Name=Sources
 ParameterCount=0
