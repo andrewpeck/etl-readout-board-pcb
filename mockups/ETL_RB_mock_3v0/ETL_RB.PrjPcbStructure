@@ -1,0 +1,8 @@
+Record=TopLevelDocument|FileName=LowVoltage.SchDoc|SheetNumber=2
+Record=SheetSymbol|SourceDocument=LowVoltage.SchDoc|Designator=Module 1|SchDesignator=Module 1|FileName=ModuleRegulator.SchDoc|SheetNumber=3|SymbolType=Normal|RawFileName=ModuleRegulator.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=LowVoltage.SchDoc|Designator=Module 2|SchDesignator=Module 2|FileName=ModuleRegulator.SchDoc|SheetNumber=3|SymbolType=Normal|RawFileName=ModuleRegulator.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=LowVoltage.SchDoc|Designator=Module 3|SchDesignator=Module 3|FileName=ModuleRegulator.SchDoc|SheetNumber=3|SymbolType=Normal|RawFileName=ModuleRegulator.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=NoMainPathDocument|SourceDocument=LowVoltage.SchDoc|FileName=BiasVoltage.SchDoc|SheetNumber=4
+Record=NoMainPathDocument|SourceDocument=LowVoltage.SchDoc|FileName=ETL_RB.SchDoc|SheetNumber=1
+Record=NoMainPathDocument|SourceDocument=LowVoltage.SchDoc|FileName=ExtPower.SchDoc|SheetNumber=6
+Record=NoMainPathDocument|SourceDocument=LowVoltage.SchDoc|FileName=LinPOL12.SchDoc|SheetNumber=5
