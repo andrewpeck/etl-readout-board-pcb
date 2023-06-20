@@ -134,23 +134,6 @@ GenerateClassCluster=0
 DocumentUniqueId=TKRFFTIL
 
 [Document6]
-DocumentPath=ETL_RB.OutJob
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=
-
-[Document7]
 DocumentPath=ETL_RB.SCHLIB
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -167,7 +150,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=RJWUXXUF
 
-[Document8]
+[Document7]
 DocumentPath=ETL_RB.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -184,24 +167,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=FBSGJLWJ
 
-[Document9]
-DocumentPath=ETL_RBv1.OutJob
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=0
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=
-
-[Document10]
+[Document8]
 DocumentPath=PowBoardConn.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
