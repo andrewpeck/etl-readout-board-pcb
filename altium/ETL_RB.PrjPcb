@@ -185,7 +185,7 @@ GenerateClassCluster=0
 DocumentUniqueId=YYSFUBRG
 
 [Document9]
-DocumentPath=ETL_RB_v2.5_Naomi.OutJob
+DocumentPath=ETL_RB.OutJob
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
