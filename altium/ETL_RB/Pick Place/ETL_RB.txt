@@ -5,7 +5,7 @@ C:\Users\Nemoz\Documents\readout-board-pcb\altium\.\ETL_RB\Pick Place\ETL_RB.txt
 File Design Information:
 
 Date:       23/06/23
-Time:       13:49
+Time:       14:17
 Revision:   afdbfcb7935d77bec552487d622d74464cd2cc8a
 Variant:    No variations
 Units used: mm
